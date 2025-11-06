@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../exp_1.ip_user_files/ipstatic" \
+"../../../../exp_1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../exp_1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+
+sv xil_defaultlib  --include "../../../../exp_1.ip_user_files/ipstatic" \
+"../../../../exp_1.srcs/sources_1/new/i2s_interface.sv" \
+"../../../../exp_1.srcs/sources_1/imports/fpga13/pkg.sv" \
+"../../../../exp_1.srcs/sources_1/new/pkg.sv" \
+"../../../../exp_1.srcs/sources_1/new/loudness_top.sv" \
+"../../../../exp_1.srcs/sources_1/new/top.sv" \
+"../../../../exp_1.srcs/sim_1/new/mic_tests.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
