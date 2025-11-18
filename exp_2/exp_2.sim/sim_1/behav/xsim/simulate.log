@@ -1,0 +1,22 @@
+Time resolution is 1 ps
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/Initial304_0  Scope: fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc  File: /mnt/data40tb/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc 48
+Time: 1 ps  Iteration: 0  Process: /fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/Initial304_0  Scope: fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc  File: /mnt/data40tb/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 510
+Failure: ERROR:add_1 must be in range [-1,DEPTH-1]
+Time: 125 ns  Iteration: 1
+$finish called at time : 125 ns
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/Initial304_0  Scope: fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc  File: /mnt/data40tb/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc 48
+Time: 1 ps  Iteration: 0  Process: /fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/Initial304_0  Scope: fft_test.i_fft.u_serial_fft.i_xpm_memory_tdpram.xpm_memory_base_inst.config_drc  File: /mnt/data40tb/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 510
+Failure: ERROR:add_1 must be in range [-1,DEPTH-1]
+Time: 125 ns  Iteration: 1
+$finish called at time : 125 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 125 ns  Iteration: 1
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 125 ns  Iteration: 1
+Failure: ERROR:empty_1 and not_empty_1 are inconsistent
+Time: 125 ns  Iteration: 1
+$finish called at time : 125 ns

@@ -1,0 +1,188 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /mnt/data40tb/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xbip_utils_v3_0_10 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_6 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_15 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_18 -L axi_utils_v2_0_6 -L cordic_v6_0_19 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fft_test_behav xil_defaultlib.fft_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/fpga13/group_admi/exp_2/exp_2.srcs/sim_1/new/fft_test.sv" Line 23. Module fft_test has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" Line 9044. Module xpm_memory_tdpram(MEMORY_SIZE=32768,MEMORY_INIT_PARAM="0",READ_DATA_WIDTH_A=32,BYTE_WRITE_WIDTH_A=32,ADDR_WIDTH_A=10,WRITE_DATA_WIDTH_B=32,READ_DATA_WIDTH_B=32,BYTE_WRITE_WIDTH_B=32,ADDR_WIDTH_B=10,READ_LATENCY_B=2) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" Line 56. Module xpm_memory_base(MEMORY_SIZE=32768,MEMORY_INIT_PARAM="0",READ_DATA_WIDTH_A=32,BYTE_WRITE_WIDTH_A=32,ADDR_WIDTH_A=10,WRITE_DATA_WIDTH_B=32,READ_DATA_WIDTH_B=32,BYTE_WRITE_WIDTH_B=32,ADDR_WIDTH_B=10,READ_LATENCY_B=2,WRITE_MODE_B=2) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.1/rdi_builds/continuous/2023_05_07_3865809/data/verilog/src/unisims/BUFGCE.v" Line 26. Module BUFGCE has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/fpga13/group_admi/exp_2/exp_2.srcs/sim_1/new/fft_test.sv" Line 23. Module fft_test has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" Line 9044. Module xpm_memory_tdpram(MEMORY_SIZE=32768,MEMORY_INIT_PARAM="0",READ_DATA_WIDTH_A=32,BYTE_WRITE_WIDTH_A=32,ADDR_WIDTH_A=10,WRITE_DATA_WIDTH_B=32,READ_DATA_WIDTH_B=32,BYTE_WRITE_WIDTH_B=32,ADDR_WIDTH_B=10,READ_LATENCY_B=2) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" Line 56. Module xpm_memory_base(MEMORY_SIZE=32768,MEMORY_INIT_PARAM="0",READ_DATA_WIDTH_A=32,BYTE_WRITE_WIDTH_A=32,ADDR_WIDTH_A=10,WRITE_DATA_WIDTH_B=32,READ_DATA_WIDTH_B=32,BYTE_WRITE_WIDTH_B=32,ADDR_WIDTH_B=10,READ_LATENCY_B=2,WRITE_MODE_B=2) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.1/rdi_builds/continuous/2023_05_07_3865809/data/verilog/src/unisims/BUFGCE.v" Line 26. Module BUFGCE has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/fpga13/group_admi/exp_2/exp_2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/fpga13/group_admi/exp_2/exp_2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package cordic_v6_0_19.cordic_v6_0_19_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package mult_gen_v12_0_18.mult_gen_v12_0_18_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package cordic_v6_0_19.cordic_pack
+Compiling package cordic_v6_0_19.cordic_hdl_comps
+Compiling package c_addsub_v12_0_15.c_addsub_v12_0_15_viv_comp
+Compiling package xbip_addsub_v3_0_6.xbip_addsub_v3_0_6_viv_comp
+Compiling package c_addsub_v12_0_15.c_addsub_v12_0_15_pkg
+Compiling package c_addsub_v12_0_15.c_addsub_v12_0_15_pkg_legacy
+Compiling package c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv_comp
+Compiling package unisim.vcomponents
+Compiling package xil_defaultlib.fft_pkg
+Compiling module xpm.xpm_memory_base(MEMORY_SIZE=3276...
+Compiling module xpm.xpm_memory_tdpram(MEMORY_SIZE=32...
+Compiling module unisims_ver.BUFGCE
+Compiling module xil_defaultlib.serial_fft_default
+Compiling module xil_defaultlib.stream_register(dtype_t=value_t_...
+Compiling architecture xilinx of entity axi_utils_v2_0_6.axi_slave_2to1 [\axi_slave_2to1(c_a_tdata_width=...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=17,has_uvpro...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_master [\glb_ifx_master(width=17,afull_t...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=3,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=4,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=2,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=5,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=6,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture rtl of entity c_addsub_v12_0_15.c_addsub_v12_0_15_lut6_legacy [\c_addsub_v12_0_15_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_fabric_legacy [\c_addsub_v12_0_15_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_legacy [\c_addsub_v12_0_15_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_15.c_addsub_v12_0_15_viv [\c_addsub_v12_0_15_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_19.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=7,family="artix...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt_mod [\cordic_sqrt_mod(p_xdevicefamily...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay_bit [\delay_bit(delay_len=0,family="a...]
+Compiling architecture struct_all of entity cordic_v6_0_19.delay_bit [\delay_bit(delay_len=7,family="a...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_sqrt [\cordic_sqrt(p_xdevicefamily="ar...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_v6_0_19_synth [\cordic_v6_0_19_synth(c_architec...]
+Compiling architecture synth of entity cordic_v6_0_19.cordic_v6_0_19_viv [\cordic_v6_0_19_viv(c_architectu...]
+Compiling architecture xilinx of entity cordic_v6_0_19.cordic_v6_0_19 [\cordic_v6_0_19(c_architecture=2...]
+Compiling architecture sqrt_cordic_arch of entity xil_defaultlib.sqrt_cordic [sqrt_cordic_default]
+Compiling module xil_defaultlib.fft_abs_value
+Compiling module xil_defaultlib.drop_upper_freqs(dtype_t=real_t_...
+Compiling module xil_defaultlib.fft_top
+Compiling module xil_defaultlib.fft_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fft_test_behav

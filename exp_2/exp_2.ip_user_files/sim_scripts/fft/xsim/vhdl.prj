@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../exp_2.gen/sources_1/ip/fft/sim/fft.vhd" \
+
+# Do not sort compile order
+nosort

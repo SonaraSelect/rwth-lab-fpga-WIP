@@ -91,15 +91,15 @@ module serial_fft (
 logic clk;
 
 // A memory to hold the data
-parameter int WINDOWSIZE = fft_pkg::SAMPLE_PER_MS*fft_pkg::WINDOWSIZE_MS;
-parameter int Words = 2*WINDOWSIZE;
-parameter int AddrWidth = $clog2(Words);
-parameter int DataWidth = $bits(data_i);
+parameter int WINDOWSIZE = fft_pkg::SAMPLE_PER_MS*fft_pkg::WINDOWSIZE_MS; // 16*32 = 512
+parameter int Words = 2*WINDOWSIZE; // 2*512 = 1024 
+parameter int AddrWidth = $clog2(Words); // 10
+parameter int DataWidth = $bits(data_i); // 32?
 parameter int Latency = 2;
-parameter int Size = 2*fft_pkg::SAMPLE_PER_MS*fft_pkg::WINDOWSIZE_MS*DataWidth;
+parameter int Size = 2*fft_pkg::SAMPLE_PER_MS*fft_pkg::WINDOWSIZE_MS*DataWidth; // 2*16*32*32=32768
 
-logic [AddrWidth-1:0] waddr,raddr, raddr_base;
-logic [DataWidth-1:0] wdata,rdata;
+logic [AddrWidth-1:0] waddr,raddr, raddr_base; // 10 bits
+logic [DataWidth-1:0] wdata,rdata; // 32 bits
 logic we,re;
 xpm_memory_tdpram #(
 	.ADDR_WIDTH_A            ( AddrWidth        ), // DECIMAL
@@ -189,39 +189,40 @@ always_ff @(posedge clk or negedge arstn) begin
 	if (!arstn) begin
 	   state <= WAIT_TRIGGER;
 	   state_next <= ACTIVE;
-	end
-	case (state)
-	   WAIT_TRIGGER: begin
-	       if(!trigger) begin
-	           state <= state_next;
-	           state_next <= WAIT_TRIGGER;
-	       end
-	   end
-	   ACTIVE: begin
-	       if(frame_count >= fft_pkg::REQUIRED_FRAMES-1) begin
-	           state <= state_next;
-	           state_next <= ACTIVE;
-	       end
-	   end
-	endcase
+	end else begin
+	   case (state)
+           WAIT_TRIGGER: begin
+               if(!trigger) begin
+                   state <= state_next;
+                   state_next <= WAIT_TRIGGER;
+               end
+           end
+           ACTIVE: begin
+               if(frame_count >= fft_pkg::REQUIRED_FRAMES-1) begin
+                   state <= state_next;
+                   state_next <= ACTIVE;
+               end
+           end
+        endcase
+    end
 end
 
 /// Task 2: generate waddr and we to capture data
 
 // generating waddr
-
 always_ff @(posedge clk or negedge arstn) begin
     if(!arstn) begin
-        we <= 1'b0;
         waddr <= 0; // todo --------------------------- check
         wdata <= 0;
     end else if(state == ACTIVE) begin
-        
+        if(valid_i) begin
+            if(waddr == 2*WINDOWSIZE - 1) waddr <= 'd0;
+            else waddr <= waddr + 'b1;
+        end
     end
-
 end
 
-// generating we
+assign we = valid_i;
 
 // generating raddr and re to control data movement
 // generating raddr:
@@ -260,9 +261,19 @@ end
 assign re = count > 0 && raddr != waddr && state == ACTIVE;
 
 /// Task 3: generate delayed valid and last signals
-logic rvalid; 
-logic rl;
+logic rvalid, rl;
+logic re_prev, rlast_prev;
 
+always_ff @(posedge clk or negedge arstn) begin
+    if (!arstn) {rvalid, rlast_prev, rl , re_prev} <= {0,0,0,0};
+    else begin
+        rlast_prev<= rlast;
+        rl <= rlast_prev;
+        
+        re_prev <= re;
+        rvalid <= re_prev;
+    end    
+end
 
 
 // FFT instantiation and its configuration
@@ -281,8 +292,29 @@ BUFGCE clk_gate (
 	.I(clk_i)
 );
 /// Task 5: instantiate the FFT IP 
-
+fft your_instance_name (
+  .aclk(clk),                                                // input wire aclk
+  .s_axis_config_tdata(config_data),                  // input wire [23 : 0] s_axis_config_tdata
+  .s_axis_config_tvalid(),                // input wire s_axis_config_tvalid
+  .s_axis_config_tready(),                // output wire s_axis_config_tready
+  .s_axis_data_tdata(rdata),                      // input wire [31 : 0] s_axis_data_tdata
+  .s_axis_data_tvalid(rvalid),                    // input wire s_axis_data_tvalid
+  .s_axis_data_tready(fft_ready),                    // output wire s_axis_data_tready
+  .s_axis_data_tlast(rl),                      // input wire s_axis_data_tlast
+  .m_axis_data_tdata(),                      // output wire [31 : 0] m_axis_data_tdata
+  .m_axis_data_tvalid(),                    // output wire m_axis_data_tvalid
+  .m_axis_data_tready(),                    // input wire m_axis_data_tready
+  .m_axis_data_tlast(),                      // output wire m_axis_data_tlast
+  .event_frame_started(),                  // output wire event_frame_started
+  .event_tlast_unexpected(),            // output wire event_tlast_unexpected
+  .event_tlast_missing(),                  // output wire event_tlast_missing
+  .event_status_channel_halt(),      // output wire event_status_channel_halt
+  .event_data_in_channel_halt(),    // output wire event_data_in_channel_halt
+  .event_data_out_channel_halt()  // output wire event_data_out_channel_halt
+);
 endmodule
+
+
 
 
 module fft_abs_value (
