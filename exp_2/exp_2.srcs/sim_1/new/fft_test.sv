@@ -42,21 +42,21 @@ initial begin
     clk = 0;
     arstn = 1;
     trigger = 1;
-    data_valid = 1;
+    data_valid = 0;
     data = 32'hbead;
-    forever #50 clk = ~clk;
+    forever #5 clk = ~clk;
 end
 
 initial begin
-    #100 arstn = 0;
-    #100 arstn = 1;
-    #200 trigger = 0;
-    #200 trigger = 1;
+    #10 arstn = 0;
+    #10 arstn = 1; data_valid = 1;
+    #10 trigger = 0;
+    #20 trigger = 1;
     forever begin
-        #100 data = 32'b10101010101010101010101010101010;
-        #100 data = 32'b01010101010101010101010101010101;
-        #100 data = 32'b11111111111111110000000000000000;
-        #100 data = 32'b00000000000000001111111111111111;
+        #10 data = 32'b10101010101010101010101010101010;
+        #10 data = 32'b01010101010101010101010101010101;
+        #10 data = 32'b11111111111111110000000000000000;
+        #10 data = 32'b00000000000000001111111111111111;
     end
 end
 endmodule;

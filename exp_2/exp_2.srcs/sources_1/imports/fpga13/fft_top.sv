@@ -89,6 +89,7 @@ module serial_fft (
 );
 
 logic clk;
+assign clk = clk_i;
 
 // A memory to hold the data
 parameter int WINDOWSIZE = fft_pkg::SAMPLE_PER_MS*fft_pkg::WINDOWSIZE_MS; // 16*32 = 512
@@ -181,31 +182,37 @@ logic done;
 assign done = (frame_count == fft_pkg::REQUIRED_FRAMES-1) && rlast && re;
 
 // defining the state machine with two states: WAIT_TRIGGER (waiting for trigger) or ACTIVE (trigger activated)
+
 typedef enum {WAIT_TRIGGER, ACTIVE} state_t;
 state_t state,state_next;
 assign active  = state != WAIT_TRIGGER;
-/// Task 1: implement the state machine
+
+logic default_val;
+
 always_ff @(posedge clk or negedge arstn) begin
-	if (!arstn) begin
-	   state <= WAIT_TRIGGER;
-	   state_next <= ACTIVE;
+	if(!arstn) begin
+		default_val = 0;
+	end else default_val = ~default_val;
+end
+
+/// Task 1: implement the state machine
+always_comb begin
+	if(!arstn) begin
+		state = WAIT_TRIGGER;
+		state_next = ACTIVE;
 	end else begin
-	   case (state)
-           WAIT_TRIGGER: begin
-               if(!trigger) begin
-                   state <= state_next;
-                   state_next <= WAIT_TRIGGER;
-               end
-           end
-           ACTIVE: begin
-               if(frame_count >= fft_pkg::REQUIRED_FRAMES-1) begin
-                   state <= state_next;
-                   state_next <= ACTIVE;
-               end
-           end
-		   default: $display("Error with fsm; Defaulted");
-        endcase
-    end
+		if(state == WAIT_TRIGGER) begin
+			if(!trigger) begin
+				state = state_next;
+				state_next = WAIT_TRIGGER;
+			end
+		end else if(state == ACTIVE) begin
+			if(frame_count >= fft_pkg::REQUIRED_FRAMES-1) begin
+				state = state_next;
+				state_next = ACTIVE;
+			end
+		end
+	end
 end
 
 /// Task 2: generate waddr and we to capture data
@@ -213,7 +220,7 @@ end
 // generating waddr
 always_ff @(posedge clk or negedge arstn) begin
     if(!arstn) begin
-        waddr <= 0; // todo --------------------------- check
+        waddr <= 0;
         wdata <= 0;
     end else if(state == ACTIVE) begin
         if(valid_i) begin
@@ -229,6 +236,7 @@ assign we = valid_i;
 // generating raddr:
 logic window_last;
 assign window_last = re && rlast;
+
 always_ff @(posedge clk or negedge arstn) begin
 	if (!arstn) raddr_base <= '0;
 	else if (state == WAIT_TRIGGER) raddr_base <= '0;
@@ -237,6 +245,7 @@ always_ff @(posedge clk or negedge arstn) begin
 		else raddr_base <= raddr_base + fft_pkg::WINDOWSTEP - Words;
 	end
 end
+
 always_ff @(posedge clk or negedge arstn) begin
 	if (!arstn) raddr <= '0;
 	else if (state == WAIT_TRIGGER) raddr <= '0;
@@ -293,7 +302,7 @@ BUFGCE clk_gate (
 	.I(clk_i)
 );
 /// Task 5: instantiate the FFT IP 
-fft your_instance_name (
+fft our_fft (
   .aclk(clk),                                                // input wire aclk
   .s_axis_config_tdata(config_data),                  // input wire [23 : 0] s_axis_config_tdata
   .s_axis_config_tvalid(),                // input wire s_axis_config_tvalid

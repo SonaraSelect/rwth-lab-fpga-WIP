@@ -1,2 +1,2 @@
-sqrt_cordic.vhd,vhdl,xil_defaultlib,../../../../exp_2.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd,
+sqrt_cordic.vhd,vhdl,xil_defaultlib,../../../../exp_2.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd,incdir="../../../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
 glbl.v,Verilog,xil_defaultlib,glbl.v

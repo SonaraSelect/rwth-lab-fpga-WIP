@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "fft",
     "component_reference": "xilinx.com:ip:xfft:9.1",
-    "ip_revision": "9",
+    "ip_revision": "14",
     "gen_directory": "../../../../exp_2.gen/sources_1/ip/fft",
     "parameters": {
       "component_parameters": {
@@ -32,7 +32,10 @@
         "number_of_stages_using_block_ram_for_data_and_phase_factors": [ { "value": "0", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "memory_options_hybrid": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "complex_mult_type": [ { "value": "use_mults_resources", "resolve_type": "user", "usage": "all" } ],
-        "butterfly_type": [ { "value": "use_luts", "resolve_type": "user", "usage": "all" } ]
+        "butterfly_type": [ { "value": "use_luts", "resolve_type": "user", "usage": "all" } ],
+        "super_sample_rates": [ { "value": "1", "resolve_type": "user", "usage": "all" } ],
+        "systolicfft_inv": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "blocking_run_time_configuration": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
         "C_XDEVICEFAMILY": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
@@ -43,6 +46,7 @@
         "C_M_AXIS_DATA_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_M_AXIS_STATUS_TDATA_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_THROTTLE_SCHEME": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_NSSR": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_CHANNELS": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_NFFT_MAX": [ { "value": "9", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ARCH": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -68,11 +72,13 @@
         "C_USE_HYBRID_RAM": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_OPTIMIZE_GOAL": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_CMPY_TYPE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_BFLY_TYPE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "C_BFLY_TYPE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SYSTOLICFFT_INV": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_IS_BLOCKING_RUNTIME_CONF": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "artix7" } ],
-        "BASE_BOARD_PART": [ { "value": "digilentinc.com:nexys-a7-100t:part0:1.2" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7a100t" } ],
         "PACKAGE": [ { "value": "csg324" } ],
@@ -85,12 +91,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "9" } ],
+        "IPREVISION": [ { "value": "14" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../exp_2.gen/sources_1/ip/fft" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2023.1" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
