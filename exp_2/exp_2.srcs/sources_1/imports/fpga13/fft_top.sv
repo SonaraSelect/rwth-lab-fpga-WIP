@@ -203,6 +203,7 @@ always_ff @(posedge clk or negedge arstn) begin
                    state_next <= ACTIVE;
                end
            end
+		   default: $display("Error with fsm; Defaulted");
         endcase
     end
 end

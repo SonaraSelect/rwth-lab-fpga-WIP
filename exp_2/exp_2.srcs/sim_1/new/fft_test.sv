@@ -40,21 +40,23 @@ fft_top i_fft (
 
 initial begin
     clk = 0;
-    arstn = 0;
+    arstn = 1;
     trigger = 1;
     data_valid = 1;
     data = 32'hbead;
-    forever #5 clk = ~clk;
+    forever #50 clk = ~clk;
 end
 
 initial begin
-    #10 arstn = 1;
-    #20 trigger = 0;
+    #100 arstn = 0;
+    #100 arstn = 1;
+    #200 trigger = 0;
+    #200 trigger = 1;
     forever begin
-        #10 data = 32'b10101010101010101010101010101010;
-        #10 data = 32'b01010101010101010101010101010101;
-        #10 data = 32'b11111111111111110000000000000000;
-        #10 data = 32'b00000000000000001111111111111111;
+        #100 data = 32'b10101010101010101010101010101010;
+        #100 data = 32'b01010101010101010101010101010101;
+        #100 data = 32'b11111111111111110000000000000000;
+        #100 data = 32'b00000000000000001111111111111111;
     end
 end
 endmodule;

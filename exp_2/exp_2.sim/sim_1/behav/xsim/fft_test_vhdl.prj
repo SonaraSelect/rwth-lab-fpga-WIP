@@ -1,4 +1,37 @@
 # compile vhdl design source files
+vhdl xbip_utils_v3_0_10  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+
+vhdl c_reg_fd_v12_0_6  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
+
+vhdl xbip_dsp48_wrapper_v3_0_4  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+
+vhdl xbip_pipe_v3_0_6  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+
+vhdl xbip_dsp48_addsub_v3_0_6  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+
+vhdl xbip_addsub_v3_0_6  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/xbip_addsub_v3_0_vh_rfs.vhd" \
+
+vhdl c_addsub_v12_0_15  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/c_addsub_v12_0_vh_rfs.vhd" \
+
+vhdl xbip_bram18k_v3_0_6  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+
+vhdl mult_gen_v12_0_18  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+
+vhdl axi_utils_v2_0_6  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+
+vhdl cordic_v6_0_19  \
+"../../../../exp_2.ip_user_files/ipstatic/hdl/cordic_v6_0_vh_rfs.vhd" \
+
 vhdl xil_defaultlib  \
 "../../../../exp_2.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd" \
 

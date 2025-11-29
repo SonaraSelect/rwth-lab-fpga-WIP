@@ -1,4 +1,7 @@
-Running: xsim.dir/mic_tests_behav/xsimk -simmode gui -wdb mic_tests_behav.wdb -simrunnum 0 -socket 34787
+Running: xsim.dir/mic_tests_behav/xsimk.exe -simmode gui -wdb mic_tests_behav.wdb -simrunnum 0 -socket 64992
 Design successfully loaded
-Design Loading Memory Usage: 24560 KB (Peak: 24856 KB)
-Design Loading CPU Usage: 30 ms
+Design Loading Memory Usage: 11016 KB (Peak: 11016 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 12416 KB (Peak: 12416 KB)
+Simulation CPU Usage: 327 ms
