@@ -89,7 +89,6 @@ module serial_fft (
 );
 
 logic clk;
-assign clk = clk_i;
 
 // A memory to hold the data
 parameter int WINDOWSIZE = fft_pkg::SAMPLE_PER_MS*fft_pkg::WINDOWSIZE_MS; // 16*32 = 512
@@ -182,37 +181,30 @@ logic done;
 assign done = (frame_count == fft_pkg::REQUIRED_FRAMES-1) && rlast && re;
 
 // defining the state machine with two states: WAIT_TRIGGER (waiting for trigger) or ACTIVE (trigger activated)
-
 typedef enum {WAIT_TRIGGER, ACTIVE} state_t;
 state_t state,state_next;
 assign active  = state != WAIT_TRIGGER;
-
-logic default_val;
-
-always_ff @(posedge clk or negedge arstn) begin
-	if(!arstn) begin
-		default_val = 0;
-	end else default_val = ~default_val;
-end
-
 /// Task 1: implement the state machine
-always_comb begin
-	if(!arstn) begin
-		state = WAIT_TRIGGER;
-		state_next = ACTIVE;
+always_ff @(posedge clk or negedge arstn) begin
+	if (!arstn) begin
+	   state <= WAIT_TRIGGER;
+	   state_next <= ACTIVE;
 	end else begin
-		if(state == WAIT_TRIGGER) begin
-			if(!trigger) begin
-				state = state_next;
-				state_next = WAIT_TRIGGER;
-			end
-		end else if(state == ACTIVE) begin
-			if(frame_count >= fft_pkg::REQUIRED_FRAMES-1) begin
-				state = state_next;
-				state_next = ACTIVE;
-			end
-		end
-	end
+	   case (state)
+           WAIT_TRIGGER: begin
+               if(!trigger) begin
+                   state <= state_next;
+                   state_next <= WAIT_TRIGGER;
+               end
+           end
+           ACTIVE: begin
+               if(frame_count >= fft_pkg::REQUIRED_FRAMES-1) begin
+                   state <= state_next;
+                   state_next <= ACTIVE;
+               end
+           end
+        endcase
+    end
 end
 
 /// Task 2: generate waddr and we to capture data
@@ -220,7 +212,7 @@ end
 // generating waddr
 always_ff @(posedge clk or negedge arstn) begin
     if(!arstn) begin
-        waddr <= 0;
+        waddr <= 0; // todo --------------------------- check
         wdata <= 0;
     end else if(state == ACTIVE) begin
         if(valid_i) begin
@@ -236,7 +228,6 @@ assign we = valid_i;
 // generating raddr:
 logic window_last;
 assign window_last = re && rlast;
-
 always_ff @(posedge clk or negedge arstn) begin
 	if (!arstn) raddr_base <= '0;
 	else if (state == WAIT_TRIGGER) raddr_base <= '0;
@@ -245,7 +236,6 @@ always_ff @(posedge clk or negedge arstn) begin
 		else raddr_base <= raddr_base + fft_pkg::WINDOWSTEP - Words;
 	end
 end
-
 always_ff @(posedge clk or negedge arstn) begin
 	if (!arstn) raddr <= '0;
 	else if (state == WAIT_TRIGGER) raddr <= '0;
@@ -275,9 +265,9 @@ logic rvalid, rl;
 logic re_prev, rlast_prev;
 
 always_ff @(posedge clk or negedge arstn) begin
-    if (!arstn) {rvalid, rlast_prev, rl , re_prev} <= {0,0,0,0};
+    if (!arstn) {rvalid, rlast_prev, rl , re_prev} <= '0;
     else begin
-        rlast_prev<= rlast;
+        rlast_prev <= rlast;
         rl <= rlast_prev;
         
         re_prev <= re;
@@ -299,22 +289,25 @@ logic fft_ready;  // .s_axis_data_tready (fft_ready), assume that tready is alwa
 BUFGCE clk_gate (
 	.O(clk),
 	.CE(fft_ready),
+	//.CE(1),
 	.I(clk_i)
 );
 /// Task 5: instantiate the FFT IP 
-fft our_fft (
-  .aclk(clk),                                                // input wire aclk
+logic config_valid;
+assign config_valid = 1'b1;
+fft fft_i (
+  .aclk(clk_i),                                                // input wire aclk
   .s_axis_config_tdata(config_data),                  // input wire [23 : 0] s_axis_config_tdata
-  .s_axis_config_tvalid(),                // input wire s_axis_config_tvalid
+  .s_axis_config_tvalid(config_valid),                // input wire s_axis_config_tvalid
   .s_axis_config_tready(),                // output wire s_axis_config_tready
   .s_axis_data_tdata(rdata),                      // input wire [31 : 0] s_axis_data_tdata
   .s_axis_data_tvalid(rvalid),                    // input wire s_axis_data_tvalid
   .s_axis_data_tready(fft_ready),                    // output wire s_axis_data_tready
   .s_axis_data_tlast(rl),                      // input wire s_axis_data_tlast
-  .m_axis_data_tdata(),                      // output wire [31 : 0] m_axis_data_tdata
-  .m_axis_data_tvalid(),                    // output wire m_axis_data_tvalid
-  .m_axis_data_tready(),                    // input wire m_axis_data_tready
-  .m_axis_data_tlast(),                      // output wire m_axis_data_tlast
+  .m_axis_data_tdata(data_o.tdata),                      // output wire [31 : 0] m_axis_data_tdata
+  .m_axis_data_tvalid(valid_o),                    // output wire m_axis_data_tvalid
+  .m_axis_data_tready(ready_i),                    // input wire m_axis_data_tready
+  .m_axis_data_tlast(data_o.tlast),                      // output wire m_axis_data_tlast
   .event_frame_started(),                  // output wire event_frame_started
   .event_tlast_unexpected(),            // output wire event_tlast_unexpected
   .event_tlast_missing(),                  // output wire event_tlast_missing

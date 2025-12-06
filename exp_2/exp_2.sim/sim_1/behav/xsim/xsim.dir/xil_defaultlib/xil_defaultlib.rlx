@@ -1,10 +1,12 @@
 0.7
 2020.2
-May 22 2025
-00:13:55
-C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/fft/sim/fft.vhd,1764434189,vhdl,,,,fft,,,,,,,,
-C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd,1764434211,vhdl,,,,sqrt_cordic,,,,,,,,
-C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,uvm,,,,,,
-C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.srcs/sim_1/new/fft_test.sv,1764437775,systemVerilog,,,,fft_test,,uvm,../../../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
-C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv,1764438602,systemVerilog,,C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.srcs/sim_1/new/fft_test.sv,,drop_upper_frames;drop_upper_freqs;fft_abs_value;fft_top;serial_fft;stream_register,,uvm,../../../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
-C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.srcs/sources_1/imports/fpga13/pkg.sv,1739881258,systemVerilog,C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.srcs/sim_1/new/fft_test.sv;C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv,C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv,,fft_pkg,,uvm,../../../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+May  7 2023
+15:10:42
+/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/fft/sim/fft.vhd,1763461380,vhdl,,,,fft,,,,,,,,
+/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd,1763457310,vhdl,,,,sqrt_cordic,,,,,,,,
+/home/fpga13/group_admi/exp_2/exp_2.sim/sim_1/behav/xsim/glbl.v,1717501569,verilog,,,,glbl,,uvm,,,,,,
+/home/fpga13/group_admi/exp_2/exp_2.srcs/sim_1/new/fft_test.sv,1764668642,systemVerilog,,,,fft_test,,uvm,,,,,,
+/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv,1764667307,systemVerilog,,/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/pkg_vga.sv,,drop_upper_frames;drop_upper_freqs;fft_abs_value;fft_top;serial_fft,,uvm,,,,,,
+/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/pkg_fft.sv,1739881258,systemVerilog,/home/fpga13/group_admi/exp_2/exp_2.srcs/sim_1/new/fft_test.sv;/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv,/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv,,fft_pkg,,uvm,,,,,,
+/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/pkg_vga.sv,1739881259,systemVerilog,/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/vga_top.sv,/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/vga_top.sv,,vga_pkg,,uvm,,,,,,
+/home/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/vga_top.sv,1764668664,systemVerilog,,/home/fpga13/group_admi/exp_2/exp_2.srcs/sim_1/new/fft_test.sv,,colorize_pixel;detection_overlay;image_buf;render_fft;stream_register;vga_gen;vga_top;vga_top_wrapper,,uvm,,,,,,

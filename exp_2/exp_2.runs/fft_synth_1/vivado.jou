@@ -1,24 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2025.1 (64-bit)
-# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
-# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
-# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Nov 29 17:36:32 2025
-# Process ID         : 14876
-# Current directory  : C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.runs/fft_synth_1
-# Command line       : vivado.exe -log fft.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft.tcl
-# Log file           : C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.runs/fft_synth_1/fft.vds
-# Journal file       : C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.runs/fft_synth_1\vivado.jou
-# Running On         : audrey
-# Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 26100
-# Processor Detail   : Intel(R) Core(TM) Ultra 7 256V
-# CPU Frequency      : 3302 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 8
-# Host memory        : 16693 MB
-# Swap memory        : 34359 MB
-# Total Virtual      : 51053 MB
-# Available Virtual  : 30099 MB
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Nov 25 12:31:21 2025
+# Process ID: 2131993
+# Current directory: /home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1
+# Command line: vivado -log fft.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft.tcl
+# Log file: /home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1/fft.vds
+# Journal file: /home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1/vivado.jou
+# Running On: FPGA13L, OS: Linux, CPU Frequency: 2461.582 MHz, CPU Physical cores: 4, Host memory: 6130 MB
 #-----------------------------------------------------------
 source fft.tcl -notrace

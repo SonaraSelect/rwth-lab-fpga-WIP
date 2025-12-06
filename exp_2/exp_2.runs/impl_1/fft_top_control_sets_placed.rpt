@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Nov 18 10:44:41 2025
+| Host         : FPGA13L running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_control_sets -verbose -file fft_top_control_sets_placed.rpt
+| Design       : fft_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    42 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             150 |           72 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              31 |            8 |
+| Yes          | No                    | Yes                    |              65 |           23 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+--------------------------------------------------------------------------------+--------------------+------------------+----------------+--------------+
+|    Clock Signal   |                                  Enable Signal                                 |  Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+--------------------------------------------------------------------------------+--------------------+------------------+----------------+--------------+
+|  u_serial_fft/clk | u_serial_fft/p_0_in                                                            | u_serial_fft/arstn |                1 |              4 |         4.00 |
+|  u_serial_fft/clk | u_serial_fft/raddr_base_0                                                      | u_serial_fft/arstn |                3 |              5 |         1.67 |
+|  u_serial_fft/clk | u_serial_fft/window_last                                                       | u_serial_fft/arstn |                2 |              7 |         3.50 |
+|  u_serial_fft/clk | u_serial_fft/re                                                                | u_serial_fft/arstn |                3 |              9 |         3.00 |
+|  u_serial_fft/clk | u_serial_fft/waddr                                                             | u_serial_fft/arstn |                3 |             10 |         3.33 |
+|  u_serial_fft/clk | u_serial_fft/raddr                                                             | u_serial_fft/arstn |                3 |             10 |         3.33 |
+|  u_serial_fft/clk | u_serial_fft/count[9]_i_1_n_0                                                  | u_serial_fft/arstn |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG    | u_drop_upper_freqs/cnt0                                                        | u_serial_fft/arstn |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG    | abs_value_i/sqrt_i/U0/i_synth/i_nd_to_rdy/wr_enable                            |                    |                2 |             15 |         7.50 |
+|  clk_IBUF_BUFG    | abs_value_i/sqrt_i/U0/i_synth/i_synth/gen_sqrt.square_root/gen_rdy_int/rdy_int |                    |                5 |             15 |         3.00 |
+|  clk_IBUF_BUFG    | abs_value_i/sqrt_i/U0/i_synth/i_outfifo.i_output_fifo/fifo0/rd_enable          |                    |                3 |             16 |         5.33 |
+|  clk_IBUF_BUFG    |                                                                                |                    |               72 |            151 |         2.10 |
++-------------------+--------------------------------------------------------------------------------+--------------------+------------------+----------------+--------------+
+
+

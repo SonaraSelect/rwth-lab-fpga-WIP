@@ -3,28 +3,28 @@
     with args -log fft.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft.tcl
 
 
-
-****** Vivado v2025.1 (64-bit)
-  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
-  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
-  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-  **** Start of session at: Sat Nov 29 17:36:32 2025
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source fft.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1337.699 ; gain = 97.070 ; free physical = 180 ; free virtual = 1344
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: fft
 Command: synth_design -top fft -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7748
+INFO: [Synth 8-7075] Helper process launched with PID 2132427
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1211.152 ; gain = 493.742
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2083.398 ; gain = 376.801 ; free physical = 166 ; free virtual = 408
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'fft' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/fft/synth/fft.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'fft' [/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/fft/synth/fft.vhd:82]
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_PART bound to: xc7a100tcsg324-1 - type: string 
 	Parameter C_S_AXIS_CONFIG_TDATA_WIDTH bound to: 24 - type: integer 
@@ -33,7 +33,6 @@ INFO: [Synth 8-638] synthesizing module 'fft' [c:/Users/the5t/OneDrive/Documents
 	Parameter C_M_AXIS_DATA_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_STATUS_TDATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_THROTTLE_SCHEME bound to: 1 - type: integer 
-	Parameter C_NSSR bound to: 1 - type: integer 
 	Parameter C_CHANNELS bound to: 1 - type: integer 
 	Parameter C_NFFT_MAX bound to: 9 - type: integer 
 	Parameter C_ARCH bound to: 4 - type: integer 
@@ -60,44 +59,60 @@ INFO: [Synth 8-638] synthesizing module 'fft' [c:/Users/the5t/OneDrive/Documents
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
-	Parameter C_SYSTOLICFFT_INV bound to: 0 - type: integer 
-	Parameter C_IS_BLOCKING_RUNTIME_CONF bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xfft_v9_1_14' declared at 'c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/fft/hdl/xfft_v9_1_vh_rfs.vhd:103919' bound to instance 'U0' of component 'xfft_v9_1_14' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/fft/synth/fft.vhd:202]
-INFO: [Synth 8-256] done synthesizing module 'fft' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/fft/synth/fft.vhd:82]
+INFO: [Synth 8-3491] module 'xfft_v9_1_9' declared at '/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/fft/hdl/xfft_v9_1_vh_rfs.vhd:103739' bound to instance 'U0' of component 'xfft_v9_1_9' [/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/fft/synth/fft.vhd:188]
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-256] done synthesizing module 'fft' (0#1) [/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/fft/synth/fft.vhd:82]
 WARNING: [Synth 8-7129] Port LUT_SCLR in module mux_bus4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port AINIT in module c_reg_fd_v12_0_10_viv__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLR in module c_reg_fd_v12_0_10_viv__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ASET in module c_reg_fd_v12_0_10_viv__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SINIT in module c_reg_fd_v12_0_10_viv__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module c_reg_fd_v12_0_10_viv__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SSET in module c_reg_fd_v12_0_10_viv__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port bypass in module c_addsub_v12_0_20_lut6_legacy__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sclr in module c_addsub_v12_0_20_lut6_legacy__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sset in module c_addsub_v12_0_20_lut6_legacy__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sinit in module c_addsub_v12_0_20_lut6_legacy__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port b_in in module c_addsub_v12_0_20_legacy__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a_signed in module c_addsub_v12_0_20_legacy__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port b_signed in module c_addsub_v12_0_20_legacy__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_20_lut6_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port bypass in module c_addsub_v12_0_20_lut6_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sclr in module c_addsub_v12_0_20_lut6_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sset in module c_addsub_v12_0_20_lut6_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sinit in module c_addsub_v12_0_20_lut6_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_20_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port b_in in module c_addsub_v12_0_20_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a_signed in module c_addsub_v12_0_20_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port b_signed in module c_addsub_v12_0_20_legacy__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port C_IN in module c_addsub_v12_0_20_viv__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_19_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AINIT in module c_reg_fd_v12_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLR in module c_reg_fd_v12_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ASET in module c_reg_fd_v12_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module c_reg_fd_v12_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module c_reg_fd_v12_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module c_reg_fd_v12_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bypass in module c_addsub_v12_0_15_lut6_legacy__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_addsub_v12_0_15_lut6_legacy__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_addsub_v12_0_15_lut6_legacy__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_addsub_v12_0_15_lut6_legacy__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_in in module c_addsub_v12_0_15_legacy__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a_signed in module c_addsub_v12_0_15_legacy__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_signed in module c_addsub_v12_0_15_legacy__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_15_lut6_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bypass in module c_addsub_v12_0_15_lut6_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_addsub_v12_0_15_lut6_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_addsub_v12_0_15_lut6_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_addsub_v12_0_15_lut6_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_15_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_in in module c_addsub_v12_0_15_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a_signed in module c_addsub_v12_0_15_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_signed in module c_addsub_v12_0_15_legacy__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_IN in module c_addsub_v12_0_15_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_14_legacy__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized11 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized11 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized11 is either unconnected or has no load
@@ -105,33 +120,31 @@ WARNING: [Synth 8-7129] Port Q1 in module shift_ram__parameterized10 is either u
 WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized10 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized10 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized10 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_26_delay_line__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CLK in module cmpy_v6_0_26_delay_line__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CE in module cmpy_v6_0_26_delay_line__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_26_delay_line__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_26_delay_line__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CLK in module cmpy_v6_0_26_delay_line__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CE in module cmpy_v6_0_26_delay_line__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_26_delay_line__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CLK in module cmpy_v6_0_26_delay_line is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CE in module cmpy_v6_0_26_delay_line is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_26_delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_21_delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module cmpy_v6_0_21_delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module cmpy_v6_0_21_delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_21_delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_21_delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module cmpy_v6_0_21_delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module cmpy_v6_0_21_delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_21_delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module cmpy_v6_0_21_delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module cmpy_v6_0_21_delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_21_delay_line is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ROUND_CY in module cmpy_4_dsp48_mult is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_26_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ROUND_CY in module cmpy_v6_0_26_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACCUMULATOR_RESET in module cmpy_v6_0_26_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IS_VALID in module cmpy_v6_0_26_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module cmpy_v6_0_21_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ROUND_CY in module cmpy_v6_0_21_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port round_cy in module cmpy is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_19_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_14_legacy__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized4 is either unconnected or has no load
@@ -143,9 +156,9 @@ WARNING: [Synth 8-7129] Port SCLR in module shift_ram__parameterized9 is either 
 WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized9 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized9 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port wea in module so_memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CLK in module xfft_v9_1_14_mux_bus2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CE in module xfft_v9_1_14_mux_bus2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SCLR in module xfft_v9_1_14_mux_bus2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xfft_v9_1_9_mux_bus2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xfft_v9_1_9_mux_bus2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xfft_v9_1_9_mux_bus2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Q1 in module shift_ram__parameterized8 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized8 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized8 is either unconnected or has no load
@@ -156,66 +169,69 @@ WARNING: [Synth 8-7129] Port unload_addr_valid in module so_datapath is either u
 WARNING: [Synth 8-7129] Port in_idle_state in module so_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port in_load_begin_state in module so_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port in_load_state in module so_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_19_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_14_legacy__parameterized3 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2446.523 ; gain = 739.926 ; free physical = 366 ; free virtual = 2776
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2446.523 ; gain = 739.926 ; free physical = 355 ; free virtual = 2767
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2446.523 ; gain = 739.926 ; free physical = 355 ; free virtual = 2767
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1979.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2449.492 ; gain = 0.000 ; free physical = 275 ; free virtual = 2714
 INFO: [Netlist 29-17] Analyzing 271 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/fft/fft_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.gen/sources_1/ip/fft/fft_ooc.xdc] for cell 'U0'
-Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.runs/fft_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.runs/fft_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/fft/fft_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/fpga13/group_admi/exp_2/exp_2.gen/sources_1/ip/fft/fft_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1979.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2489.141 ; gain = 0.000 ; free physical = 133 ; free virtual = 2586
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   FD => FDRE: 3 instances
   FDE => FDRE: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1979.602 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2489.141 ; gain = 0.000 ; free physical = 132 ; free virtual = 2588
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:01:41 . Memory (MB): peak = 2489.141 ; gain = 782.543 ; free physical = 163 ; free virtual = 2522
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:01:41 . Memory (MB): peak = 2489.141 ; gain = 782.543 ; free physical = 163 ; free virtual = 2522
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:41 . Memory (MB): peak = 2489.141 ; gain = 782.543 ; free physical = 163 ; free virtual = 2523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:01:43 . Memory (MB): peak = 2489.141 ; gain = 782.543 ; free physical = 131 ; free virtual = 2499
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -236,52 +252,52 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/run_addr_gen/r_count_mask_fixlen.gen_r_count_mask_reg[0].reg_fdre) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre0) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre1) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre0) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre1) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre0) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre1) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.runt_srl_loop.i_fdre) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
-INFO: [Synth 8-3332] Sequential element (non_native_flt_non_ssr_fft.xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_1_14_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/run_addr_gen/r_count_mask_fixlen.gen_r_count_mask_reg[0].reg_fdre) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre0) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre1) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre0) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre1) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre0) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre1) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/io_addr_gen/count_delay/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.runt_srl_loop.i_fdre) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_real/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_e.xfft_inst/single_channel.datapath/has_scaling.scaler_imag/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_1_9_viv.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:45 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 164 ; free virtual = 2495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:52 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 123 ; free virtual = 2434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:53 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 138 ; free virtual = 2425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:53 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 140 ; free virtual = 2415
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -299,37 +315,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 129 ; free virtual = 2373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 129 ; free virtual = 2372
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 127 ; free virtual = 2373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 127 ; free virtual = 2373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 127 ; free virtual = 2373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 127 ; free virtual = 2373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -339,7 +355,7 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name       | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|cmpy_4_dsp48_mult | (C+(A'*B')')' | 25     | 18     | 11     | -      | 0      | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|cmpy_4_dsp48_mult | (C+(A'*B')')' | 25     | 18     | 11     | -      | 0      | 1    | 1    | 1    | -    | -     | 1    | 1    | 
 |cmpy_4_dsp48_mult | Dynamic       | -      | -      | -      | -      | 44     | -    | -    | -    | -    | -     | 1    | 1    | 
 +------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
@@ -365,42 +381,42 @@ Report Cell Usage:
 |10    |MUXF7    |    18|
 |11    |MUXF8    |     9|
 |12    |RAMB18E1 |     2|
-|14    |SRL16E   |   204|
+|14    |SRL16E   |   205|
 |15    |XORCY    |    62|
 |16    |FD       |     3|
 |17    |FDE      |     5|
-|18    |FDRE     |   965|
+|18    |FDRE     |   964|
 |19    |FDSE     |     1|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.156 ; gain = 798.559 ; free physical = 127 ; free virtual = 2373
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 174 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:43 . Memory (MB): peak = 1979.602 ; gain = 1262.191
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 1979.602 ; gain = 1262.191
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:54 . Memory (MB): peak = 2505.156 ; gain = 755.941 ; free physical = 127 ; free virtual = 2373
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:58 . Memory (MB): peak = 2505.164 ; gain = 798.559 ; free physical = 126 ; free virtual = 2373
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1979.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2505.164 ; gain = 0.000 ; free physical = 354 ; free virtual = 2612
 INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1979.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2505.164 ; gain = 0.000 ; free physical = 353 ; free virtual = 2612
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 37 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 29 instances
   FD => FDRE: 3 instances
   FDE => FDRE: 5 instances
 
-Synth Design complete | Checksum: 52458b0c
+Synth Design complete | Checksum: e1b39937
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+66 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1979.602 ; gain = 1465.266
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1979.602 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.runs/fft_synth_1/fft.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fft, cache-ID = a14a2ab6314a0a94
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:02:05 . Memory (MB): peak = 2505.164 ; gain = 1135.605 ; free physical = 353 ; free virtual = 2612
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1779.807; main = 1552.580; forked = 260.628
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3487.691; main = 2505.160; forked = 982.531
+INFO: [Common 17-1381] The checkpoint '/home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1/fft.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fft, cache-ID = b2410222045fe22f
 INFO: [Coretcl 2-1174] Renamed 96 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1979.602 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/exp_2/exp_2.runs/fft_synth_1/fft.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file fft_utilization_synth.rpt -pb fft_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 29 17:37:47 2025...
+INFO: [Common 17-1381] The checkpoint '/home/fpga13/group_admi/exp_2/exp_2.runs/fft_synth_1/fft.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fft_utilization_synth.rpt -pb fft_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 25 12:33:56 2025...

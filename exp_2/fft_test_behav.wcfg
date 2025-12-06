@@ -13,105 +13,165 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="66.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="112.801 ns"></ZoomEndTime>
-      <Cursor1Time time="105.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,192.001 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="219"></NameColumnWidth>
-      <ValueColumnWidth column_width="163"></ValueColumnWidth>
+      <ValueColumnWidth column_width="157"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="23" />
-   <wvobject fp_name="/fft_test/clk" type="logic">
+   <WVObjectSize size="38" />
+   <wvobject type="logic" fp_name="/fft_test/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/fft_test/arstn" type="logic">
+   <wvobject type="logic" fp_name="/fft_test/arstn">
       <obj_property name="ElementShortName">arstn</obj_property>
       <obj_property name="ObjectShortName">arstn</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/default_val" type="logic">
-      <obj_property name="ElementShortName">default_val</obj_property>
-      <obj_property name="ObjectShortName">default_val</obj_property>
-   </wvobject>
-   <wvobject fp_name="/fft_test/trigger" type="logic">
+   <wvobject type="logic" fp_name="/fft_test/trigger">
       <obj_property name="ElementShortName">trigger</obj_property>
       <obj_property name="ObjectShortName">trigger</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/data_valid" type="logic">
+   <wvobject type="logic" fp_name="/fft_test/data_valid">
       <obj_property name="ElementShortName">data_valid</obj_property>
       <obj_property name="ObjectShortName">data_valid</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/proc_data_valid" type="logic">
+   <wvobject type="logic" fp_name="/fft_test/proc_data_valid">
       <obj_property name="ElementShortName">proc_data_valid</obj_property>
       <obj_property name="ObjectShortName">proc_data_valid</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/proc_data_ready" type="logic">
+   <wvobject type="logic" fp_name="/fft_test/proc_data_ready">
       <obj_property name="ElementShortName">proc_data_ready</obj_property>
       <obj_property name="ObjectShortName">proc_data_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/active" type="logic">
+   <wvobject type="logic" fp_name="/fft_test/active">
       <obj_property name="ElementShortName">active</obj_property>
       <obj_property name="ObjectShortName">active</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/state" type="array">
-      <obj_property name="ElementShortName">state[31:0]</obj_property>
-      <obj_property name="ObjectShortName">state[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/valid_i">
+      <obj_property name="ElementShortName">valid_i</obj_property>
+      <obj_property name="ObjectShortName">valid_i</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/state_next" type="array">
-      <obj_property name="ElementShortName">state_next[31:0]</obj_property>
-      <obj_property name="ObjectShortName">state_next[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/fft_test/data" type="array">
+   <wvobject type="array" fp_name="/fft_test/data">
       <obj_property name="ElementShortName">data</obj_property>
       <obj_property name="ObjectShortName">data</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/proc_data" type="array">
+   <wvobject type="array" fp_name="/fft_test/proc_data">
       <obj_property name="ElementShortName">proc_data</obj_property>
       <obj_property name="ObjectShortName">proc_data</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/waddr" type="array">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/waddr">
       <obj_property name="ElementShortName">waddr[9:0]</obj_property>
       <obj_property name="ObjectShortName">waddr[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/we" type="logic">
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/we">
       <obj_property name="ElementShortName">we</obj_property>
       <obj_property name="ObjectShortName">we</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/count" type="array">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/count">
       <obj_property name="ElementShortName">count[9:0]</obj_property>
       <obj_property name="ObjectShortName">count[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/sample_count" type="array">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/sample_count">
       <obj_property name="ElementShortName">sample_count[8:0]</obj_property>
       <obj_property name="ObjectShortName">sample_count[8:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/frame_count" type="array">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/frame_count">
       <obj_property name="ElementShortName">frame_count[6:0]</obj_property>
       <obj_property name="ObjectShortName">frame_count[6:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/raddr" type="array">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/raddr">
       <obj_property name="ElementShortName">raddr[9:0]</obj_property>
       <obj_property name="ObjectShortName">raddr[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/raddr_base" type="array">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/raddr_base">
       <obj_property name="ElementShortName">raddr_base[9:0]</obj_property>
       <obj_property name="ObjectShortName">raddr_base[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/re" type="logic">
-      <obj_property name="ElementShortName">re</obj_property>
-      <obj_property name="ObjectShortName">re</obj_property>
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/state">
+      <obj_property name="ElementShortName">state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/window_last" type="logic">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/state_next">
+      <obj_property name="ElementShortName">state_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/window_last">
       <obj_property name="ElementShortName">window_last</obj_property>
       <obj_property name="ObjectShortName">window_last</obj_property>
    </wvobject>
-   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/mem" type="array">
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/mem">
       <obj_property name="ElementShortName">mem[0:1023][31:0]</obj_property>
       <obj_property name="ObjectShortName">mem[0:1023][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/re">
+      <obj_property name="ElementShortName">re</obj_property>
+      <obj_property name="ObjectShortName">re</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/douta">
+      <obj_property name="ElementShortName">douta[31:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/sample_count">
+      <obj_property name="ElementShortName">sample_count[8:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_count[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/frame_count">
+      <obj_property name="ElementShortName">frame_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">frame_count[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_drop_upper_freqs/valid_i">
+      <obj_property name="ElementShortName">valid_i</obj_property>
+      <obj_property name="ObjectShortName">valid_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_drop_upper_freqs/valid_o">
+      <obj_property name="ElementShortName">valid_o</obj_property>
+      <obj_property name="ObjectShortName">valid_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_drop_upper_freqs/last_o">
+      <obj_property name="ElementShortName">last_o</obj_property>
+      <obj_property name="ObjectShortName">last_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/abs_value_i/sqrt_i/m_axis_dout_tvalid">
+      <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/abs_value_i/abs_valid">
+      <obj_property name="ElementShortName">abs_valid</obj_property>
+      <obj_property name="ObjectShortName">abs_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/dropped_freqs_valid">
+      <obj_property name="ElementShortName">dropped_freqs_valid</obj_property>
+      <obj_property name="ObjectShortName">dropped_freqs_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/fft_ready">
+      <obj_property name="ElementShortName">fft_ready</obj_property>
+      <obj_property name="ObjectShortName">fft_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/fft_i/s_axis_data_tready">
+      <obj_property name="ElementShortName">s_axis_data_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/fft_i/aclk">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/fft_i/s_axis_data_tdata">
+      <obj_property name="ElementShortName">s_axis_data_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/rdata">
+      <obj_property name="ElementShortName">rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/fft_test/i_fft/u_serial_fft/fft_i/m_axis_data_tdata">
+      <obj_property name="ElementShortName">m_axis_data_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/fft_test/i_fft/u_serial_fft/fft_i/m_axis_data_tvalid">
+      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
    </wvobject>
 </wave_config>

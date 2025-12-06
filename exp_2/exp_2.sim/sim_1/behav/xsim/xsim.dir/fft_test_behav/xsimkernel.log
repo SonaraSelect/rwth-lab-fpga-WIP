@@ -1,4 +1,7 @@
-Running: xsim.dir/fft_test_behav/xsimk.exe -simmode gui -wdb fft_test_behav.wdb -simrunnum 0 -socket 59160
+Running: xsim.dir/fft_test_behav/xsimk -simmode gui -wdb fft_test_behav.wdb -simrunnum 0 -socket 54337
 Design successfully loaded
-Design Loading Memory Usage: 15072 KB (Peak: 15072 KB)
-Design Loading CPU Usage: 46 ms
+Design Loading Memory Usage: 33280 KB (Peak: 33280 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 123476 KB (Peak: 172548 KB)
+Simulation CPU Usage: 60 ms
