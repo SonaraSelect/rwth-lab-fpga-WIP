@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="vga_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vga_pkg" />
+            <top_module name="vga_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="96,913.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="97,510.001 ns"></ZoomEndTime>
+      <Cursor1Time time="97,195.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="219"></NameColumnWidth>
+      <ValueColumnWidth column_width="121"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject type="logic" fp_name="/vga_test/DUT/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/clk_pixel">
+      <obj_property name="ElementShortName">clk_pixel</obj_property>
+      <obj_property name="ObjectShortName">clk_pixel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/arstn">
+      <obj_property name="ElementShortName">arstn</obj_property>
+      <obj_property name="ObjectShortName">arstn</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/vga_test/DUT/vga_gen_i/ver_cnt">
+      <obj_property name="ElementShortName">ver_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_cnt[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/vga_test/DUT/vga_gen_i/hor_cnt">
+      <obj_property name="ElementShortName">hor_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_cnt[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/vga_gen_i/hor_sync">
+      <obj_property name="ElementShortName">hor_sync</obj_property>
+      <obj_property name="ObjectShortName">hor_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/vga_gen_i/ver_sync">
+      <obj_property name="ElementShortName">ver_sync</obj_property>
+      <obj_property name="ObjectShortName">ver_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/vga_hor_sync">
+      <obj_property name="ElementShortName">vga_hor_sync</obj_property>
+      <obj_property name="ObjectShortName">vga_hor_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/vga_ver_sync">
+      <obj_property name="ElementShortName">vga_ver_sync</obj_property>
+      <obj_property name="ObjectShortName">vga_ver_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/vga_gen_i/valid_x">
+      <obj_property name="ElementShortName">valid_x</obj_property>
+      <obj_property name="ObjectShortName">valid_x</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/vga_test/DUT/vga_gen_i/valid_y">
+      <obj_property name="ElementShortName">valid_y</obj_property>
+      <obj_property name="ObjectShortName">valid_y</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/vga_test/DUT/image_buf_i/vga_ctrl">
+      <obj_property name="ElementShortName">vga_ctrl</obj_property>
+      <obj_property name="ObjectShortName">vga_ctrl</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

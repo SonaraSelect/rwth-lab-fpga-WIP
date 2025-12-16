@@ -267,8 +267,8 @@ always_ff @(posedge clk_pixel or negedge arstn) begin
         hor_sync <= 0;
         ver_sync <= 0;
     end else begin
-        hor_sync <= hor_cnt==0 ? 1 : 0;
-        ver_sync <= ver_cnt==0 ? 1 : 0;
+        hor_sync <= (hor_cnt >= (hor_dis_width + hor_fp_width) && hor_cnt < (hor_dis_width + hor_fp_width + hor_pulse_width)) ? 0 : 1;
+        ver_sync <= (ver_cnt >= (ver_dis_width + ver_fp_width) && ver_cnt < (ver_dis_width + ver_fp_width + ver_pulse_width)) ? 0 : 1;
     end
 end
 
@@ -279,8 +279,13 @@ always_ff @(posedge clk_pixel or negedge arstn) begin
         valid_x <= '0;
         valid_y <= '0;
     end else begin
-        valid_x <= (hor_pulse_width + hor_bp_width < hor_cnt && hor_cnt < hor_sync_cycles-hor_fp_width) ? 1 : 0;
-        valid_y <= (ver_pulse_width + ver_bp_width < ver_cnt && ver_cnt < ver_sync_cycles-ver_fp_width) ? 1 : 0;
+        if(hor_cnt < hor_dis_width && ver_cnt < ver_dis_width) begin
+           valid_x <= 1;
+           valid_y <= 1;
+        end else begin
+           valid_x <= 0;
+           valid_y <= 0; 
+        end
     end
 end
 
@@ -409,13 +414,13 @@ assign pixel.ctrl = vga_ctrl_del[Latency-1];
 
 // Instantiate checkers for the axi stream
 //synthesis translate_off
-	stream_prop #(.dtype_t($typeof(rend_pixel))) rend_prop (
-		.clk  (clk  ),
-		.rstn (arstn ),
-		.valid(rend_pixel_valid),
-		.ready(rend_pixel_ready),
-		.data (rend_pixel )
-	);
+//	stream_prop #(.dtype_t($typeof(rend_pixel))) rend_prop (
+//		.clk  (clk  ),
+//		.rstn (arstn ),
+//		.valid(rend_pixel_valid),
+//		.ready(rend_pixel_ready),
+//		.data (rend_pixel )
+//	);
 //synthesis translate_on
 
 endmodule
@@ -514,13 +519,13 @@ stream_register #(
 );
 
 //synthesis translate_off
-stream_prop #(.dtype_t(fft_t)) prop_in (
-	.clk  (clk  ),
-	.rstn (arstn ),
-	.valid(fft_valid),
-	.ready(fft_ready),
-	.data (fft_data )
-);
+//stream_prop #(.dtype_t(fft_t)) prop_in (
+//	.clk  (clk  ),
+//	.rstn (arstn ),
+//	.valid(fft_valid),
+//	.ready(fft_ready),
+//	.data (fft_data )
+//);
 //synthesis translate_on
 
 

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Dec 16 10:29:30 2025
+# Process ID: 75360
+# Current directory: /home/fpga13/group_admi/fpga_project/fpga_project.runs/sqrt_cordic_synth_1
+# Command line: vivado -log sqrt_cordic.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sqrt_cordic.tcl
+# Log file: /home/fpga13/group_admi/fpga_project/fpga_project.runs/sqrt_cordic_synth_1/sqrt_cordic.vds
+# Journal file: /home/fpga13/group_admi/fpga_project/fpga_project.runs/sqrt_cordic_synth_1/vivado.jou
+# Running On: FPGA13L, OS: Linux, CPU Frequency: 3693.160 MHz, CPU Physical cores: 4, Host memory: 6130 MB
+#-----------------------------------------------------------
+source sqrt_cordic.tcl -notrace

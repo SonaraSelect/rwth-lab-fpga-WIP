@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Dec 16 12:06:56 2025
+# Process ID: 146488
+# Current directory: /home/fpga13/group_admi/fpga_project/fpga_project.runs/impl_1
+# Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: /home/fpga13/group_admi/fpga_project/fpga_project.runs/impl_1/top.vdi
+# Journal file: /home/fpga13/group_admi/fpga_project/fpga_project.runs/impl_1/vivado.jou
+# Running On: FPGA13L, OS: Linux, CPU Frequency: 1476.727 MHz, CPU Physical cores: 4, Host memory: 6130 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: open_checkpoint /home/fpga13/group_admi/fpga_project/fpga_project.runs/impl_1/top.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1326.434 ; gain = 0.000 ; free physical = 1004 ; free virtual = 3194
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1673.465 ; gain = 0.000 ; free physical = 673 ; free virtual = 2855
+INFO: [Netlist 29-17] Analyzing 134 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'i2spcm0/inst/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'vga0/clk_wiz_i/clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2212.910 ; gain = 2.969 ; free physical = 158 ; free virtual = 2322
+Restored from archive | CPU: 0.060000 secs | Memory: 1.061653 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2212.910 ; gain = 2.969 ; free physical = 158 ; free virtual = 2322
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2212.910 ; gain = 0.000 ; free physical = 158 ; free virtual = 2322
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2023.1 (64-bit) build 3865809
+open_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2212.910 ; gain = 886.477 ; free physical = 158 ; free virtual = 2322
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.98 . Memory (MB): peak = 2268.707 ; gain = 55.797 ; free physical = 253 ; free virtual = 2327
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 2228b8fdc
+
+Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2294.520 ; gain = 25.812 ; free physical = 253 ; free virtual = 2327
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/data40tb/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_0 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.

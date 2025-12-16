@@ -1,0 +1,2 @@
+fft.vhd,vhdl,xil_defaultlib,../../../../fpga_project.gen/sources_1/ip/fft/sim/fft.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v
