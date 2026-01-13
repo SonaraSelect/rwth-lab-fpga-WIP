@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Tue Jan 13 11:49:26 2026
+| Date         : Tue Jan 13 12:12:26 2026
 | Host         : DESKTOP-OS4G7S0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file uart_top_utilization_synth.rpt -pb uart_top_utilization_synth.pb
 | Design       : uart_top
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs*             |   30 |     0 |          0 |     63400 |  0.05 |
 |   LUT as Logic          |   30 |     0 |          0 |     63400 |  0.05 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |   35 |     0 |          0 |    126800 |  0.03 |
-|   Register as Flip Flop |   35 |     0 |          0 |    126800 |  0.03 |
+| Slice Registers         |   34 |     0 |          0 |    126800 |  0.03 |
+|   Register as Flip Flop |   34 |     0 |          0 |    126800 |  0.03 |
 |   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
@@ -58,7 +58,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 3     |          Yes |           - |          Set |
-| 32    |          Yes |           - |        Reset |
+| 31    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -149,7 +149,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   32 |        Flop & Latch |
+| FDCE     |   31 |        Flop & Latch |
 | LUT5     |   18 |                 LUT |
 | LUT4     |    6 |                 LUT |
 | LUT6     |    5 |                 LUT |

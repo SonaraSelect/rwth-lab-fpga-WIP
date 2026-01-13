@@ -114,7 +114,7 @@
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "uart_tx_OBUF",
+                                        "name": "arstn_IBUF",
                                         "isBus": false
                                     }
                                 ]
@@ -130,9 +130,8 @@
                                 "portIndex": 3,
                                 "nets": [
                                     {
-                                        "name": "uart_data",
-                                        "isBus": false,
-                                        "parentNetId": 15
+                                        "name": "uart_tx_OBUF",
+                                        "isBus": false
                                     }
                                 ]
                             }
@@ -146,29 +145,6 @@
                         "state_reg": [
                             {
                                 "name": "FSM_onehot_state_reg[2]",
-                                "states": [
-                                    {
-                                        "name": "S_WAIT_DONE",
-                                        "val": "100"
-                                    },
-                                    {
-                                        "name": "S_TRANSMIT",
-                                        "val": "010"
-                                    },
-                                    {
-                                        "name": "S_IDLE",
-                                        "val": "001"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "id": 15,
-                        "name": "uart_data",
-                        "state_reg": [
-                            {
-                                "name": "FSM_onehot_state_reg[1]",
                                 "states": [
                                     {
                                         "name": "S_WAIT_DONE",
