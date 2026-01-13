@@ -38,10 +38,6 @@ module uart_top #(
     logic [AXI_WIDTH-1:0] axi_tdata;
     logic axi_tvalid;
     
-    initial begin
-        axi_tdata = 32'hDEADBEAD;
-        axi_tready = 1;
-    end
 
     localparam NUM_BYTES = AXI_WIDTH / 8;
     localparam INDEX_WIDTH = (NUM_BYTES > 1) ? $clog2(NUM_BYTES) : 1;
@@ -76,6 +72,10 @@ module uart_top #(
             data_buffer <= 0;
             byte_index  <= 0;
             uart_data    <= 0;
+            
+            // DELETE -------------------------------------------
+            axi_tdata = 32'hDEADBEAD;
+            axi_tready = 1;
         end else begin
             case (state)
                 S_IDLE: begin

@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
@@ -88,6 +89,8 @@ read_xdc C:/Users/necde/Documents/FPGA/exp_3/exp_3.srcs/constrs_1/imports/Downlo
 set_property used_in_implementation false [get_files C:/Users/necde/Documents/FPGA/exp_3/exp_3.srcs/constrs_1/imports/Downloads/timing.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/necde/Documents/FPGA/exp_3/exp_3.srcs/utils_1/imports/synth_1/uart_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
