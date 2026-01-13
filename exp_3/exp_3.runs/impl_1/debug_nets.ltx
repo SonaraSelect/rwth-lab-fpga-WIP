@@ -29,14 +29,158 @@
                                 "id": 0,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 12,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "u_gen/data0",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "u_gen/data0[13]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[12]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[11]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[10]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[9]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[8]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[7]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[6]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[5]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[4]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[3]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[2]"
+                                            },
+                                            {
+                                                "name": "u_gen/data0[1]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 0,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "state[2]",
+                                                "parentNetId": 13
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 2,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 2,
                                 "nets": [
                                     {
                                         "name": "uart_tx_OBUF",
                                         "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "uart_data",
+                                        "isBus": false,
+                                        "parentNetId": 15
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "parent_nets": [
+                    {
+                        "id": 13,
+                        "name": "state[2]",
+                        "state_reg": [
+                            {
+                                "name": "FSM_onehot_state_reg[2]",
+                                "states": [
+                                    {
+                                        "name": "S_WAIT_DONE",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "S_TRANSMIT",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "S_IDLE",
+                                        "val": "001"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 15,
+                        "name": "uart_data",
+                        "state_reg": [
+                            {
+                                "name": "FSM_onehot_state_reg[1]",
+                                "states": [
+                                    {
+                                        "name": "S_WAIT_DONE",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "S_TRANSMIT",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "S_IDLE",
+                                        "val": "001"
                                     }
                                 ]
                             }
