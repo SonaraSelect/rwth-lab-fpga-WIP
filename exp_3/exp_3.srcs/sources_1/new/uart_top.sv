@@ -39,7 +39,7 @@ module uart_top #(
     logic axi_tvalid;
     
      assign axi_tdata = 32'hDEADBEAD;
-     assign axi_tready = 1;
+     assign axi_tvalid = 1;
     
 
     localparam NUM_BYTES = AXI_WIDTH / 8;

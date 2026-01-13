@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Jan 13 12:11:59 2026
-# Process ID         : 18944
+# Start of session at: Tue Jan 13 12:35:44 2026
+# Process ID         : 40208
 # Current directory  : C:/Users/necde/Documents/FPGA/exp_3/exp_3.runs/synth_1
 # Command line       : vivado.exe -log uart_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_top.tcl
 # Log file           : C:/Users/necde/Documents/FPGA/exp_3/exp_3.runs/synth_1/uart_top.vds
@@ -19,6 +19,6 @@
 # Host memory        : 16834 MB
 # Swap memory        : 37579 MB
 # Total Virtual      : 54414 MB
-# Available Virtual  : 39195 MB
+# Available Virtual  : 39449 MB
 #-----------------------------------------------------------
 source uart_top.tcl -notrace

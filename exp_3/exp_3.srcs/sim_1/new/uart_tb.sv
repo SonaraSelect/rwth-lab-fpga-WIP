@@ -37,8 +37,8 @@ module uart_tb;
     ) dut (
         .clk(clk),
         .arstn(arstn),
-        .axi_tdata(axi_tdata),
-        .axi_tvalid(axi_tvalid),
+//        .axi_tdata(axi_tdata),
+//        .axi_tvalid(axi_tvalid),
         .axi_tready(axi_tready),
         .uart_tx(uart_tx)
     );
@@ -50,8 +50,8 @@ module uart_tb;
 
     initial begin
         arstn = 0;
-        axi_tvalid = 0;
-        axi_tdata = 0;
+//        axi_tvalid = 0;
+//        axi_tdata = 0;
         #100;
         arstn = 1;
         #20;
@@ -59,12 +59,12 @@ module uart_tb;
         wait(axi_tready);
         
         @(posedge clk);
-        axi_tdata  <= 32'h44434241;
-        axi_tvalid <= 1;
+//        axi_tdata  <= 32'h44434241;
+//        axi_tvalid <= 1;
 
         wait(!axi_tready);
         @(posedge clk);
-        axi_tvalid <= 0;
+//        axi_tvalid <= 0;
 
         #10000; 
         
