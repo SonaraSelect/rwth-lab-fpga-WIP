@@ -28,3 +28,8 @@
     <Process Command="vivado.bat" Owner="necde" Host="DESKTOP-OS4G7S0" Pid="10572" HostCore="20" HostMemory="016834945024">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="necde" Host="DESKTOP-OS4G7S0" Pid="39544" HostCore="20" HostMemory="016834945024">
+    </Process>
+</ProcessHandle>
