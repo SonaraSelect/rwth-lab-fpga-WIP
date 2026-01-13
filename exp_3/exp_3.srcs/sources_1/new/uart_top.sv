@@ -27,12 +27,21 @@ module uart_top #(
     input  logic       clk,
     input  logic       arstn,
     
-    input  logic [AXI_WIDTH-1:0] axi_tdata,
-    input  logic                 axi_tvalid,
+//    input  logic [AXI_WIDTH-1:0] axi_tdata,
+//    input  logic                 axi_tvalid,
     output logic                 axi_tready,
 
     output logic       uart_tx
 );
+
+    // For demonstration purposes
+    logic [AXI_WIDTH-1:0] axi_tdata;
+    logic axi_tvalid;
+    
+    initial begin
+        axi_tdata = 32'hDEADBEAD;
+        axi_tready = 1;
+    end
 
     localparam NUM_BYTES = AXI_WIDTH / 8;
     localparam INDEX_WIDTH = (NUM_BYTES > 1) ? $clog2(NUM_BYTES) : 1;
