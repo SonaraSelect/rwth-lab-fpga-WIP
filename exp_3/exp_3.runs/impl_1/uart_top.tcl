@@ -108,6 +108,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 5
   set_param general.usePosixSpawnForFork 1
+  set_param synth.incrementalSynthesisCache C:/Users/necde/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2704-DESKTOP-OS4G7S0/incrSyn
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param runs.launchOptions { -jobs 19  }
   reset_param project.defaultXPMLibraries 

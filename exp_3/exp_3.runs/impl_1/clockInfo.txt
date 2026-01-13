@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.1
-| Date         : Tue Jan 13 12:14:18 2026
+| Date         : Tue Jan 13 12:29:25 2026
 | Host         : DESKTOP-OS4G7S0
 | Design       : checkpoint_uart_top
 | Device       : xc7a100t-csg324-1--
