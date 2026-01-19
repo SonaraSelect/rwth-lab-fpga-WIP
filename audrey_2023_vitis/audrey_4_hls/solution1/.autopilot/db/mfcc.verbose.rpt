@@ -1,0 +1,1340 @@
+
+
+================================================================
+== Vitis HLS Report for 'mfcc'
+================================================================
+* Date:           Mon Jan 19 23:15:31 2026
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        audrey_4_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.876 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      459|      459|  4.590 us|  4.590 us|  460|  460|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                           |                                |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                  Instance                 |             Module             |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_mfcc_Pipeline_task_3_fu_138            |mfcc_Pipeline_task_3            |      259|      259|  2.590 us|  2.590 us|  259|  259|       no|
+        |grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151  |mfcc_Pipeline_VITIS_LOOP_180_1  |       92|       92|  0.920 us|  0.920 us|   92|   92|       no|
+        |grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219  |mfcc_Pipeline_VITIS_LOOP_199_1  |       55|       55|  0.550 us|  0.550 us|   55|   55|       no|
+        |grp_mfcc_Pipeline_task_6_fu_231            |mfcc_Pipeline_task_6            |       44|       44|  0.440 us|  0.440 us|   44|   44|       no|
+        +-------------------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        1|   34|    2592|   3459|    -|
+|Memory           |       14|    -|      31|     21|    0|
+|Multiplexer      |        -|    -|       -|    285|    -|
+|Register         |        -|    -|      14|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       15|   34|    2637|   3767|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      270|  240|  126800|  63400|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        5|   14|       2|      5|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |                  Instance                 |             Module             | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151  |mfcc_Pipeline_VITIS_LOOP_180_1  |        0|  30|  1503|  1729|    0|
+    |grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219  |mfcc_Pipeline_VITIS_LOOP_199_1  |        1|   4|  1068|  1567|    0|
+    |grp_mfcc_Pipeline_task_3_fu_138            |mfcc_Pipeline_task_3            |        0|   0|    11|    72|    0|
+    |grp_mfcc_Pipeline_task_6_fu_231            |mfcc_Pipeline_task_6            |        0|   0|    10|    91|    0|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |Total                                      |                                |        1|  34|  2592|  3459|    0|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------+------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |       Memory      |               Module               | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |abs_spectrogram_U  |abs_spectrogram_RAM_1WNR_AUTO_1R1W  |       14|   0|   0|    0|   257|   16|     1|         4112|
+    |mel_filtered_U     |mel_filtered_RAM_AUTO_1R1W          |        0|  16|  11|    0|    42|   16|     1|          672|
+    |mfcc_1_U           |mfcc_1_RAM_AUTO_1R1W                |        0|  15|  10|    0|    42|   15|     1|          630|
+    +-------------------+------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total              |                                    |       14|  31|  21|    0|   341|   47|     3|         5414|
+    +-------------------+------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+    |                   Variable Name                   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_mfcc_Pipeline_task_6_fu_231_out_stream_TREADY  |       and|   0|  0|   2|           1|           1|
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                              |          |   0|  0|   2|           1|           1|
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |abs_spectrogram_address0       |  13|          3|    9|         27|
+    |abs_spectrogram_ce0            |  13|          3|    1|          3|
+    |abs_spectrogram_ce1            |   9|          2|    1|          2|
+    |abs_spectrogram_ce10           |   9|          2|    1|          2|
+    |abs_spectrogram_ce11           |   9|          2|    1|          2|
+    |abs_spectrogram_ce12           |   9|          2|    1|          2|
+    |abs_spectrogram_ce13           |   9|          2|    1|          2|
+    |abs_spectrogram_ce14           |   9|          2|    1|          2|
+    |abs_spectrogram_ce2            |   9|          2|    1|          2|
+    |abs_spectrogram_ce3            |   9|          2|    1|          2|
+    |abs_spectrogram_ce4            |   9|          2|    1|          2|
+    |abs_spectrogram_ce5            |   9|          2|    1|          2|
+    |abs_spectrogram_ce6            |   9|          2|    1|          2|
+    |abs_spectrogram_ce7            |   9|          2|    1|          2|
+    |abs_spectrogram_ce8            |   9|          2|    1|          2|
+    |abs_spectrogram_ce9            |   9|          2|    1|          2|
+    |abs_spectrogram_we0            |   9|          2|    1|          2|
+    |ap_NS_fsm                      |  45|         11|    1|         11|
+    |in_stream_TREADY_int_regslice  |   9|          2|    1|          2|
+    |mel_filtered_address0          |  13|          3|    6|         18|
+    |mel_filtered_ce0               |  13|          3|    1|          3|
+    |mel_filtered_we0               |   9|          2|    1|          2|
+    |mfcc_1_address0                |  13|          3|    6|         18|
+    |mfcc_1_ce0                     |  13|          3|    1|          3|
+    |mfcc_1_we0                     |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          | 285|         65|   43|        119|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |                          Name                          | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                               |  10|   0|   10|          0|
+    |grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151_ap_start_reg  |   1|   0|    1|          0|
+    |grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219_ap_start_reg  |   1|   0|    1|          0|
+    |grp_mfcc_Pipeline_task_3_fu_138_ap_start_reg            |   1|   0|    1|          0|
+    |grp_mfcc_Pipeline_task_6_fu_231_ap_start_reg            |   1|   0|    1|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                   |  14|   0|   14|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+--------------+---------------------+--------------+
+|     RTL Ports     | Dir | Bits|   Protocol   |    Source Object    |    C Type    |
++-------------------+-----+-----+--------------+---------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_none|                 mfcc|  return value|
+|ap_rst_n           |   in|    1|  ap_ctrl_none|                 mfcc|  return value|
+|in_stream_TDATA    |   in|   16|          axis|   in_stream_V_data_V|       pointer|
+|in_stream_TVALID   |   in|    1|          axis|   in_stream_V_last_V|       pointer|
+|in_stream_TREADY   |  out|    1|          axis|   in_stream_V_last_V|       pointer|
+|in_stream_TLAST    |   in|    1|          axis|   in_stream_V_last_V|       pointer|
+|in_stream_TKEEP    |   in|    2|          axis|   in_stream_V_keep_V|       pointer|
+|in_stream_TSTRB    |   in|    2|          axis|   in_stream_V_strb_V|       pointer|
+|out_stream_TDATA   |  out|   16|          axis|  out_stream_V_data_V|       pointer|
+|out_stream_TVALID  |  out|    1|          axis|  out_stream_V_last_V|       pointer|
+|out_stream_TREADY  |   in|    1|          axis|  out_stream_V_last_V|       pointer|
+|out_stream_TLAST   |  out|    1|          axis|  out_stream_V_last_V|       pointer|
+|out_stream_TKEEP   |  out|    2|          axis|  out_stream_V_keep_V|       pointer|
+|out_stream_TSTRB   |  out|    2|          axis|  out_stream_V_strb_V|       pointer|
++-------------------+-----+-----+--------------+---------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.25>
+ST_1 : Operation 11 [1/1] (3.25ns)   --->   "%abs_spectrogram = alloca i64 1" [audrey_4_hls/mfcc.cpp:41]   --->   Operation 11 'alloca' 'abs_spectrogram' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 12 [1/1] (2.15ns)   --->   "%mel_filtered = alloca i64 1" [audrey_4_hls/mfcc.cpp:63]   --->   Operation 12 'alloca' 'mel_filtered' <Predicate = true> <Delay = 2.15>
+ST_1 : Operation 13 [1/1] (2.15ns)   --->   "%mfcc_1 = alloca i64 1" [audrey_4_hls/mfcc.cpp:71]   --->   Operation 13 'alloca' 'mfcc_1' <Predicate = true> <Delay = 2.15>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 14 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 15 [2/2] (3.25ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_task_3, i16 %in_stream_V_data_V, i2 %in_stream_V_keep_V, i2 %in_stream_V_strb_V, i1 %in_stream_V_last_V, i16 %abs_spectrogram"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_task_3, i16 %in_stream_V_data_V, i2 %in_stream_V_keep_V, i2 %in_stream_V_strb_V, i1 %in_stream_V_last_V, i16 %abs_spectrogram"   --->   Operation 16 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%empty_31 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_VITIS_LOOP_180_1, i16 %abs_spectrogram, i16 %mel_filtered, i8 %first_ind, i8 %mel_filterbank_0, i8 %mel_filterbank_1, i8 %mel_filterbank_2, i8 %mel_filterbank_3, i8 %mel_filterbank_4, i8 %mel_filterbank_5, i8 %mel_filterbank_6, i8 %mel_filterbank_7, i8 %mel_filterbank_8, i8 %mel_filterbank_9, i8 %mel_filterbank_10, i8 %mel_filterbank_11, i8 %mel_filterbank_12, i8 %mel_filterbank_13, i8 %mel_filterbank_14, i8 %mel_filterbank_15, i8 %mel_filterbank_16, i8 %mel_filterbank_17, i8 %mel_filterbank_18, i8 %mel_filterbank_19, i8 %mel_filterbank_20, i8 %mel_filterbank_21, i8 %mel_filterbank_22, i7 %mel_filterbank_23, i7 %mel_filterbank_24, i7 %mel_filterbank_25, i7 %mel_filterbank_26, i6 %mel_filterbank_27, i6 %mel_filterbank_28, i5 %mel_filterbank_29"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_VITIS_LOOP_180_1, i16 %abs_spectrogram, i16 %mel_filtered, i8 %first_ind, i8 %mel_filterbank_0, i8 %mel_filterbank_1, i8 %mel_filterbank_2, i8 %mel_filterbank_3, i8 %mel_filterbank_4, i8 %mel_filterbank_5, i8 %mel_filterbank_6, i8 %mel_filterbank_7, i8 %mel_filterbank_8, i8 %mel_filterbank_9, i8 %mel_filterbank_10, i8 %mel_filterbank_11, i8 %mel_filterbank_12, i8 %mel_filterbank_13, i8 %mel_filterbank_14, i8 %mel_filterbank_15, i8 %mel_filterbank_16, i8 %mel_filterbank_17, i8 %mel_filterbank_18, i8 %mel_filterbank_19, i8 %mel_filterbank_20, i8 %mel_filterbank_21, i8 %mel_filterbank_22, i7 %mel_filterbank_23, i7 %mel_filterbank_24, i7 %mel_filterbank_25, i7 %mel_filterbank_26, i6 %mel_filterbank_27, i6 %mel_filterbank_28, i5 %mel_filterbank_29"   --->   Operation 19 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_VITIS_LOOP_199_1, i16 %mel_filtered, i15 %mfcc_1, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 21 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_VITIS_LOOP_199_1, i16 %mel_filtered, i15 %mfcc_1, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%empty_32 = wait i32 @_ssdm_op_Wait"   --->   Operation 22 'wait' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 23 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_task_6, i15 %mfcc_1, i16 %out_stream_V_data_V, i2 %out_stream_V_keep_V, i2 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 23 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 2.15>
+ST_9 : Operation 24 [1/2] (2.15ns)   --->   "%call_ln0 = call void @mfcc_Pipeline_task_6, i15 %mfcc_1, i16 %out_stream_V_data_V, i2 %out_stream_V_keep_V, i2 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 24 'call' 'call_ln0' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 25 [1/1] (0.00ns)   --->   "%spectopmodule_ln17 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty" [audrey_4_hls/mfcc.cpp:17]   --->   Operation 25 'spectopmodule' 'spectopmodule_ln17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln17 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_9, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0" [audrey_4_hls/mfcc.cpp:17]   --->   Operation 26 'specinterface' 'specinterface_ln17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %in_stream_V_data_V, i2 %in_stream_V_keep_V, i2 %in_stream_V_strb_V, i1 %in_stream_V_last_V, void @empty_5, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %in_stream_V_data_V"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %in_stream_V_keep_V"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %in_stream_V_strb_V"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %in_stream_V_last_V"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %out_stream_V_data_V, i2 %out_stream_V_keep_V, i2 %out_stream_V_strb_V, i1 %out_stream_V_last_V, void @empty_5, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %out_stream_V_data_V"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %out_stream_V_keep_V"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %out_stream_V_strb_V"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %out_stream_V_last_V"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln42 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %out_stream_V_data_V, i2 %out_stream_V_keep_V, i2 %out_stream_V_strb_V, i1 0, i1 %out_stream_V_last_V, i1 0, i1 0, void @empty_2" [audrey_4_hls/mfcc.cpp:42]   --->   Operation 37 'specaxissidechannel' 'specaxissidechannel_ln42' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln42 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %in_stream_V_data_V, i2 %in_stream_V_keep_V, i2 %in_stream_V_strb_V, i1 0, i1 %in_stream_V_last_V, i1 0, i1 0, void @empty_3" [audrey_4_hls/mfcc.cpp:42]   --->   Operation 38 'specaxissidechannel' 'specaxissidechannel_ln42' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%ret_ln121 = ret" [audrey_4_hls/mfcc.cpp:121]   --->   Operation 39 'ret' 'ret_ln121' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_none:ce=0
+Port [ in_stream_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ in_stream_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ in_stream_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ in_stream_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_stream_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_stream_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_stream_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_stream_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ first_ind]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_4]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_5]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_6]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_7]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_8]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_9]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_10]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_11]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_12]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_13]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_14]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_15]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_16]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_17]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_18]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_19]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_20]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_21]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_22]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_23]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_24]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_25]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_26]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_27]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_28]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mel_filterbank_29]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ log_apfixed_reduce_log_inverse_lut_table_array]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+abs_spectrogram          (alloca             ) [ 00111100000]
+mel_filtered             (alloca             ) [ 00111111000]
+mfcc_1                   (alloca             ) [ 00111111110]
+empty                    (wait               ) [ 00000000000]
+call_ln0                 (call               ) [ 00000000000]
+empty_31                 (wait               ) [ 00000000000]
+call_ln0                 (call               ) [ 00000000000]
+call_ln0                 (call               ) [ 00000000000]
+empty_32                 (wait               ) [ 00000000000]
+call_ln0                 (call               ) [ 00000000000]
+spectopmodule_ln17       (spectopmodule      ) [ 00000000000]
+specinterface_ln17       (specinterface      ) [ 00000000000]
+specinterface_ln0        (specinterface      ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specinterface_ln0        (specinterface      ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap        ) [ 00000000000]
+specaxissidechannel_ln42 (specaxissidechannel) [ 00000000000]
+specaxissidechannel_ln42 (specaxissidechannel) [ 00000000000]
+ret_ln121                (ret                ) [ 00000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="in_stream_V_data_V">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in_stream_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="in_stream_V_keep_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in_stream_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="in_stream_V_strb_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in_stream_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="in_stream_V_last_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in_stream_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="out_stream_V_data_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_stream_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="out_stream_V_keep_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_stream_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="out_stream_V_strb_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_stream_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="out_stream_V_last_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_stream_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="first_ind">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="first_ind"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="mel_filterbank_0">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="mel_filterbank_1">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="mel_filterbank_2">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="mel_filterbank_3">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="mel_filterbank_4">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="mel_filterbank_5">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_5"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="mel_filterbank_6">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_6"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="mel_filterbank_7">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_7"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="mel_filterbank_8">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_8"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="mel_filterbank_9">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_9"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1000" name="mel_filterbank_10">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_10"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1000" name="mel_filterbank_11">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_11"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1000" name="mel_filterbank_12">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_12"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1000" name="mel_filterbank_13">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_13"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1000" name="mel_filterbank_14">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_14"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1000" name="mel_filterbank_15">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_15"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1000" name="mel_filterbank_16">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_16"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1000" name="mel_filterbank_17">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_17"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1000" name="mel_filterbank_18">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_18"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1000" name="mel_filterbank_19">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_19"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1000" name="mel_filterbank_20">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_20"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1000" name="mel_filterbank_21">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_21"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1000" name="mel_filterbank_22">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_22"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1000" name="mel_filterbank_23">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_23"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1000" name="mel_filterbank_24">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_24"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1000" name="mel_filterbank_25">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_25"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1000" name="mel_filterbank_26">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_26"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1000" name="mel_filterbank_27">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_27"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1000" name="mel_filterbank_28">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_28"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1000" name="mel_filterbank_29">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mel_filterbank_29"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1000" name="log_apfixed_reduce_log_inverse_lut_table_array">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="log_apfixed_reduce_log_inverse_lut_table_array"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1000" name="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1000" name="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1001" name="const_84">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1001" name="const_86">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1001" name="const_88">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mfcc_Pipeline_task_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1001" name="const_90">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mfcc_Pipeline_VITIS_LOOP_180_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1001" name="const_92">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mfcc_Pipeline_VITIS_LOOP_199_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1001" name="const_94">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mfcc_Pipeline_task_6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1001" name="const_96">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1001" name="const_98">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1001" name="const_100">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1001" name="const_102">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1001" name="const_104">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_9"/></StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1001" name="const_106">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1001" name="const_108">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1001" name="const_110">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1001" name="const_112">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1001" name="const_118">
+<pin_list>
+<pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecAXISSideChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="120" class="1001" name="const_120">
+<pin_list>
+<pin id="121" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="122" class="1001" name="const_122">
+<pin_list>
+<pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="124" class="1001" name="const_124">
+<pin_list>
+<pin id="125" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="126" class="1004" name="abs_spectrogram_alloca_fu_126">
+<pin_list>
+<pin id="127" dir="0" index="0" bw="1" slack="0"/>
+<pin id="128" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="abs_spectrogram/1 "/>
+</bind>
+</comp>
+
+<comp id="130" class="1004" name="mel_filtered_alloca_fu_130">
+<pin_list>
+<pin id="131" dir="0" index="0" bw="1" slack="0"/>
+<pin id="132" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="mel_filtered/1 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="mfcc_1_alloca_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="1" slack="0"/>
+<pin id="136" dir="1" index="1" bw="15" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="mfcc_1/1 "/>
+</bind>
+</comp>
+
+<comp id="138" class="1004" name="grp_mfcc_Pipeline_task_3_fu_138">
+<pin_list>
+<pin id="139" dir="0" index="0" bw="0" slack="0"/>
+<pin id="140" dir="0" index="1" bw="16" slack="0"/>
+<pin id="141" dir="0" index="2" bw="2" slack="0"/>
+<pin id="142" dir="0" index="3" bw="2" slack="0"/>
+<pin id="143" dir="0" index="4" bw="1" slack="0"/>
+<pin id="144" dir="0" index="5" bw="16" slack="2147483647"/>
+<pin id="145" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/2 "/>
+</bind>
+</comp>
+
+<comp id="151" class="1004" name="grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151">
+<pin_list>
+<pin id="152" dir="0" index="0" bw="0" slack="0"/>
+<pin id="153" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="154" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="155" dir="0" index="3" bw="8" slack="0"/>
+<pin id="156" dir="0" index="4" bw="8" slack="0"/>
+<pin id="157" dir="0" index="5" bw="8" slack="0"/>
+<pin id="158" dir="0" index="6" bw="8" slack="0"/>
+<pin id="159" dir="0" index="7" bw="8" slack="0"/>
+<pin id="160" dir="0" index="8" bw="8" slack="0"/>
+<pin id="161" dir="0" index="9" bw="8" slack="0"/>
+<pin id="162" dir="0" index="10" bw="8" slack="0"/>
+<pin id="163" dir="0" index="11" bw="8" slack="0"/>
+<pin id="164" dir="0" index="12" bw="8" slack="0"/>
+<pin id="165" dir="0" index="13" bw="8" slack="0"/>
+<pin id="166" dir="0" index="14" bw="8" slack="0"/>
+<pin id="167" dir="0" index="15" bw="8" slack="0"/>
+<pin id="168" dir="0" index="16" bw="8" slack="0"/>
+<pin id="169" dir="0" index="17" bw="8" slack="0"/>
+<pin id="170" dir="0" index="18" bw="8" slack="0"/>
+<pin id="171" dir="0" index="19" bw="8" slack="0"/>
+<pin id="172" dir="0" index="20" bw="8" slack="0"/>
+<pin id="173" dir="0" index="21" bw="8" slack="0"/>
+<pin id="174" dir="0" index="22" bw="8" slack="0"/>
+<pin id="175" dir="0" index="23" bw="8" slack="0"/>
+<pin id="176" dir="0" index="24" bw="8" slack="0"/>
+<pin id="177" dir="0" index="25" bw="8" slack="0"/>
+<pin id="178" dir="0" index="26" bw="8" slack="0"/>
+<pin id="179" dir="0" index="27" bw="7" slack="0"/>
+<pin id="180" dir="0" index="28" bw="7" slack="0"/>
+<pin id="181" dir="0" index="29" bw="7" slack="0"/>
+<pin id="182" dir="0" index="30" bw="7" slack="0"/>
+<pin id="183" dir="0" index="31" bw="6" slack="0"/>
+<pin id="184" dir="0" index="32" bw="6" slack="0"/>
+<pin id="185" dir="0" index="33" bw="5" slack="0"/>
+<pin id="186" dir="1" index="34" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/4 "/>
+</bind>
+</comp>
+
+<comp id="219" class="1004" name="grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219">
+<pin_list>
+<pin id="220" dir="0" index="0" bw="0" slack="0"/>
+<pin id="221" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="222" dir="0" index="2" bw="15" slack="2147483647"/>
+<pin id="223" dir="0" index="3" bw="6" slack="0"/>
+<pin id="224" dir="0" index="4" bw="22" slack="0"/>
+<pin id="225" dir="0" index="5" bw="18" slack="0"/>
+<pin id="226" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/6 "/>
+</bind>
+</comp>
+
+<comp id="231" class="1004" name="grp_mfcc_Pipeline_task_6_fu_231">
+<pin_list>
+<pin id="232" dir="0" index="0" bw="0" slack="0"/>
+<pin id="233" dir="0" index="1" bw="15" slack="2147483647"/>
+<pin id="234" dir="0" index="2" bw="16" slack="0"/>
+<pin id="235" dir="0" index="3" bw="2" slack="0"/>
+<pin id="236" dir="0" index="4" bw="2" slack="0"/>
+<pin id="237" dir="0" index="5" bw="1" slack="0"/>
+<pin id="238" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/8 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="129"><net_src comp="84" pin="0"/><net_sink comp="126" pin=0"/></net>
+
+<net id="133"><net_src comp="84" pin="0"/><net_sink comp="130" pin=0"/></net>
+
+<net id="137"><net_src comp="84" pin="0"/><net_sink comp="134" pin=0"/></net>
+
+<net id="146"><net_src comp="88" pin="0"/><net_sink comp="138" pin=0"/></net>
+
+<net id="147"><net_src comp="0" pin="0"/><net_sink comp="138" pin=1"/></net>
+
+<net id="148"><net_src comp="2" pin="0"/><net_sink comp="138" pin=2"/></net>
+
+<net id="149"><net_src comp="4" pin="0"/><net_sink comp="138" pin=3"/></net>
+
+<net id="150"><net_src comp="6" pin="0"/><net_sink comp="138" pin=4"/></net>
+
+<net id="187"><net_src comp="90" pin="0"/><net_sink comp="151" pin=0"/></net>
+
+<net id="188"><net_src comp="16" pin="0"/><net_sink comp="151" pin=3"/></net>
+
+<net id="189"><net_src comp="18" pin="0"/><net_sink comp="151" pin=4"/></net>
+
+<net id="190"><net_src comp="20" pin="0"/><net_sink comp="151" pin=5"/></net>
+
+<net id="191"><net_src comp="22" pin="0"/><net_sink comp="151" pin=6"/></net>
+
+<net id="192"><net_src comp="24" pin="0"/><net_sink comp="151" pin=7"/></net>
+
+<net id="193"><net_src comp="26" pin="0"/><net_sink comp="151" pin=8"/></net>
+
+<net id="194"><net_src comp="28" pin="0"/><net_sink comp="151" pin=9"/></net>
+
+<net id="195"><net_src comp="30" pin="0"/><net_sink comp="151" pin=10"/></net>
+
+<net id="196"><net_src comp="32" pin="0"/><net_sink comp="151" pin=11"/></net>
+
+<net id="197"><net_src comp="34" pin="0"/><net_sink comp="151" pin=12"/></net>
+
+<net id="198"><net_src comp="36" pin="0"/><net_sink comp="151" pin=13"/></net>
+
+<net id="199"><net_src comp="38" pin="0"/><net_sink comp="151" pin=14"/></net>
+
+<net id="200"><net_src comp="40" pin="0"/><net_sink comp="151" pin=15"/></net>
+
+<net id="201"><net_src comp="42" pin="0"/><net_sink comp="151" pin=16"/></net>
+
+<net id="202"><net_src comp="44" pin="0"/><net_sink comp="151" pin=17"/></net>
+
+<net id="203"><net_src comp="46" pin="0"/><net_sink comp="151" pin=18"/></net>
+
+<net id="204"><net_src comp="48" pin="0"/><net_sink comp="151" pin=19"/></net>
+
+<net id="205"><net_src comp="50" pin="0"/><net_sink comp="151" pin=20"/></net>
+
+<net id="206"><net_src comp="52" pin="0"/><net_sink comp="151" pin=21"/></net>
+
+<net id="207"><net_src comp="54" pin="0"/><net_sink comp="151" pin=22"/></net>
+
+<net id="208"><net_src comp="56" pin="0"/><net_sink comp="151" pin=23"/></net>
+
+<net id="209"><net_src comp="58" pin="0"/><net_sink comp="151" pin=24"/></net>
+
+<net id="210"><net_src comp="60" pin="0"/><net_sink comp="151" pin=25"/></net>
+
+<net id="211"><net_src comp="62" pin="0"/><net_sink comp="151" pin=26"/></net>
+
+<net id="212"><net_src comp="64" pin="0"/><net_sink comp="151" pin=27"/></net>
+
+<net id="213"><net_src comp="66" pin="0"/><net_sink comp="151" pin=28"/></net>
+
+<net id="214"><net_src comp="68" pin="0"/><net_sink comp="151" pin=29"/></net>
+
+<net id="215"><net_src comp="70" pin="0"/><net_sink comp="151" pin=30"/></net>
+
+<net id="216"><net_src comp="72" pin="0"/><net_sink comp="151" pin=31"/></net>
+
+<net id="217"><net_src comp="74" pin="0"/><net_sink comp="151" pin=32"/></net>
+
+<net id="218"><net_src comp="76" pin="0"/><net_sink comp="151" pin=33"/></net>
+
+<net id="227"><net_src comp="92" pin="0"/><net_sink comp="219" pin=0"/></net>
+
+<net id="228"><net_src comp="78" pin="0"/><net_sink comp="219" pin=3"/></net>
+
+<net id="229"><net_src comp="80" pin="0"/><net_sink comp="219" pin=4"/></net>
+
+<net id="230"><net_src comp="82" pin="0"/><net_sink comp="219" pin=5"/></net>
+
+<net id="239"><net_src comp="94" pin="0"/><net_sink comp="231" pin=0"/></net>
+
+<net id="240"><net_src comp="8" pin="0"/><net_sink comp="231" pin=2"/></net>
+
+<net id="241"><net_src comp="10" pin="0"/><net_sink comp="231" pin=3"/></net>
+
+<net id="242"><net_src comp="12" pin="0"/><net_sink comp="231" pin=4"/></net>
+
+<net id="243"><net_src comp="14" pin="0"/><net_sink comp="231" pin=5"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: out_stream_V_data_V | {8 9 }
+	Port: out_stream_V_keep_V | {8 9 }
+	Port: out_stream_V_strb_V | {8 9 }
+	Port: out_stream_V_last_V | {8 9 }
+ - Input state : 
+	Port: mfcc : in_stream_V_data_V | {2 3 }
+	Port: mfcc : in_stream_V_keep_V | {2 3 }
+	Port: mfcc : in_stream_V_strb_V | {2 3 }
+	Port: mfcc : in_stream_V_last_V | {2 3 }
+	Port: mfcc : first_ind | {4 5 }
+	Port: mfcc : mel_filterbank_0 | {4 5 }
+	Port: mfcc : mel_filterbank_1 | {4 5 }
+	Port: mfcc : mel_filterbank_2 | {4 5 }
+	Port: mfcc : mel_filterbank_3 | {4 5 }
+	Port: mfcc : mel_filterbank_4 | {4 5 }
+	Port: mfcc : mel_filterbank_5 | {4 5 }
+	Port: mfcc : mel_filterbank_6 | {4 5 }
+	Port: mfcc : mel_filterbank_7 | {4 5 }
+	Port: mfcc : mel_filterbank_8 | {4 5 }
+	Port: mfcc : mel_filterbank_9 | {4 5 }
+	Port: mfcc : mel_filterbank_10 | {4 5 }
+	Port: mfcc : mel_filterbank_11 | {4 5 }
+	Port: mfcc : mel_filterbank_12 | {4 5 }
+	Port: mfcc : mel_filterbank_13 | {4 5 }
+	Port: mfcc : mel_filterbank_14 | {4 5 }
+	Port: mfcc : mel_filterbank_15 | {4 5 }
+	Port: mfcc : mel_filterbank_16 | {4 5 }
+	Port: mfcc : mel_filterbank_17 | {4 5 }
+	Port: mfcc : mel_filterbank_18 | {4 5 }
+	Port: mfcc : mel_filterbank_19 | {4 5 }
+	Port: mfcc : mel_filterbank_20 | {4 5 }
+	Port: mfcc : mel_filterbank_21 | {4 5 }
+	Port: mfcc : mel_filterbank_22 | {4 5 }
+	Port: mfcc : mel_filterbank_23 | {4 5 }
+	Port: mfcc : mel_filterbank_24 | {4 5 }
+	Port: mfcc : mel_filterbank_25 | {4 5 }
+	Port: mfcc : mel_filterbank_26 | {4 5 }
+	Port: mfcc : mel_filterbank_27 | {4 5 }
+	Port: mfcc : mel_filterbank_28 | {4 5 }
+	Port: mfcc : mel_filterbank_29 | {4 5 }
+	Port: mfcc : log_apfixed_reduce_log_inverse_lut_table_array | {6 7 }
+	Port: mfcc : log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array | {6 7 }
+	Port: mfcc : log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array | {6 7 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------------------|---------|---------|---------|---------|
+| Operation|              Functional Unit              |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|          |      grp_mfcc_Pipeline_task_3_fu_138      |    0    |    0    |    9    |    32   |
+|   call   | grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151 |    30   | 75.0329 |   1626  |   1700  |
+|          | grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219 |    4    | 13.3664 |   1064  |   1173  |
+|          |      grp_mfcc_Pipeline_task_6_fu_231      |    0    |   1.61  |    13   |    51   |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                           |    34   | 90.0093 |   2712  |   2956  |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+
+Memories:
++-------------------------------------------------------+--------+--------+--------+--------+
+|                                                       |  BRAM  |   FF   |   LUT  |  URAM  |
++-------------------------------------------------------+--------+--------+--------+--------+
+|                    abs_spectrogram                    |   14   |    0   |    0   |    0   |
+|                       first_ind                       |    0   |    8   |    6   |    -   |
+|log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array|    1   |    0   |    0   |    -   |
+|     log_apfixed_reduce_log_inverse_lut_table_array    |    0   |    6   |    6   |    -   |
+| log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array|    0   |   18   |    5   |    -   |
+|                    mel_filterbank_0                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_1                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_10                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_11                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_12                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_13                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_14                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_15                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_16                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_17                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_18                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_19                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_2                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_20                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_21                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_22                   |    0   |    8   |    6   |    -   |
+|                   mel_filterbank_23                   |    0   |    7   |    5   |    -   |
+|                   mel_filterbank_24                   |    0   |    7   |    5   |    -   |
+|                   mel_filterbank_25                   |    0   |    7   |    5   |    -   |
+|                   mel_filterbank_26                   |    0   |    7   |    5   |    -   |
+|                   mel_filterbank_27                   |    0   |    6   |    4   |    -   |
+|                   mel_filterbank_28                   |    0   |    6   |    4   |    -   |
+|                   mel_filterbank_29                   |    0   |    5   |    4   |    -   |
+|                    mel_filterbank_3                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_4                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_5                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_6                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_7                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_8                   |    0   |    8   |    6   |    -   |
+|                    mel_filterbank_9                   |    0   |    8   |    6   |    -   |
+|                      mel_filtered                     |    0   |   16   |   11   |    0   |
+|                         mfcc_1                        |    0   |   15   |   10   |    0   |
++-------------------------------------------------------+--------+--------+--------+--------+
+|                         Total                         |   15   |   292  |   208  |    0   |
++-------------------------------------------------------+--------+--------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    -   |   34   |   90   |  2712  |  2956  |    -   |
+|   Memory  |   15   |    -   |    -   |   292  |   208  |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   15   |   34   |   90   |  3004  |  3164  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mel_filterbank.h" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\mel_filterbank.h"/>
+    <originFiles name="mfcc.cpp" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\mfcc.cpp"/>
+    <originFiles name="mfcc.h" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\mfcc.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.cpp" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

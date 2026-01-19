@@ -1,0 +1,105 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                   Line: 729, Column: 31 }
+Function:        _ZN18log_apfixed_reduce3logILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_729_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                   Line: 500, Column: 0 }
+Function:        _ZN18log_apfixed_reduce3logILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_729_1
+  - String:          ''' ('
+  - LoopLoc:         'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:729:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'log_apfixed_reduce::log<17, 9>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '17'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                   Line: 249, Column: 0 }
+Function:        _ZN18log_apfixed_reduce10log_traitsILi2EE15range_reductionILi24EEE9ap_ufixedILi15ELin7EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi29ELi7ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void log_apfixed_reduce::range_reduce<ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 24, 15>(ap_ufixed<24, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<15, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                       Line: 171, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                       Line: 249, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                   Line: 500, Column: 0 }
+Function:        _ZN18log_apfixed_reduce3logILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                       Line: 249, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                       Line: 500, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 198, Column: 0 }
+Function:        _Z13feature_2_logP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> hls::log<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1207, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'feature_2_log(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 198, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'feature_1_mel(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 179, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'feature_2_log(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 198, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...

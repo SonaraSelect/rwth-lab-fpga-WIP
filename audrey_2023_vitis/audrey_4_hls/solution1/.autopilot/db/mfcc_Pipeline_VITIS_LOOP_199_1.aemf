@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1768860931347">
+  <ports id="1" name="mel_filtered" type="PortType" coreName="RAM" coreId="1702043936" bitwidth="16" iftype="IfTypeRegister" arraysize="42">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="mfcc_1" type="PortType" coreName="RAM" coreId="979906164" bitwidth="15" direction="DirOut" iftype="IfTypeRegister" arraysize="42">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="36" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="37" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="38" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="41" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="45" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="46" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="47" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="48" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="51" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="54" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="60" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@ports.1"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="67" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="68" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="69" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="70" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="91" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="92" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="93" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="95" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="96" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="97" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <blocks id="9" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.body.i96</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="m_1" originalName="m" coreId="796159852" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="m_1_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="br_ln0" coreId="1850303858" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.body.i96</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="30" name="for.inc33.preheader.exitStub" type="BlockType">
+    <controlInputObjs>for.body.i96</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln0" coreId="0" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="135" pipe_depth="13" RegionName="VITIS_LOOP_199_1">
+    <basic_blocks id="15" name="for.body.i96" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.body.i96.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc33.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.body.i96.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="m" lineNumber="199" originalName="m" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="796159852" contextFuncName="feature_2_log" bitwidth="6" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="199" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="icmp_ln199" lineNumber="199" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="icmp_ln199_fu_90_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="feature_2_log" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.94" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="199" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="add_ln199" lineNumber="199" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="add_ln199_fu_96_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="feature_2_log" bitwidth="6" opcode="add" m_display="0" m_delay="1.94" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="199" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln199" lineNumber="199" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="991" contextFuncName="feature_2_log" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="199" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.body.i96.split</controlInputObjs>
+        <controlInputObjs>for.inc33.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="audrey_4_hls/mfcc.cpp">
+        <validLinenumbers>199</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="28" name="for.body.i96.split" type="BlockType">
+      <controlInputObjs>for.body.i96</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body.i96</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="m_1_cast" lineNumber="199" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="m_1_cast_fu_102_p1" coreId="0" contextFuncName="feature_2_log" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="199" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="mel_filtered_addr" lineNumber="201" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="1021" contextFuncName="feature_2_log" bitwidth="6" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="201" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>mel_filtered</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="mel_filtered_load" lineNumber="201" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="feature_2_log" bitwidth="16" opcode="load" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="201" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="sext_ln201" lineNumber="201" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="sext_ln201_fu_112_p1" coreId="341" contextFuncName="feature_2_log" bitwidth="17" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="201" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="x" lineNumber="201" originalName="x" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="x_fu_116_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="feature_2_log" bitwidth="17" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.14" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="201" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="trunc_ln" lineNumber="201" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="grp_log_17_9_s_fu_70" coreId="391" contextFuncName="feature_2_log" bitwidth="15" opcode="call" nodeLabel="2.0" nodeLatency="10" m_display="0" m_delay="6.56" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="201" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>log_17_9_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="mfcc_1_addr" lineNumber="201" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="0" contextFuncName="feature_2_log" bitwidth="6" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="201" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>mfcc_1</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="mfcc_1_addr_write_ln201" lineNumber="201" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="feature_2_log" opcode="store" nodeLabel="12.0" m_display="0" m_delay="2.15" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="201" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="m_1_write_ln199" lineNumber="199" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="0" contextFuncName="feature_2_log" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="199" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln199" lineNumber="199" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="878653747" contextFuncName="feature_2_log" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="199" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="feature_2_log"/>
+        <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="72" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
+        <controlInputObjs>for.body.i96</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="audrey_4_hls/mfcc.cpp">
+        <validLinenumbers>199</validLinenumbers>
+        <validLinenumbers>201</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <regnodes realName="mel_filtered_addr_reg_138">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="x_reg_143">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln199_reg_129">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="m_1_reg_122">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="m_1_cast_reg_133">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln199_fu_90">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mfcc_1_addr_gep_fu_57">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_1_cast_fu_102">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln199_fu_96">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_fu_116">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_1_fu_40">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln201_fu_112">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mel_filtered_addr_gep_fu_44">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_log_17_9_s_fu_70">
+    <nodeIds>23</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="m_load_fu_87">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_82">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln199_store_fu_107">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array" portID="100">
+    <nodeIds>23</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="log_apfixed_reduce_log_inverse_lut_table_array" portID="100">
+    <nodeIds>23</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" portID="100">
+    <nodeIds>23</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="mel_filtered">
+    <nodeIds>20</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="mfcc_1">
+    <nodeIds>25</nodeIds>
+  </memoryPorts>
+  <ioPorts name="mel_filtered(p0)">
+    <contents name="load">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mfcc_1(p0)">
+    <contents name="store">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="2" latency="2"/>
+      <operations id="26" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="20" stage="1" latency="2"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="23" stage="11" latency="11"/>
+    </states>
+    <states id="4">
+      <operations id="23" stage="10" latency="11"/>
+    </states>
+    <states id="5">
+      <operations id="23" stage="9" latency="11"/>
+    </states>
+    <states id="6">
+      <operations id="23" stage="8" latency="11"/>
+    </states>
+    <states id="7">
+      <operations id="23" stage="7" latency="11"/>
+    </states>
+    <states id="8">
+      <operations id="23" stage="6" latency="11"/>
+    </states>
+    <states id="9">
+      <operations id="23" stage="5" latency="11"/>
+    </states>
+    <states id="10">
+      <operations id="23" stage="4" latency="11"/>
+    </states>
+    <states id="11">
+      <operations id="23" stage="3" latency="11"/>
+    </states>
+    <states id="12">
+      <operations id="23" stage="2" latency="11"/>
+      <operations id="29" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="11"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="mfcc_Pipeline_VITIS_LOOP_199_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="55" mMaxLatency="55">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>9</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_199_1" mII="1" mDepth="13" mMinTripCount="42" mMaxTripCount="42" mMinLatency="53" mMaxLatency="53" mType="1">
+      <basicBlocks>15</basicBlocks>
+      <basicBlocks>28</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>30</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

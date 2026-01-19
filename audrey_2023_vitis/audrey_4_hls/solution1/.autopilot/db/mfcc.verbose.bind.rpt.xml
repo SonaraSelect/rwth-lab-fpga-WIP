@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'mfcc'" level="0">
+<item name = "Date">Mon Jan 19 23:15:28 2026
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">audrey_4_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100t-csg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.876 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">459, 459, 4.590 us, 4.590 us, 460, 460, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_mfcc_Pipeline_task_3_fu_138">mfcc_Pipeline_task_3, 259, 259, 2.590 us, 2.590 us, 259, 259, no</column>
+<column name="grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151">mfcc_Pipeline_VITIS_LOOP_180_1, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
+<column name="grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219">mfcc_Pipeline_VITIS_LOOP_199_1, 55, 55, 0.550 us, 0.550 us, 55, 55, no</column>
+<column name="grp_mfcc_Pipeline_task_6_fu_231">mfcc_Pipeline_task_6, 44, 44, 0.440 us, 0.440 us, 44, 44, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

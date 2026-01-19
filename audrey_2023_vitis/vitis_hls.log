@@ -1,0 +1,51 @@
+NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'the5t' on host 'audrey' (Windows NT_amd64 version 6.2) on Mon Jan 19 23:21:34 +0100 2026
+INFO: [HLS 200-10] In directory 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis'
+Sourcing Tcl script 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project audrey_4_hls 
+INFO: [HLS 200-10] Opening project 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls'.
+INFO: [HLS 200-1510] Running: set_top mfcc 
+INFO: [HLS 200-1510] Running: add_files audrey_4_hls/mel_filterbank.h 
+INFO: [HLS 200-10] Adding design file 'audrey_4_hls/mel_filterbank.h' to the project
+INFO: [HLS 200-1510] Running: add_files audrey_4_hls/mfcc.cpp 
+INFO: [HLS 200-10] Adding design file 'audrey_4_hls/mfcc.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files audrey_4_hls/mfcc.h 
+INFO: [HLS 200-10] Adding design file 'audrey_4_hls/mfcc.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb audrey_4_hls/tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'audrey_4_hls/tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../tb.cpp in debug mode
+csim.mk:78: recipe for target 'obj/tb.o' failed
+../../../tb.cpp:8:25: fatal error: ../src/mfcc.h: No such file or directory
+ #include "../src/mfcc.h"
+                         ^
+compilation terminated.
+make: *** [obj/tb.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.291 seconds; current allocated memory: 0.691 MB.
+4
+    while executing
+"source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/csim.tcl"
+    invoked from within
+"hls::main C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 5.833 seconds; peak allocated memory: 1.030 GB.

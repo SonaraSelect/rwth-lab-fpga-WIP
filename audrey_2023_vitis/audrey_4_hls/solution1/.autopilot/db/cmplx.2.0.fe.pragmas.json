@@ -1,0 +1,95 @@
+{
+  "0": {
+    "basicblocks": 15,
+    "calls": "5 1",
+    "file": "mfcc.cpp",
+    "fileloc": 17,
+    "instructions": 94,
+    "loads": {
+      "L": 2
+    },
+    "name": "mfcc",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 1136
+  },
+  "1": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "mfcc.cpp",
+    "fileloc": 198,
+    "instructions": 68,
+    "loads": {
+      "L": 9
+    },
+    "name": "feature_2_log",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 964
+  },
+  "2": {
+    "basicblocks": 16,
+    "calls": "4",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 249,
+    "instructions": 45,
+    "loads": {
+      "L": 7
+    },
+    "name": "range_reduction<24>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 187
+  },
+  "3": {
+    "basicblocks": 231,
+    "calls": "2",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 499,
+    "instructions": 682,
+    "loads": {
+      "G": 2,
+      "L": 10
+    },
+    "name": "log<17, 9>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 869
+  },
+  "4": {
+    "basicblocks": 63,
+    "calls": "",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 170,
+    "instructions": 142,
+    "loads": {
+      "G": 1,
+      "L": 10
+    },
+    "name": "range_reduce<ap_fixed<29, 7, AP_TRN, AP_WRAP, 0>, 4, 4, 24, 15>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 142
+  },
+  "5": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "mfcc.cpp",
+    "fileloc": 179,
+    "instructions": 78,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "name": "feature_1_mel",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 78
+  }
+}

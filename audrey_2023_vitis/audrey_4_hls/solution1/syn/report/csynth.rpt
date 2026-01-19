@@ -1,0 +1,236 @@
+
+
+================================================================
+== Synthesis Summary Report of 'mfcc'
+================================================================
++ General Information: 
+    * Date:           Mon Jan 19 23:15:32 2026
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        audrey_4_hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a100t-csg324-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+------------+-----------+-----+
+    |              Modules              | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |          |            |           |     |
+    |              & Loops              | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF     |    LUT    | URAM|
+    +-----------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+------------+-----------+-----+
+    |+ mfcc                             |     -|  0.42|      459|  4.590e+03|         -|      460|     -|        no|  15 (5%)|  34 (14%)|   2637 (2%)|  3767 (5%)|    -|
+    | + mfcc_Pipeline_task_3            |     -|  1.92|      259|  2.590e+03|         -|      259|     -|        no|        -|         -|    11 (~0%)|   72 (~0%)|    -|
+    |  o task_3                         |     -|  7.30|      257|  2.570e+03|         1|        1|   257|       yes|        -|         -|           -|          -|    -|
+    | + mfcc_Pipeline_VITIS_LOOP_180_1  |     -|  1.11|       92|    920.000|         -|       92|     -|        no|        -|  30 (12%)|   1503 (1%)|  1729 (2%)|    -|
+    |  o VITIS_LOOP_180_1               |    II|  7.30|       90|    900.000|         9|        2|    42|       yes|        -|         -|           -|          -|    -|
+    | + mfcc_Pipeline_VITIS_LOOP_199_1  |     -|  0.42|       55|    550.000|         -|       55|     -|        no|  1 (~0%)|    4 (1%)|  1068 (~0%)|  1567 (2%)|    -|
+    |  o VITIS_LOOP_199_1               |     -|  7.30|       53|    530.000|        13|        1|    42|       yes|        -|         -|           -|          -|    -|
+    |   + log_17_9_s                    |    II|  0.42|       10|    100.000|         -|        1|     -|       yes|  1 (~0%)|    4 (1%)|   884 (~0%)|  1413 (2%)|    -|
+    | + mfcc_Pipeline_task_6            |     -|  3.74|       44|    440.000|         -|       44|     -|        no|        -|         -|    10 (~0%)|   91 (~0%)|    -|
+    |  o task_6                         |     -|  7.30|       42|    420.000|         2|        1|    42|       yes|        -|         -|           -|          -|    -|
+    +-----------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface  | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| in_stream  | in        | both          | 16    | 2     | 1     | 1      | 2     | 1      |
+| out_stream | out       | both          | 16    | 2     | 1     | 1      | 2     | 1      |
++------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------------------------------------------------------------+
+| Argument   | Direction | Datatype                                                            |
++------------+-----------+---------------------------------------------------------------------+
+| in_stream  | in        | stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>& |
+| out_stream | out       | stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>& |
++------------+-----------+---------------------------------------------------------------------+
+
+* SW-to-HW Mapping
++------------+--------------+-----------+
+| Argument   | HW Interface | HW Type   |
++------------+--------------+-----------+
+| in_stream  | in_stream    | interface |
+| out_stream | out_stream   | interface |
++------------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                    | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++-----------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + mfcc                                  | 34  |        |              |     |        |         |
+|  + mfcc_Pipeline_task_3                 | 0   |        |              |     |        |         |
+|    add_ln42_fu_93_p2                    | -   |        | add_ln42     | add | fabric | 0       |
+|  + mfcc_Pipeline_VITIS_LOOP_180_1       | 30  |        |              |     |        |         |
+|    add_ln180_fu_963_p2                  | -   |        | add_ln180    | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U6                | 1   |        | mul_ln187    | mul | auto   | 0       |
+|    add_ln187_fu_1176_p2                 | -   |        | add_ln187    | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U22               | 1   |        | mul_ln187_1  | mul | auto   | 0       |
+|    add_ln187_1_fu_1186_p2               | -   |        | add_ln187_1  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U23               | 1   |        | mul_ln187_2  | mul | auto   | 0       |
+|    add_ln187_2_fu_988_p2                | -   |        | add_ln187_2  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U7                | 1   |        | mul_ln187_3  | mul | auto   | 0       |
+|    add_ln187_3_fu_999_p2                | -   |        | add_ln187_3  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U8                | 1   |        | mul_ln187_4  | mul | auto   | 0       |
+|    add_ln187_4_fu_1010_p2               | -   |        | add_ln187_4  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U9                | 1   |        | mul_ln187_5  | mul | auto   | 0       |
+|    add_ln187_5_fu_1021_p2               | -   |        | add_ln187_5  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U10               | 1   |        | mul_ln187_6  | mul | auto   | 0       |
+|    add_ln187_6_fu_1196_p2               | -   |        | add_ln187_6  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U24               | 1   |        | mul_ln187_7  | mul | auto   | 0       |
+|    add_ln187_7_fu_1206_p2               | -   |        | add_ln187_7  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U25               | 1   |        | mul_ln187_8  | mul | auto   | 0       |
+|    add_ln187_8_fu_1216_p2               | -   |        | add_ln187_8  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U26               | 1   |        | mul_ln187_9  | mul | auto   | 0       |
+|    add_ln187_9_fu_1226_p2               | -   |        | add_ln187_9  | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U27               | 1   |        | mul_ln187_10 | mul | auto   | 0       |
+|    add_ln187_10_fu_1032_p2              | -   |        | add_ln187_10 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U11               | 1   |        | mul_ln187_11 | mul | auto   | 0       |
+|    add_ln187_11_fu_1043_p2              | -   |        | add_ln187_11 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U12               | 1   |        | mul_ln187_12 | mul | auto   | 0       |
+|    add_ln187_12_fu_1054_p2              | -   |        | add_ln187_12 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U13               | 1   |        | mul_ln187_13 | mul | auto   | 0       |
+|    add_ln187_13_fu_1065_p2              | -   |        | add_ln187_13 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U14               | 1   |        | mul_ln187_14 | mul | auto   | 0       |
+|    add_ln187_14_fu_1076_p2              | -   |        | add_ln187_14 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U15               | 1   |        | mul_ln187_15 | mul | auto   | 0       |
+|    add_ln187_15_fu_1087_p2              | -   |        | add_ln187_15 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U16               | 1   |        | mul_ln187_16 | mul | auto   | 0       |
+|    add_ln187_16_fu_1098_p2              | -   |        | add_ln187_16 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U17               | 1   |        | mul_ln187_17 | mul | auto   | 0       |
+|    add_ln187_17_fu_1236_p2              | -   |        | add_ln187_17 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U28               | 1   |        | mul_ln187_18 | mul | auto   | 0       |
+|    add_ln187_18_fu_1246_p2              | -   |        | add_ln187_18 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U29               | 1   |        | mul_ln187_19 | mul | auto   | 0       |
+|    add_ln187_19_fu_1256_p2              | -   |        | add_ln187_19 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U30               | 1   |        | mul_ln187_20 | mul | auto   | 0       |
+|    add_ln187_20_fu_1266_p2              | -   |        | add_ln187_20 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U31               | 1   |        | mul_ln187_21 | mul | auto   | 0       |
+|    add_ln187_21_fu_1276_p2              | -   |        | add_ln187_21 | add | fabric | 0       |
+|    mul_8ns_16s_24_1_1_U32               | 1   |        | mul_ln187_22 | mul | auto   | 0       |
+|    add_ln187_22_fu_1286_p2              | -   |        | add_ln187_22 | add | fabric | 0       |
+|    mul_7ns_16s_23_1_1_U33               | 1   |        | mul_ln187_23 | mul | auto   | 0       |
+|    add_ln187_23_fu_1296_p2              | -   |        | add_ln187_23 | add | fabric | 0       |
+|    mul_7ns_16s_23_1_1_U34               | 1   |        | mul_ln187_24 | mul | auto   | 0       |
+|    add_ln187_24_fu_1306_p2              | -   |        | add_ln187_24 | add | fabric | 0       |
+|    mul_7ns_16s_23_1_1_U35               | 1   |        | mul_ln187_25 | mul | auto   | 0       |
+|    add_ln187_25_fu_1109_p2              | -   |        | add_ln187_25 | add | fabric | 0       |
+|    mul_7ns_16s_23_1_1_U18               | 1   |        | mul_ln187_26 | mul | auto   | 0       |
+|    add_ln187_26_fu_1120_p2              | -   |        | add_ln187_26 | add | fabric | 0       |
+|    mul_6ns_16s_22_1_1_U19               | 1   |        | mul_ln187_27 | mul | auto   | 0       |
+|    add_ln187_27_fu_1131_p2              | -   |        | add_ln187_27 | add | fabric | 0       |
+|    mul_6ns_16s_22_1_1_U20               | 1   |        | mul_ln187_28 | mul | auto   | 0       |
+|    add_ln187_28_fu_1142_p2              | -   |        | add_ln187_28 | add | fabric | 0       |
+|    mul_5ns_16s_21_1_1_U21               | 1   |        | mul_ln187_29 | mul | auto   | 0       |
+|    add_ln187_29_fu_2063_p2              | -   |        | add_ln187_29 | add | fabric | 0       |
+|    add_ln187_32_fu_1999_p2              | -   |        | add_ln187_32 | add | fabric | 0       |
+|    add_ln187_35_fu_2077_p2              | -   |        | add_ln187_35 | add | fabric | 0       |
+|    add_ln187_36_fu_2081_p2              | -   |        | add_ln187_36 | add | fabric | 0       |
+|    add_ln187_39_fu_2013_p2              | -   |        | add_ln187_39 | add | fabric | 0       |
+|    add_ln187_46_fu_2100_p2              | -   |        | add_ln187_46 | add | fabric | 0       |
+|    add_ln187_49_fu_2110_p2              | -   |        | add_ln187_49 | add | fabric | 0       |
+|    add_ln187_50_fu_2115_p2              | -   |        | add_ln187_50 | add | fabric | 0       |
+|    add_ln187_53_fu_2038_p2              | -   |        | add_ln187_53 | add | fabric | 0       |
+|  + mfcc_Pipeline_VITIS_LOOP_199_1       | 4   |        |              |     |        |         |
+|    add_ln199_fu_96_p2                   | -   |        | add_ln199    | add | fabric | 0       |
+|    x_fu_116_p2                          | -   |        | x            | add | fabric | 0       |
+|   + log_17_9_s                          | 4   |        |              |     |        |         |
+|     mul_5s_23ns_28_1_1_U74              | 1   |        | mul_ln739    | mul | auto   | 0       |
+|     mul_29s_6ns_29_2_1_U73              | 2   |        | mul_ln761    | mul | auto   | 1       |
+|     add_ln184_fu_1540_p2                | -   |        | add_ln184    | add | fabric | 0       |
+|     mac_mulsub_24ns_4ns_29ns_29_4_1_U76 | 1   |        | mul_ln184    | mul | dsp48  | 3       |
+|     mac_mulsub_24ns_4ns_29ns_29_4_1_U76 | 1   |        | sub_ln184    | sub | dsp48  | 3       |
+|     mul_9ns_9ns_18_1_1_U75              | -   |        | mul_ln776    | mul | auto   | 0       |
+|     sub_ln776_fu_1634_p2                | -   |        | sub_ln776    | sub | fabric | 0       |
+|     add_ln779_fu_1557_p2                | -   |        | add_ln779    | add | fabric | 0       |
+|     log_base_1_fu_1699_p2               | -   |        | log_base_1   | add | fabric | 0       |
+|  + mfcc_Pipeline_task_6                 | 0   |        |              |     |        |         |
+|    add_ln107_fu_105_p2                  | -   |        | add_ln107    | add | fabric | 0       |
++-----------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------------------------------------------+------+------+--------+---------------------------------------------------------+---------+------+---------+
+| Name                                                          | BRAM | URAM | Pragma | Variable                                                | Storage | Impl | Latency |
++---------------------------------------------------------------+------+------+--------+---------------------------------------------------------+---------+------+---------+
+| + mfcc                                                        | 15   | 0    |        |                                                         |         |      |         |
+|   abs_spectrogram_U                                           | 1    | -    |        | abs_spectrogram                                         | rom_np  | auto | 1       |
+|   mel_filtered_U                                              | -    | -    |        | mel_filtered                                            | ram_1p  | auto | 1       |
+|   mfcc_1_U                                                    | -    | -    |        | mfcc_1                                                  | ram_1p  | auto | 1       |
+|  + mfcc_Pipeline_VITIS_LOOP_180_1                             | 0    | 0    |        |                                                         |         |      |         |
+|    first_ind_U                                                | -    | -    |        | first_ind                                               | rom_1p  | auto | 1       |
+|    mel_filterbank_0_U                                         | -    | -    |        | mel_filterbank_0                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_1_U                                         | -    | -    |        | mel_filterbank_1                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_2_U                                         | -    | -    |        | mel_filterbank_2                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_3_U                                         | -    | -    |        | mel_filterbank_3                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_4_U                                         | -    | -    |        | mel_filterbank_4                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_5_U                                         | -    | -    |        | mel_filterbank_5                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_6_U                                         | -    | -    |        | mel_filterbank_6                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_7_U                                         | -    | -    |        | mel_filterbank_7                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_8_U                                         | -    | -    |        | mel_filterbank_8                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_9_U                                         | -    | -    |        | mel_filterbank_9                                        | rom_1p  | auto | 1       |
+|    mel_filterbank_10_U                                        | -    | -    |        | mel_filterbank_10                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_11_U                                        | -    | -    |        | mel_filterbank_11                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_12_U                                        | -    | -    |        | mel_filterbank_12                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_13_U                                        | -    | -    |        | mel_filterbank_13                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_14_U                                        | -    | -    |        | mel_filterbank_14                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_15_U                                        | -    | -    |        | mel_filterbank_15                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_16_U                                        | -    | -    |        | mel_filterbank_16                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_17_U                                        | -    | -    |        | mel_filterbank_17                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_18_U                                        | -    | -    |        | mel_filterbank_18                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_19_U                                        | -    | -    |        | mel_filterbank_19                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_20_U                                        | -    | -    |        | mel_filterbank_20                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_21_U                                        | -    | -    |        | mel_filterbank_21                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_22_U                                        | -    | -    |        | mel_filterbank_22                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_23_U                                        | -    | -    |        | mel_filterbank_23                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_24_U                                        | -    | -    |        | mel_filterbank_24                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_25_U                                        | -    | -    |        | mel_filterbank_25                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_26_U                                        | -    | -    |        | mel_filterbank_26                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_27_U                                        | -    | -    |        | mel_filterbank_27                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_28_U                                        | -    | -    |        | mel_filterbank_28                                       | rom_1p  | auto | 1       |
+|    mel_filterbank_29_U                                        | -    | -    |        | mel_filterbank_29                                       | rom_1p  | auto | 1       |
+|  + mfcc_Pipeline_VITIS_LOOP_199_1                             | 1    | 0    |        |                                                         |         |      |         |
+|   + log_17_9_s                                                | 1    | 0    |        |                                                         |         |      |         |
+|     log_apfixed_reduce_log_inverse_lut_table_array_U          | -    | -    |        | log_apfixed_reduce_log_inverse_lut_table_array          | rom_1p  | auto | 1       |
+|     log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_U | 1    | -    |        | log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array | rom_1p  | auto | 1       |
+|     log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_U  | -    | -    |        | log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array  | rom_1p  | auto | 1       |
++---------------------------------------------------------------+------+------+--------+---------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------+----------------------------------------------+
+| Type      | Options                  | Location                                     |
++-----------+--------------------------+----------------------------------------------+
+| interface | ap_ctrl_none port=return | audrey_4_hls/mfcc.cpp:23 in mfcc, return     |
+| interface | axis port=in_stream      | audrey_4_hls/mfcc.cpp:24 in mfcc, in_stream  |
+| interface | axis port=out_stream     | audrey_4_hls/mfcc.cpp:25 in mfcc, out_stream |
+| pipeline  |                          | audrey_4_hls/mfcc.cpp:43 in mfcc             |
++-----------+--------------------------+----------------------------------------------+
+
+

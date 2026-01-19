@@ -1,0 +1,146 @@
+
+
+================================================================
+== Vitis HLS Report for 'mfcc_Pipeline_task_6'
+================================================================
+* Date:           Mon Jan 19 23:15:28 2026
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        audrey_4_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.556 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       44|       44|  0.440 us|  0.440 us|   44|   44|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- task_6  |       42|       42|         2|          1|          1|    42|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.55>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%m = alloca i32 1"   --->   Operation 5 'alloca' 'm' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %out_stream_V_data_V, i2 %out_stream_V_keep_V, i2 %out_stream_V_strb_V, i1 0, i1 %out_stream_V_last_V, i1 0, i1 0, void @empty_2"   --->   Operation 6 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %out_stream_V_last_V, i2 %out_stream_V_strb_V, i2 %out_stream_V_keep_V, i16 %out_stream_V_data_V, void @empty_5, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.61ns)   --->   "%store_ln0 = store i6 0, i6 %m"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc33"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%m_1 = load i6 %m" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 10 'load' 'm_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 11 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.94ns)   --->   "%icmp_ln107 = icmp_eq  i6 %m_1, i6 42" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 12 'icmp' 'icmp_ln107' <Predicate = true> <Delay = 1.94> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (1.94ns)   --->   "%add_ln107 = add i6 %m_1, i6 1" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 13 'add' 'add_ln107' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln107 = br i1 %icmp_ln107, void %for.inc33.split, void %for.end35.exitStub" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 14 'br' 'br_ln107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%m_2_cast = zext i6 %m_1" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 15 'zext' 'm_2_cast' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%mfcc_1_addr = getelementptr i15 %mfcc_1, i64 0, i64 %m_2_cast" [audrey_4_hls/mfcc.cpp:110]   --->   Operation 16 'getelementptr' 'mfcc_1_addr' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (2.15ns)   --->   "%val_out_data = load i6 %mfcc_1_addr" [audrey_4_hls/mfcc.cpp:110]   --->   Operation 17 'load' 'val_out_data' <Predicate = (!icmp_ln107)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 42> <RAM>
+ST_1 : Operation 18 [1/1] (1.94ns)   --->   "%val_out_last = icmp_eq  i6 %m_1, i6 41" [audrey_4_hls/mfcc.cpp:114]   --->   Operation 18 'icmp' 'val_out_last' <Predicate = (!icmp_ln107)> <Delay = 1.94> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (1.61ns)   --->   "%store_ln107 = store i6 %add_ln107, i6 %m" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 19 'store' 'store_ln107' <Predicate = (!icmp_ln107)> <Delay = 1.61>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 26 'ret' 'ret_ln0' <Predicate = (icmp_ln107)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%speclooptripcount_ln107 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 42, i64 42, i64 42" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 20 'speclooptripcount' 'speclooptripcount_ln107' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln107 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 21 'specloopname' 'specloopname_ln107' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/2] (2.15ns)   --->   "%val_out_data = load i6 %mfcc_1_addr" [audrey_4_hls/mfcc.cpp:110]   --->   Operation 22 'load' 'val_out_data' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 42> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%sext_ln109 = sext i15 %val_out_data" [audrey_4_hls/mfcc.cpp:109]   --->   Operation 23 'sext' 'sext_ln109' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%write_ln117 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A, i16 %out_stream_V_data_V, i2 %out_stream_V_keep_V, i2 %out_stream_V_strb_V, i1 %out_stream_V_last_V, i16 %sext_ln109, i2 3, i2 3, i1 %val_out_last" [audrey_4_hls/mfcc.cpp:117]   --->   Operation 24 'write' 'write_ln117' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln107 = br void %for.inc33" [audrey_4_hls/mfcc.cpp:107]   --->   Operation 25 'br' 'br_ln107' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.556ns
+The critical path consists of the following:
+	'alloca' operation ('m') [6]  (0.000 ns)
+	'load' operation ('m', audrey_4_hls/mfcc.cpp:107) on local variable 'm' [12]  (0.000 ns)
+	'add' operation ('add_ln107', audrey_4_hls/mfcc.cpp:107) [15]  (1.946 ns)
+	'store' operation ('store_ln107', audrey_4_hls/mfcc.cpp:107) of variable 'add_ln107', audrey_4_hls/mfcc.cpp:107 on local variable 'm' [26]  (1.610 ns)
+
+ <State 2>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('val_out.data', audrey_4_hls/mfcc.cpp:110) on array 'mfcc_1' [22]  (2.152 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:21:40.114+0100"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:31.638+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'mfcc_Pipeline_VITIS_LOOP_180_1' (loop 'VITIS_LOOP_180_1'): Unable to schedule 'load' operation ('abs_spectrogram_load_19', audrey_4_hls/mfcc.cpp:187->audrey_4_hls/mfcc.cpp:64) on array 'abs_spectrogram' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'abs_spectrogram'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:26.754+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'log&lt;17, 9>' to 'log_17_9_s'." projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:26.031+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'audio' (audrey_4_hls/mfcc.cpp:145:38)" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:22.511+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'has_ovflo' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:328:66)" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:22.481+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:315:71)" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:22.462+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:151:68)" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:22.438+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'cp_len_enable' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:138:66)" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:22.422+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'has_nfft' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:125:65)" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:22.407+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'data_type' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:100:77)" projectName="audrey_4_hls" solutionName="solution1" date="2026-01-19T23:15:22.394+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
