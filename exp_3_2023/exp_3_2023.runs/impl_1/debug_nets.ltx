@@ -31,25 +31,13 @@
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 13,
+                                "rightIndex": 9,
                                 "portIndex": 0,
                                 "nets": [
                                     {
                                         "name": "u_gen/clk_cnt",
                                         "isBus": true,
                                         "subnets": [
-                                            {
-                                                "name": "u_gen/clk_cnt[13]"
-                                            },
-                                            {
-                                                "name": "u_gen/clk_cnt[12]"
-                                            },
-                                            {
-                                                "name": "u_gen/clk_cnt[11]"
-                                            },
-                                            {
-                                                "name": "u_gen/clk_cnt[10]"
-                                            },
                                             {
                                                 "name": "u_gen/clk_cnt[9]"
                                             },
@@ -89,53 +77,18 @@
                                 "id": 1,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": true,
+                                "isVector": false,
                                 "leftIndex": 0,
-                                "rightIndex": 12,
+                                "rightIndex": 0,
                                 "portIndex": 1,
                                 "nets": [
                                     {
-                                        "name": "u_gen/data0",
+                                        "name": "state",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "u_gen/data0[13]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[12]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[11]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[10]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[9]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[8]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[7]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[6]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[5]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[4]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[3]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[2]"
-                                            },
-                                            {
-                                                "name": "u_gen/data0[1]"
+                                                "name": "state[2]",
+                                                "parentNetId": 10
                                             }
                                         ]
                                     }
@@ -146,18 +99,44 @@
                                 "id": 2,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 1,
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "state",
+                                        "name": "uart_data0_1",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "state[2]",
-                                                "parentNetId": 27
+                                                "name": "uart_data0_1[2]"
+                                            },
+                                            {
+                                                "name": "uart_data0_1[1]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 2,
+                                "rightIndex": 3,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "uart_data0",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "uart_data0[6]"
+                                            },
+                                            {
+                                                "name": "uart_data0[5]"
                                             }
                                         ]
                                     }
@@ -165,23 +144,58 @@
                             },
                             {
                                 "name": "probe3",
-                                "id": 3,
+                                "id": 4,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 2,
                                 "portIndex": 3,
                                 "nets": [
                                     {
-                                        "name": "arstn_IBUF",
-                                        "isBus": false
+                                        "name": "uart_data__0_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "uart_data__0_1[2]"
+                                            },
+                                            {
+                                                "name": "uart_data__0_1[1]"
+                                            },
+                                            {
+                                                "name": "uart_data__0_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 3,
+                                "rightIndex": 4,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "uart_data__0",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "uart_data__0[6]"
+                                            },
+                                            {
+                                                "name": "uart_data__0[5]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
                             {
                                 "name": "probe4",
-                                "id": 4,
+                                "id": 6,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -200,7 +214,7 @@
                 ],
                 "parent_nets": [
                     {
-                        "id": 27,
+                        "id": 10,
                         "name": "state[2]",
                         "state_reg": [
                             {

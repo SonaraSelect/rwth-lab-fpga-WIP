@@ -22,7 +22,7 @@
 module uart_top #(
     parameter AXI_WIDTH = 32,
     parameter CLK_FREQ  = 100000000,
-    parameter BAUD_RATE = 9600
+    parameter BAUD_RATE = 115200
 )(
     input  logic       clk,
     input  logic       arstn,
