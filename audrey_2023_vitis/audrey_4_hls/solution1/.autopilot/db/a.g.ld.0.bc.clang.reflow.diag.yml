@@ -82,6 +82,50 @@ DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
 Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
 Args:            
   - String:          'Inlining function '''
+  - Callee:          'hls::x_complex<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::real(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_x_complex.h', 
+                       Line: 79, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::x_complex<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::imag(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_x_complex.h', 
+                       Line: 84, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'feature_0_stft(hls::x_complex<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 145, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          'Inlining function '''
   - Callee:          'feature_1_mel(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
     DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 179, Column: 0 }
   - String:          ''' into '''
@@ -99,6 +143,38 @@ Args:
   - Callee:          'feature_2_log(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
     DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 198, Column: 0 }
   - String:          ''' into '''
+  - Caller:          'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)'
+    DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 170, Column: 28 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 170, Column: 28 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                   Line: 1208, Column: 12 }
+Function:        _Z4mfccRN3hls6streamINS_4axisI8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h', 
+                       Line: 500, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
   - Caller:          'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)'
     DebugLoc:        { File: audrey_4_hls/mfcc.cpp, Line: 20, Column: 0 }
   - String:          ''''

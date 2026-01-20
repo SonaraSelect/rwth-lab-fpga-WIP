@@ -9,12 +9,14 @@ set_top mfcc
 add_files audrey_4_hls/mel_filterbank.h
 add_files audrey_4_hls/mfcc.cpp
 add_files audrey_4_hls/mfcc.h
-add_files -tb audrey_4_hls/tb.cpp
+add_files -tb audrey_4_hls/tb.cpp -cflags "-Wno-unknown-pragmas"
+add_files -tb audrey_4_hls/stimuli -cflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
-set_part {xc7a100tcsg324-1}
+set_part {xc7a100t-csg324-1}
 create_clock -period 10 -name default
-#source "./audrey_4_hls/solution1/directives.tcl"
+config_export -display_name mfcc2 -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP -rtl verilog
+source "./audrey_4_hls/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP

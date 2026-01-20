@@ -796,23 +796,23 @@ C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\aud
       ^~~
       VITIS_LOOP_927_1: 
 C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54049:7: note: FIX-IT applied suggested code changes
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54910:5: warning: Added loop label VITIS_LOOP_166_1:   [xilinx-label-all-loops]
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54929:5: warning: Added loop label VITIS_LOOP_165_1:   [xilinx-label-all-loops]
     for (int k = 0; k <= 257; k++) {
     ^~~
-    VITIS_LOOP_166_1: 
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54910:5: note: FIX-IT applied suggested code changes
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54924:5: warning: Added loop label VITIS_LOOP_180_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_165_1: 
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54929:5: note: FIX-IT applied suggested code changes
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54944:5: warning: Added loop label VITIS_LOOP_180_1:   [xilinx-label-all-loops]
     for (int m = 0; m < 42; m++) {
     ^~~
     VITIS_LOOP_180_1: 
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54924:5: note: FIX-IT applied suggested code changes
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54930:9: warning: Added loop label VITIS_LOOP_186_2:   [xilinx-label-all-loops]
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54944:5: note: FIX-IT applied suggested code changes
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54950:9: warning: Added loop label VITIS_LOOP_186_2:   [xilinx-label-all-loops]
         for (int i = 0; i < 30; i++) {
         ^~~
         VITIS_LOOP_186_2: 
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54930:9: note: FIX-IT applied suggested code changes
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54943:5: warning: Added loop label VITIS_LOOP_199_1:   [xilinx-label-all-loops]
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54950:9: note: FIX-IT applied suggested code changes
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54963:5: warning: Added loop label VITIS_LOOP_199_1:   [xilinx-label-all-loops]
     for (int m = 0; m < 42; m++) {
     ^~~
     VITIS_LOOP_199_1: 
-C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54943:5: note: FIX-IT applied suggested code changes
+C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp:54963:5: note: FIX-IT applied suggested code changes

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mfcc_Pipeline_task_6'" level="0">
-<item name = "Date">Mon Jan 19 23:15:31 2026
+<item name = "Date">Tue Jan 20 12:41:17 2026
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">audrey_4_hls</item>
@@ -78,10 +78,10 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln107_fu_105_p2">+, 0, 0, 14, 6, 1</column>
+<column name="add_ln106_fu_89_p2">+, 0, 0, 14, 6, 1</column>
 <column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln107_fu_99_p2">icmp, 0, 0, 14, 6, 6</column>
-<column name="val_out_last_fu_116_p2">icmp, 0, 0, 14, 6, 6</column>
+<column name="icmp_ln106_fu_83_p2">icmp, 0, 0, 14, 6, 6</column>
+<column name="val_out_last_fu_95_p2">icmp, 0, 0, 14, 6, 6</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -90,7 +90,7 @@
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_m_1">9, 2, 6, 12</column>
-<column name="m_fu_56">9, 2, 6, 12</column>
+<column name="m_fu_52">9, 2, 6, 12</column>
 <column name="out_stream_TDATA_blk_n">9, 2, 1, 2</column>
 </table>
 </item>
@@ -99,8 +99,8 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="m_fu_56">6, 0, 6, 0</column>
-<column name="val_out_last_reg_147">1, 0, 1, 0</column>
+<column name="m_fu_52">6, 0, 6, 0</column>
+<column name="val_out_last_reg_116">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -118,9 +118,6 @@
 <column name="ap_ready">out, 1, ap_ctrl_hs, mfcc_Pipeline_task_6, return value</column>
 <column name="out_stream_TREADY">in, 1, axis, out_stream_V_data_V, pointer</column>
 <column name="out_stream_TDATA">out, 16, axis, out_stream_V_data_V, pointer</column>
-<column name="mfcc_1_address0">out, 6, ap_memory, mfcc_1, array</column>
-<column name="mfcc_1_ce0">out, 1, ap_memory, mfcc_1, array</column>
-<column name="mfcc_1_q0">in, 15, ap_memory, mfcc_1, array</column>
 <column name="out_stream_TVALID">out, 1, axis, out_stream_V_last_V, pointer</column>
 <column name="out_stream_TLAST">out, 1, axis, out_stream_V_last_V, pointer</column>
 <column name="out_stream_TKEEP">out, 2, axis, out_stream_V_keep_V, pointer</column>

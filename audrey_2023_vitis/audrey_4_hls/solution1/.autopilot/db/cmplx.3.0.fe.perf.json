@@ -1,33 +1,18 @@
 {
   "0": {
-    "basicblocks": 11,
-    "calls": "1",
+    "basicblocks": 36,
+    "calls": "",
     "file": "mfcc.cpp",
     "fileloc": 17,
-    "instructions": 126,
+    "instructions": 492,
     "loads": {
-      "G": 2,
-      "L": 5
+      "G": 5,
+      "L": 3
     },
     "name": "mfcc",
     "stores": {
       "L": 10
     },
-    "total_instructions": 494
-  },
-  "1": {
-    "basicblocks": 24,
-    "calls": "",
-    "file": "hls_log_apfixed.h",
-    "fileloc": 499,
-    "instructions": 368,
-    "loads": {
-      "G": 3
-    },
-    "name": "log<17, 9>",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 368
+    "total_instructions": 492
   }
 }

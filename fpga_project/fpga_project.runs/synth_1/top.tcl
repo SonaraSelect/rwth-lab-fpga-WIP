@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/fpga13/group_admi/fpga_project/fpga_project.runs/synth_1/top.tcl"
+  variable script "C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,8 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -79,47 +83,48 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/fpga13/group_admi/fpga_project/fpga_project.cache/wt [current_project]
-set_property parent.project_path /home/fpga13/group_admi/fpga_project/fpga_project.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.cache/wt [current_project]
+set_property parent.project_path C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/fpga13/.Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part digilentinc.com:nexys-a7-100t:part0:1.2 [current_project]
-set_property ip_output_repo /home/fpga13/group_admi/fpga_project/fpga_project.cache/ip [current_project]
+set_property ip_repo_paths c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/export-nonpipelined [current_project]
+update_ip_catalog
+set_property ip_output_repo c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem {
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/text.mem
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/mfccs.mem
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/lut.mem
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/text.mem
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/mfccs.mem
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/lut.mem
 }
 read_verilog -library xil_defaultlib -sv {
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv
-  /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv
+  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv
 }
-read_ip -quiet /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/ip/fft/fft.xci
-set_property is_enabled false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd]
-set_property is_enabled true [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/fft/sim/fft.vhd]
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/fft/fft_ooc.xdc]
+read_ip -quiet C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/ip/fft/fft.xci
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/fft_ooc.xdc]
 
-read_ip -quiet /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/ip/sqrt_cordic/sqrt_cordic.xci
-set_property is_enabled false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/demo_tb/tb_sqrt_cordic.vhd]
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic_ooc.xdc]
+read_ip -quiet C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/ip/sqrt_cordic/sqrt_cordic.xci
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic_ooc.xdc]
 
-read_ip -quiet /home/fpga13/group_admi/fpga_project/fpga_project.srcs/sources_1/ip/clk_wiz/clk_wiz.xci
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz_board.xdc]
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz.xdc]
-set_property used_in_implementation false [get_files -all /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz_ooc.xdc]
+read_ip -quiet C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/ip/clk_wiz/clk_wiz.xci
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz_ooc.xdc]
+
+read_ip -quiet c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/ip/mfcc_1/mfcc_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/constraints/mfcc_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -130,17 +135,17 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/fpga13/group_admi/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc
-set_property used_in_implementation false [get_files /home/fpga13/group_admi/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]
+read_xdc C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc
+set_property used_in_implementation false [get_files C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]
 
-read_xdc /home/fpga13/group_admi/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc
-set_property used_in_implementation false [get_files /home/fpga13/group_admi/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]
+read_xdc C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc
+set_property used_in_implementation false [get_files C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/fpga13/group_admi/fpga_project/fpga_project.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

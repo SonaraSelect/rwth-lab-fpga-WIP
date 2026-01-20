@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1768860932236">
-  <ports id="1" name="in_stream_V_data_V" type="PortType" originalName="in_stream" coreId="1717920800" bitwidth="16">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1768909277783">
+  <ports id="1" name="in_stream_V_data_V" type="PortType" originalName="in_stream" coreId="1953391988" bitwidth="16">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="in_stream_V_keep_V" type="PortType" originalName="in_stream" coreId="1717924464" bitwidth="2">
+  <ports id="2" name="in_stream_V_keep_V" type="PortType" originalName="in_stream" coreId="1953391988" bitwidth="2">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="in_stream_V_strb_V" type="PortType" originalName="in_stream" coreId="1953391988" bitwidth="2">
+  <ports id="3" name="in_stream_V_strb_V" type="PortType" originalName="in_stream" coreId="1635147636" bitwidth="2">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="in_stream_V_last_V" type="PortType" originalName="in_stream" coreId="3007" bitwidth="1">
+  <ports id="4" name="in_stream_V_last_V" type="PortType" originalName="in_stream" coreId="1416659824" bitwidth="1">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="out_stream_V_data_V" type="PortType" originalName="out_stream" coreId="1852793695" bitwidth="16" direction="DirOut">
+  <ports id="5" name="out_stream_V_data_V" type="PortType" originalName="out_stream" coreId="1869898593" bitwidth="16" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <ports id="6" name="out_stream_V_keep_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="2" direction="DirOut">
@@ -21,127 +21,44 @@
   <ports id="7" name="out_stream_V_strb_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="2" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="8" name="out_stream_V_last_V" type="PortType" originalName="out_stream" coreId="1953391988" bitwidth="1" direction="DirOut">
+  <ports id="8" name="out_stream_V_last_V" type="PortType" originalName="out_stream" coreId="551509904" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <edges id="77" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="78" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="79" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="80" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="81" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="85" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="86" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="89" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="90" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="94" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.9"/>
-  <edges id="95" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.4"/>
-  <edges id="96" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.5"/>
-  <edges id="97" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.6"/>
-  <edges id="98" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.7"/>
-  <edges id="99" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="100" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="101" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="102" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="103" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="104" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="105" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="106" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="107" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="108" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="109" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="110" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="111" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="112" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="113" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="114" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="115" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="116" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="117" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="118" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="119" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="120" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="121" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="122" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="123" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="124" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="125" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="126" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="127" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="128" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="129" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="130" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="131" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="132" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="247" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.9"/>
-  <edges id="248" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="249" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="250" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.5"/>
-  <edges id="251" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.8"/>
-  <edges id="252" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="253" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
-  <edges id="254" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="255" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="256" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.8"/>
-  <edges id="257" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.8"/>
-  <edges id="258" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
-  <edges id="259" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="260" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="261" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.9"/>
-  <blocks id="68" name="mfcc" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="abs_spectrogram" lineNumber="41" originalName="abs_spectrogram" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="abs_spectrogram_U" coreName="RAM_1WnR" implIndex="auto" control="no" opType="rom_np" coreId="83" contextFuncName="mfcc" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="41" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
-      <dataOutputObjs>call</dataOutputObjs>
-      <dataOutputObjs>call</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="mel_filtered" lineNumber="63" originalName="mel_filtered" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="mel_filtered_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="mfcc" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="63" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
-      <dataOutputObjs>call</dataOutputObjs>
-      <dataOutputObjs>call</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="mfcc_1" lineNumber="71" originalName="mfcc" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." rtlName="mfcc_1_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="mfcc" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="71" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
-      <dataOutputObjs>call</dataOutputObjs>
-      <dataOutputObjs>call</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="empty" coreId="792" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="_ln0" rtlName="grp_mfcc_Pipeline_task_3_fu_138" coreId="0" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="5" m_clusterGroupNumber="-1">
+  <edges id="34" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="35" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="36" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="37" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@ports.4"/>
+  <edges id="43" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@ports.5"/>
+  <edges id="44" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@ports.6"/>
+  <edges id="45" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@ports.7"/>
+  <edges id="160" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="161" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="162" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="163" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="164" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <blocks id="29" name="mfcc" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="empty" coreId="1651470960" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" rtlName="grp_mfcc_Pipeline_task_2_fu_52" coreId="4294967295" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>in_stream_V_data_V</dataInputObjs>
       <dataInputObjs>in_stream_V_keep_V</dataInputObjs>
       <dataInputObjs>in_stream_V_strb_V</dataInputObjs>
       <dataInputObjs>in_stream_V_last_V</dataInputObjs>
-      <dataInputObjs>alloca</dataInputObjs>
-      <constName>mfcc_Pipeline_task_3</constName>
+      <constName>mfcc_Pipeline_task_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="empty_31" coreId="0" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln0" rtlName="grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151" coreId="4294967295" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <dataInputObjs>alloca</dataInputObjs>
-      <dataInputObjs>alloca</dataInputObjs>
-      <constName>mfcc_Pipeline_VITIS_LOOP_180_1</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln0" rtlName="grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219" coreId="0" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <dataInputObjs>alloca</dataInputObjs>
-      <dataInputObjs>alloca</dataInputObjs>
-      <constName>mfcc_Pipeline_VITIS_LOOP_199_1</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="empty_32" coreId="0" bitwidth="32" opcode="wait" nodeLabel="7.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln0" rtlName="grp_mfcc_Pipeline_task_6_fu_231" coreId="0" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <dataInputObjs>alloca</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="empty_11" coreId="1528955000" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="empty_12" coreId="4294967295" bitwidth="32" opcode="wait" nodeLabel="4.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="_ln0" rtlName="grp_mfcc_Pipeline_task_6_fu_64" coreId="1919509536" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataOutputObjs>out_stream_V_data_V</dataOutputObjs>
       <dataOutputObjs>out_stream_V_keep_V</dataOutputObjs>
       <dataOutputObjs>out_stream_V_strb_V</dataOutputObjs>
       <dataOutputObjs>out_stream_V_last_V</dataOutputObjs>
       <constName>mfcc_Pipeline_task_6</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln121" lineNumber="121" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="0" contextFuncName="mfcc" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln121" lineNumber="121" fileName="audrey_4_hls/mfcc.cpp" fileDirectory="../." coreId="543843360" contextFuncName="mfcc" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="audrey_4_hls/mfcc.cpp" linenumber="121" fileDirectory="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis" functionName="mfcc"/>
     </node_objs>
     <fileValidLineNumbers fileName="audrey_4_hls/mfcc.cpp">
-      <validLinenumbers>41</validLinenumbers>
-      <validLinenumbers>63</validLinenumbers>
-      <validLinenumbers>71</validLinenumbers>
       <validLinenumbers>121</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
@@ -152,221 +69,88 @@
   <ScheduleInfo time="4"/>
   <ScheduleInfo time="5"/>
   <ScheduleInfo time="6"/>
-  <ScheduleInfo time="7"/>
-  <ScheduleInfo time="8"/>
-  <ScheduleInfo time="9"/>
-  <expressionNodes realName="mfcc_1_alloca_fu_134">
-    <nodeIds>57</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="abs_spectrogram_alloca_fu_126">
-    <nodeIds>55</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="mel_filtered_alloca_fu_130">
-    <nodeIds>56</nodeIds>
-  </expressionNodes>
-  <moduleNodes realName="grp_mfcc_Pipeline_task_3_fu_138">
-    <nodeIds>61</nodeIds>
+  <moduleNodes realName="grp_mfcc_Pipeline_task_2_fu_52">
+    <nodeIds>24</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219">
-    <nodeIds>64</nodeIds>
+  <moduleNodes realName="grp_mfcc_Pipeline_task_6_fu_64">
+    <nodeIds>27</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_mfcc_Pipeline_task_6_fu_231">
-    <nodeIds>66</nodeIds>
-  </moduleNodes>
-  <moduleNodes realName="grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151">
-    <nodeIds>63</nodeIds>
-  </moduleNodes>
-  <memoryPorts dataString="first_ind" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array" portID="100">
-    <nodeIds>64</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="log_apfixed_reduce_log_inverse_lut_table_array" portID="100">
-    <nodeIds>64</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" portID="100">
-    <nodeIds>64</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_0" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_1" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_10" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_11" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_12" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_13" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_14" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_15" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_16" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_17" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_18" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_19" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_2" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_20" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_21" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_22" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_23" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_24" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_25" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_26" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_27" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_28" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_29" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_3" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_4" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_5" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_6" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_7" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_8" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="mel_filterbank_9" portID="100">
-    <nodeIds>63</nodeIds>
-  </memoryPorts>
   <ioPorts name="in_stream_V_data_V">
     <contents name="call">
-      <nodeIds>61</nodeIds>
+      <nodeIds>24</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_keep_V">
     <contents name="call">
-      <nodeIds>61</nodeIds>
+      <nodeIds>24</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_last_V">
     <contents name="call">
-      <nodeIds>61</nodeIds>
+      <nodeIds>24</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_strb_V">
     <contents name="call">
-      <nodeIds>61</nodeIds>
+      <nodeIds>24</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_data_V">
     <contents name="call">
-      <nodeIds>66</nodeIds>
+      <nodeIds>27</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_keep_V">
     <contents name="call">
-      <nodeIds>66</nodeIds>
+      <nodeIds>27</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_last_V">
     <contents name="call">
-      <nodeIds>66</nodeIds>
+      <nodeIds>27</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_strb_V">
     <contents name="call">
-      <nodeIds>66</nodeIds>
+      <nodeIds>27</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
     <states id="1">
-      <operations id="55" stage="1" latency="1"/>
-      <operations id="56" stage="1" latency="1"/>
-      <operations id="57" stage="1" latency="1"/>
-      <operations id="60" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
     </states>
     <states id="2">
-      <operations id="61" stage="2" latency="2"/>
+      <operations id="24" stage="2" latency="2"/>
     </states>
     <states id="3">
-      <operations id="61" stage="1" latency="2"/>
+      <operations id="24" stage="1" latency="2"/>
     </states>
     <states id="4">
-      <operations id="62" stage="1" latency="1"/>
-      <operations id="63" stage="2" latency="2"/>
+      <operations id="25" stage="1" latency="1"/>
     </states>
     <states id="5">
-      <operations id="63" stage="1" latency="2"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="2" latency="2"/>
     </states>
     <states id="6">
-      <operations id="64" stage="2" latency="2"/>
+      <operations id="27" stage="1" latency="2"/>
     </states>
     <states id="7">
-      <operations id="64" stage="1" latency="2"/>
-    </states>
-    <states id="8">
-      <operations id="65" stage="1" latency="1"/>
-      <operations id="66" stage="2" latency="2"/>
-    </states>
-    <states id="9">
-      <operations id="66" stage="1" latency="2"/>
-    </states>
-    <states id="10">
-      <operations id="43" stage="1" latency="1"/>
-      <operations id="44" stage="1" latency="1"/>
-      <operations id="45" stage="1" latency="1"/>
-      <operations id="46" stage="1" latency="1"/>
-      <operations id="47" stage="1" latency="1"/>
-      <operations id="48" stage="1" latency="1"/>
-      <operations id="49" stage="1" latency="1"/>
-      <operations id="50" stage="1" latency="1"/>
-      <operations id="51" stage="1" latency="1"/>
-      <operations id="52" stage="1" latency="1"/>
-      <operations id="53" stage="1" latency="1"/>
-      <operations id="54" stage="1" latency="1"/>
-      <operations id="58" stage="1" latency="1"/>
-      <operations id="59" stage="1" latency="1"/>
-      <operations id="67" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
@@ -386,19 +170,10 @@
     <transitions inState="6" outState="7">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="7" outState="8">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="8" outState="9">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="9" outState="10">
-      <condition id="-1"/>
-    </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="mfcc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="459" mMaxLatency="459">
-      <basicBlocks>68</basicBlocks>
+    <cfgRegions mId="1" mTag="mfcc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="564" mMaxLatency="564">
+      <basicBlocks>29</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

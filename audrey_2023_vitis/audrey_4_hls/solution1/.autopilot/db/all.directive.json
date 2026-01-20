@@ -16,8 +16,29 @@
       ]
     },
     "slx": false,
+    "sourceFile": "C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "mfcc",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "mfcc"
+        }
+      ]
+    },
+    "slx": false,
     "sourceFile": "C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/csynth.tcl",
-    "sourceLine": 17,
+    "sourceLine": 19,
     "success": true
   }
 ]

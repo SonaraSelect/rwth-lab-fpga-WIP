@@ -13,7 +13,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 1
+set HasDSPModule 0
 set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1
@@ -45,12 +45,12 @@ set TargetInfo xc7a100t:-csg324:-1
 set SourceFiles {sc {} c ../mfcc.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog ../tb.cpp bc ../tb.cpp vhdl ../tb.cpp sc ../tb.cpp cas ../tb.cpp c {}}
+set TBFiles {verilog {../tb.cpp ../stimuli} bc {../tb.cpp ../stimuli} sc {../tb.cpp ../stimuli} vhdl {../tb.cpp ../stimuli} c {} cas {../tb.cpp ../stimuli}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
-set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

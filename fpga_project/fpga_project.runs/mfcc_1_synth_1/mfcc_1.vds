@@ -1,0 +1,289 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Jan 20 12:46:40 2026
+# Process ID: 5196
+# Current directory: C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1
+# Command line: vivado.exe -log mfcc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mfcc_1.tcl
+# Log file: C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1/mfcc_1.vds
+# Journal file: C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1\vivado.jou
+# Running On: audrey, OS: Windows, CPU Frequency: 3302 MHz, CPU Physical cores: 8, Host memory: 16693 MB
+#-----------------------------------------------------------
+source mfcc_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/export-nonpipelined'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mfcc_1
+Command: synth_design -top mfcc_1 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2228
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2286.574 ; gain = 410.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mfcc_1' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/synth/mfcc_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'mfcc' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mfcc_mfcc_Pipeline_task_2' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_mfcc_Pipeline_task_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mfcc_flow_control_loop_pipe_sequential_init' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_flow_control_loop_pipe_sequential_init' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_mfcc_Pipeline_task_2' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_mfcc_Pipeline_task_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mfcc_mfcc_Pipeline_task_6' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_mfcc_Pipeline_task_6.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_mfcc_Pipeline_task_6' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_mfcc_Pipeline_task_6.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mfcc_regslice_both' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_regslice_both' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_regslice_both.v:11]
+INFO: [Synth 8-6157] synthesizing module 'mfcc_regslice_both__parameterized0' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_regslice_both__parameterized0' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_regslice_both.v:11]
+INFO: [Synth 8-6157] synthesizing module 'mfcc_regslice_both__parameterized1' [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_regslice_both__parameterized1' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/hdl/verilog/mfcc.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_1' (0#1) [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/synth/mfcc_1.v:53]
+WARNING: [Synth 8-7129] Port in_stream_TDATA[15] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[14] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[13] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[12] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[11] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[10] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[9] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[8] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[7] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[6] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[5] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[4] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[3] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[2] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[1] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[0] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TKEEP[1] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TKEEP[0] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TSTRB[1] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TSTRB[0] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TLAST[0] in module mfcc_mfcc_Pipeline_task_2 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2382.754 ; gain = 506.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2382.754 ; gain = 506.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2382.754 ; gain = 506.773
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2382.754 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/constraints/mfcc_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/constraints/mfcc_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2445.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2447.191 ; gain = 1.473
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 16    
+	                1 Bit    Registers := 32    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   8 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 12    
+	   4 Input    2 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 25    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port in_stream_TDATA[15] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[14] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[13] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[12] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[11] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[10] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[9] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[8] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[7] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[6] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[5] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[4] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[3] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[2] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[1] in module mfcc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_stream_TDATA[0] in module mfcc is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     3|
+|3     |LUT3 |     9|
+|4     |LUT4 |    10|
+|5     |LUT5 |    15|
+|6     |LUT6 |    24|
+|7     |FDRE |    40|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2447.191 ; gain = 506.773
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2447.191 ; gain = 571.211
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2447.191 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2447.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 83abc5e7
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2447.191 ; gain = 969.488
+INFO: [Common 17-1381] The checkpoint 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1/mfcc_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mfcc_1, cache-ID = b722af4977891527
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/mfcc_1_synth_1/mfcc_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mfcc_1_utilization_synth.rpt -pb mfcc_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 12:47:10 2026...

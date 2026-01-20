@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1 opened at Mon Jan 19 23:15:00 +0100 2026
+INFO-FLOW: Workspace C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1 opened at Tue Jan 20 12:40:51 +0100 2026
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7a100t-csg324-1 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
-Command       create_platform done; 2.768 sec.
+Command       create_platform done; 2.572 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -22,13 +22,25 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xf
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.857 sec.
+Command     set_part done; 2.656 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 2.939 sec.
-Execute   set_part xc7a100tcsg324-1 
-INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
-Execute     create_platform xc7a100tcsg324-1 -board  
+Execute     send_msg_by_id INFO @200-1464@%s config_export -display_name=mfcc2 
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=mfcc2
+Execute     config_export -display_name=mfcc2 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP 
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP
+Execute     config_export -output=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 2.77 sec.
+Execute   set_part xc7a100t-csg324-1 
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-1 
+Execute     create_platform xc7a100t-csg324-1 -board  
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -43,14 +55,20 @@ Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7a100t-csg324-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.202 sec.
+Command   set_part done; 0.112 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -display_name mfcc2 -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -display_name mfcc2 -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP -rtl verilog 
+Execute   source ./audrey_4_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./audrey_4_hls/solution1/directives.tcl
+Execute     set_directive_top -name mfcc mfcc 
+INFO: [HLS 200-1510] Running: set_directive_top -name mfcc mfcc 
 Execute   csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 1.035 GB.
 Execute       set_directive_top mfcc -name=mfcc 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -67,18 +85,18 @@ INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=artix7_slow -device-resource-info=BRAM_270.000000_DSP_240.000000_FF_126800.000000_LUT_63400.000000_SLICE_15850.000000_URAM_0.000000 -device-name-info=xc7a100tcsg324-1 > C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/clang.out.log 2> C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.507 sec.
+Command       clang_tidy done; 2.521 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/all.directive.json -fix-errors C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.81 sec.
+Command       clang_tidy done; 2.842 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 2.8 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp.clang-tidy.loop-label.err.log
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 4.906 sec.
+Command       clang_tidy done; 4.896 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
@@ -90,7 +108,7 @@ WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (C:/Xilinx/Vitis_HLS/2023
 WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:315:71)
 WARNING: [HLS 207-5292] unused parameter 'has_ovflo' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_fft.h:328:66)
 WARNING: [HLS 207-5292] unused parameter 'audio' (audrey_4_hls/mfcc.cpp:145:38)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 18.442 seconds; current allocated memory: 1.036 GB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 18.287 seconds; current allocated memory: 1.042 GB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.g.bc"  
@@ -111,7 +129,7 @@ INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csyn
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.5 sec.
+Command       run_link_or_opt done; 0.503 sec.
 Execute       run_link_or_opt -out C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 INFO-FLOW: 
@@ -130,101 +148,75 @@ INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_729_1' (C:/Xilinx/Vitis_HLS/2023.
 INFO: [HLS 214-178] Inlining function 'void log_apfixed_reduce::range_reduce<ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 24, 15>(ap_ufixed<24, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<15, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:249:0)
 INFO: [HLS 214-178] Inlining function 'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:500:0)
 INFO: [HLS 214-178] Inlining function 'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> hls::log<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'feature_2_log(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (audrey_4_hls/mfcc.cpp:198:0)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::real(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)' (audrey_4_hls/mfcc.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::imag(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)' (audrey_4_hls/mfcc.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'feature_0_stft(hls::x_complex<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)' (audrey_4_hls/mfcc.cpp:20:0)
 INFO: [HLS 214-178] Inlining function 'feature_1_mel(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)' (audrey_4_hls/mfcc.cpp:20:0)
 INFO: [HLS 214-178] Inlining function 'feature_2_log(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)' (audrey_4_hls/mfcc.cpp:20:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (audrey_4_hls/mfcc.cpp:170:28)
+INFO: [HLS 214-364] Automatically inlining function 'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)' to improve effectiveness of pipeline pragma in function 'mfcc(hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1208:12)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.729 seconds; current allocated memory: 1.037 GB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.037 GB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.814 seconds; current allocated memory: 1.044 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.044 GB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top mfcc -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.0.bc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.045 GB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 1.052 GB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.1.bc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 1.047 GB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.054 GB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.g.1.bc to C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.o.1.bc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_180_1' (audrey_4_hls/mfcc.cpp:180) in function 'mfcc' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_199_1' (audrey_4_hls/mfcc.cpp:199) in function 'mfcc' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'task_6' (audrey_4_hls/mfcc.cpp:107) in function 'mfcc' automatically.
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_180_1' (audrey_4_hls/mfcc.cpp:180) in function 'mfcc' for pipelining.
 INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_186_2' (audrey_4_hls/mfcc.cpp:186) in function 'mfcc' completely with a factor of 30.
 INFO: [XFORM 203-102] Partitioning array 'mel_filterbank' in dimension 2 automatically.
-Command         transform done; 0.17 sec.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'abs_spectrogram' in function 'mfcc' (audrey_4_hls/mfcc.cpp:170:9).
+Command         transform done; 0.105 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:728:42) to (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:748:17) in function 'log_apfixed_reduce::log<17, 9>'... converting 18 basic blocks.
-INFO: [XFORM 203-11] Balancing expressions in function 'mfcc' (audrey_4_hls/mfcc.cpp:17:17)...29 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'log_apfixed_reduce::log<17, 9>' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:178:6)...3 expression(s) balanced.
-Command         transform done; 0.105 sec.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.285 seconds; current allocated memory: 1.071 GB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (audrey_4_hls/mfcc.cpp:106:35) in function 'mfcc'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.149 seconds; current allocated memory: 1.076 GB.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.o.2.bc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Execute           auto_get_db
-Command         transform done; 0.129 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1.086 GB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.579 sec.
-Command     elaborate done; 21.801 sec.
+Command       opt_and_import_c done; 0.354 sec.
+Command     elaborate done; 21.52 sec.
 Execute     ap_eval exec zip -j C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
-Command     ap_eval done; 0.107 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
 INFO: [HLS 200-10] Synthesizing 'mfcc' ...
 Execute       ap_set_top_model mfcc 
-WARNING: [SYN 201-103] Legalizing function name 'log<17, 9>' to 'log_17_9_s'.
 Execute       get_model_list mfcc -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model mfcc 
 Execute       preproc_iomode -model mfcc_Pipeline_task_6 
-Execute       preproc_iomode -model mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       preproc_iomode -model log<17, 9> 
-Execute       preproc_iomode -model mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       preproc_iomode -model mfcc_Pipeline_task_3 
+Execute       preproc_iomode -model mfcc_Pipeline_task_2 
 Execute       get_model_list mfcc -filter all-wo-channel 
-INFO-FLOW: Model list for configure: mfcc_Pipeline_task_3 mfcc_Pipeline_VITIS_LOOP_180_1 {log<17, 9>} mfcc_Pipeline_VITIS_LOOP_199_1 mfcc_Pipeline_task_6 mfcc
-INFO-FLOW: Configuring Module : mfcc_Pipeline_task_3 ...
-Execute       set_default_model mfcc_Pipeline_task_3 
-Execute       apply_spec_resource_limit mfcc_Pipeline_task_3 
-INFO-FLOW: Configuring Module : mfcc_Pipeline_VITIS_LOOP_180_1 ...
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       apply_spec_resource_limit mfcc_Pipeline_VITIS_LOOP_180_1 
-INFO-FLOW: Configuring Module : log<17, 9> ...
-Execute       set_default_model log<17, 9> 
-Execute       apply_spec_resource_limit log<17, 9> 
-INFO-FLOW: Configuring Module : mfcc_Pipeline_VITIS_LOOP_199_1 ...
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       apply_spec_resource_limit mfcc_Pipeline_VITIS_LOOP_199_1 
+INFO-FLOW: Model list for configure: mfcc_Pipeline_task_2 mfcc_Pipeline_task_6 mfcc
+INFO-FLOW: Configuring Module : mfcc_Pipeline_task_2 ...
+Execute       set_default_model mfcc_Pipeline_task_2 
+Execute       apply_spec_resource_limit mfcc_Pipeline_task_2 
 INFO-FLOW: Configuring Module : mfcc_Pipeline_task_6 ...
 Execute       set_default_model mfcc_Pipeline_task_6 
 Execute       apply_spec_resource_limit mfcc_Pipeline_task_6 
 INFO-FLOW: Configuring Module : mfcc ...
 Execute       set_default_model mfcc 
 Execute       apply_spec_resource_limit mfcc 
-INFO-FLOW: Model list for preprocess: mfcc_Pipeline_task_3 mfcc_Pipeline_VITIS_LOOP_180_1 {log<17, 9>} mfcc_Pipeline_VITIS_LOOP_199_1 mfcc_Pipeline_task_6 mfcc
-INFO-FLOW: Preprocessing Module: mfcc_Pipeline_task_3 ...
-Execute       set_default_model mfcc_Pipeline_task_3 
-Execute       cdfg_preprocess -model mfcc_Pipeline_task_3 
-Execute       rtl_gen_preprocess mfcc_Pipeline_task_3 
-INFO-FLOW: Preprocessing Module: mfcc_Pipeline_VITIS_LOOP_180_1 ...
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       cdfg_preprocess -model mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       rtl_gen_preprocess mfcc_Pipeline_VITIS_LOOP_180_1 
-INFO-FLOW: Preprocessing Module: log<17, 9> ...
-Execute       set_default_model log<17, 9> 
-Execute       cdfg_preprocess -model log<17, 9> 
-Execute       rtl_gen_preprocess log<17, 9> 
-INFO-FLOW: Preprocessing Module: mfcc_Pipeline_VITIS_LOOP_199_1 ...
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       cdfg_preprocess -model mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       rtl_gen_preprocess mfcc_Pipeline_VITIS_LOOP_199_1 
+INFO-FLOW: Model list for preprocess: mfcc_Pipeline_task_2 mfcc_Pipeline_task_6 mfcc
+INFO-FLOW: Preprocessing Module: mfcc_Pipeline_task_2 ...
+Execute       set_default_model mfcc_Pipeline_task_2 
+Execute       cdfg_preprocess -model mfcc_Pipeline_task_2 
+Execute       rtl_gen_preprocess mfcc_Pipeline_task_2 
 INFO-FLOW: Preprocessing Module: mfcc_Pipeline_task_6 ...
 Execute       set_default_model mfcc_Pipeline_task_6 
 Execute       cdfg_preprocess -model mfcc_Pipeline_task_6 
@@ -233,134 +225,37 @@ INFO-FLOW: Preprocessing Module: mfcc ...
 Execute       set_default_model mfcc 
 Execute       cdfg_preprocess -model mfcc 
 Execute       rtl_gen_preprocess mfcc 
-INFO-FLOW: Model list for synthesis: mfcc_Pipeline_task_3 mfcc_Pipeline_VITIS_LOOP_180_1 {log<17, 9>} mfcc_Pipeline_VITIS_LOOP_199_1 mfcc_Pipeline_task_6 mfcc
+INFO-FLOW: Model list for synthesis: mfcc_Pipeline_task_2 mfcc_Pipeline_task_6 mfcc
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'mfcc_Pipeline_task_3' 
+INFO: [HLS 200-42] -- Implementing module 'mfcc_Pipeline_task_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model mfcc_Pipeline_task_3 
-Execute       schedule -model mfcc_Pipeline_task_3 
+Execute       set_default_model mfcc_Pipeline_task_2 
+Execute       schedule -model mfcc_Pipeline_task_2 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'abs_spectrogram'. Use bind_storage pragma to override this type.
-INFO: [SCHED 204-61] Pipelining loop 'task_3'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'task_3'
+INFO: [SCHED 204-61] Pipelining loop 'task_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'task_2'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.115 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.325 seconds; current allocated memory: 1.114 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.verbose.sched.rpt 
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.215 seconds; current allocated memory: 1.090 GB.
+Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.verbose.sched.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
 Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.sched.adb -f 
-INFO-FLOW: Finish scheduling mfcc_Pipeline_task_3.
-Execute       set_default_model mfcc_Pipeline_task_3 
-Execute       bind -model mfcc_Pipeline_task_3 
+Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.sched.adb -f 
+INFO-FLOW: Finish scheduling mfcc_Pipeline_task_2.
+Execute       set_default_model mfcc_Pipeline_task_2 
+Execute       bind -model mfcc_Pipeline_task_2 
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.116 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.verbose.bind.rpt 
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 1.091 GB.
+Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.verbose.bind.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
 Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.bind.adb -f 
-INFO-FLOW: Finish binding mfcc_Pipeline_task_3.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'mfcc_Pipeline_VITIS_LOOP_180_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       schedule -model mfcc_Pipeline_VITIS_LOOP_180_1 
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'abs_spectrogram'. Use bind_storage pragma to override this type.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_180_1'.
-WARNING: [HLS 200-885] The II Violation in module 'mfcc_Pipeline_VITIS_LOOP_180_1' (loop 'VITIS_LOOP_180_1'): Unable to schedule 'load' operation ('abs_spectrogram_load_19', audrey_4_hls/mfcc.cpp:187->audrey_4_hls/mfcc.cpp:64) on array 'abs_spectrogram' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'abs_spectrogram'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 9, loop 'VITIS_LOOP_180_1'
-INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.398 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.466 seconds; current allocated memory: 1.119 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.verbose.sched.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.sched.adb -f 
-INFO-FLOW: Finish scheduling mfcc_Pipeline_VITIS_LOOP_180_1.
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       bind -model mfcc_Pipeline_VITIS_LOOP_180_1 
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 1.119 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.verbose.bind.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.bind.adb -f 
-INFO-FLOW: Finish binding mfcc_Pipeline_VITIS_LOOP_180_1.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'log_17_9_s' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model log<17, 9> 
-Execute       schedule -model log<17, 9> 
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln184) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining function 'log<17, 9>'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, function 'log<17, 9>'
-INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.358 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.492 seconds; current allocated memory: 1.122 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.verbose.sched.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.sched.adb -f 
-INFO-FLOW: Finish scheduling log<17, 9>.
-Execute       set_default_model log<17, 9> 
-Execute       bind -model log<17, 9> 
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.168 seconds; current allocated memory: 1.122 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.verbose.bind.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.bind.adb -f 
-INFO-FLOW: Finish binding log<17, 9>.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'mfcc_Pipeline_VITIS_LOOP_199_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       schedule -model mfcc_Pipeline_VITIS_LOOP_199_1 
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_199_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_199_1'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 1.122 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.verbose.sched.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.sched.adb -f 
-INFO-FLOW: Finish scheduling mfcc_Pipeline_VITIS_LOOP_199_1.
-Execute       set_default_model mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       bind -model mfcc_Pipeline_VITIS_LOOP_199_1 
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 1.122 GB.
-Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.verbose.bind.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.bind.adb -f 
-INFO-FLOW: Finish binding mfcc_Pipeline_VITIS_LOOP_199_1.
+Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.bind.adb -f 
+INFO-FLOW: Finish binding mfcc_Pipeline_task_2.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'mfcc_Pipeline_task_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -368,9 +263,9 @@ Execute       set_default_model mfcc_Pipeline_task_6
 Execute       schedule -model mfcc_Pipeline_task_6 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'task_6'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'task_6'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'task_6'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.131 seconds; current allocated memory: 1.122 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.143 seconds; current allocated memory: 1.092 GB.
 Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_6.verbose.sched.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
@@ -384,7 +279,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 1.122 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 1.092 GB.
 Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_6.verbose.bind.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
@@ -398,7 +293,7 @@ Execute       set_default_model mfcc
 Execute       schedule -model mfcc 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 1.092 GB.
 Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.verbose.sched.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
@@ -412,7 +307,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.148 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.092 GB.
 Execute       syn_report -verbosereport -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.verbose.bind.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
@@ -421,163 +316,41 @@ Execute       db_write -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga
 INFO-FLOW: Finish binding mfcc.
 Execute       get_model_list mfcc -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
-Execute       rtl_gen_preprocess mfcc_Pipeline_task_3 
-Execute       rtl_gen_preprocess mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       rtl_gen_preprocess log<17, 9> 
-Execute       rtl_gen_preprocess mfcc_Pipeline_VITIS_LOOP_199_1 
+Execute       rtl_gen_preprocess mfcc_Pipeline_task_2 
 Execute       rtl_gen_preprocess mfcc_Pipeline_task_6 
 Execute       rtl_gen_preprocess mfcc 
-INFO-FLOW: Model list for RTL generation: mfcc_Pipeline_task_3 mfcc_Pipeline_VITIS_LOOP_180_1 {log<17, 9>} mfcc_Pipeline_VITIS_LOOP_199_1 mfcc_Pipeline_task_6 mfcc
+INFO-FLOW: Model list for RTL generation: mfcc_Pipeline_task_2 mfcc_Pipeline_task_6 mfcc
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'mfcc_Pipeline_task_3' 
+INFO: [HLS 200-10] -- Generating RTL for module 'mfcc_Pipeline_task_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model mfcc_Pipeline_task_3 -top_prefix mfcc_ -sub_prefix mfcc_ -mg_file C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.compgen.tcl 
-INFO: [RTGEN 206-100] Finished creating RTL model for 'mfcc_Pipeline_task_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 1.124 GB.
+Execute       create_rtl_model mfcc_Pipeline_task_2 -top_prefix mfcc_ -sub_prefix mfcc_ -mg_file C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mfcc_Pipeline_task_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 1.093 GB.
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
-Execute       gen_rtl mfcc_Pipeline_task_3 -style xilinx -f -lang vhdl -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/vhdl/mfcc_mfcc_Pipeline_task_3 
-Execute       gen_rtl mfcc_Pipeline_task_3 -style xilinx -f -lang vlog -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/verilog/mfcc_mfcc_Pipeline_task_3 
-Execute       syn_report -csynth -model mfcc_Pipeline_task_3 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_task_3_csynth.rpt 
+Execute       gen_rtl mfcc_Pipeline_task_2 -style xilinx -f -lang vhdl -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/vhdl/mfcc_mfcc_Pipeline_task_2 
+Execute       gen_rtl mfcc_Pipeline_task_2 -style xilinx -f -lang vlog -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/verilog/mfcc_mfcc_Pipeline_task_2 
+Execute       syn_report -csynth -model mfcc_Pipeline_task_2 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_task_2_csynth.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
 Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -rtlxml -model mfcc_Pipeline_task_3 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_task_3_csynth.xml 
+Execute       syn_report -rtlxml -model mfcc_Pipeline_task_2 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_task_2_csynth.xml 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
 Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -verbosereport -model mfcc_Pipeline_task_3 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.verbose.rpt 
+Execute       syn_report -verbosereport -model mfcc_Pipeline_task_2 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.verbose.rpt 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
 Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -model mfcc_Pipeline_task_3 -f -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.adb 
-Execute       db_write -model mfcc_Pipeline_task_3 -bindview -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info mfcc_Pipeline_task_3 -p C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'mfcc_Pipeline_VITIS_LOOP_180_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model mfcc_Pipeline_VITIS_LOOP_180_1 -top_prefix mfcc_ -sub_prefix mfcc_ -mg_file C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mfcc_Pipeline_VITIS_LOOP_180_1' pipeline 'VITIS_LOOP_180_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_5ns_16s_21_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_6ns_16s_22_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_7ns_16s_23_1_1': 4 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_8ns_16s_24_1_1': 23 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'mfcc_Pipeline_VITIS_LOOP_180_1'.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_first_ind_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_0_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_1_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_2_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_3_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_4_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_5_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_6_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_7_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_8_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_9_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_10_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_11_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_12_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_13_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_14_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_15_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_16_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_17_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_18_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_19_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_20_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_21_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_22_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_23_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_24_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_25_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_26_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_27_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_28_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_29_ROM_AUTO_1R' using auto ROMs.
-Command       create_rtl_model done; 0.747 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.884 seconds; current allocated memory: 1.129 GB.
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
-Execute       gen_rtl mfcc_Pipeline_VITIS_LOOP_180_1 -style xilinx -f -lang vhdl -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/vhdl/mfcc_mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       gen_rtl mfcc_Pipeline_VITIS_LOOP_180_1 -style xilinx -f -lang vlog -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/verilog/mfcc_mfcc_Pipeline_VITIS_LOOP_180_1 
-Execute       syn_report -csynth -model mfcc_Pipeline_VITIS_LOOP_180_1 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_VITIS_LOOP_180_1_csynth.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -rtlxml -model mfcc_Pipeline_VITIS_LOOP_180_1 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_VITIS_LOOP_180_1_csynth.xml 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -verbosereport -model mfcc_Pipeline_VITIS_LOOP_180_1 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.verbose.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -model mfcc_Pipeline_VITIS_LOOP_180_1 -f -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.adb 
-Execute       db_write -model mfcc_Pipeline_VITIS_LOOP_180_1 -bindview -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info mfcc_Pipeline_VITIS_LOOP_180_1 -p C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'log_17_9_s' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model log<17, 9> -top_prefix mfcc_ -sub_prefix mfcc_ -mg_file C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'log_17_9_s' pipeline 'log<17, 9>' pipeline type 'function pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_24ns_4ns_29ns_29_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_29s_6ns_29_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5s_23ns_28_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_9ns_9ns_18_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'log_17_9_s'.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_log_17_9_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_log_17_9_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'mfcc_log_17_9_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R' using auto ROMs.
-Command       create_rtl_model done; 0.185 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.925 seconds; current allocated memory: 1.137 GB.
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
-Execute       gen_rtl log<17, 9> -style xilinx -f -lang vhdl -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/vhdl/mfcc_log_17_9_s 
-Execute       gen_rtl log<17, 9> -style xilinx -f -lang vlog -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/verilog/mfcc_log_17_9_s 
-Execute       syn_report -csynth -model log<17, 9> -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/log_17_9_s_csynth.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -rtlxml -model log<17, 9> -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/log_17_9_s_csynth.xml 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -verbosereport -model log<17, 9> -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.verbose.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -model log<17, 9> -f -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.adb 
-Execute       db_write -model log<17, 9> -bindview -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info log<17, 9> -p C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'mfcc_Pipeline_VITIS_LOOP_199_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model mfcc_Pipeline_VITIS_LOOP_199_1 -top_prefix mfcc_ -sub_prefix mfcc_ -mg_file C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mfcc_Pipeline_VITIS_LOOP_199_1' pipeline 'VITIS_LOOP_199_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'mfcc_Pipeline_VITIS_LOOP_199_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.661 seconds; current allocated memory: 1.142 GB.
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
-Execute       gen_rtl mfcc_Pipeline_VITIS_LOOP_199_1 -style xilinx -f -lang vhdl -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/vhdl/mfcc_mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       gen_rtl mfcc_Pipeline_VITIS_LOOP_199_1 -style xilinx -f -lang vlog -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/verilog/mfcc_mfcc_Pipeline_VITIS_LOOP_199_1 
-Execute       syn_report -csynth -model mfcc_Pipeline_VITIS_LOOP_199_1 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_VITIS_LOOP_199_1_csynth.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -rtlxml -model mfcc_Pipeline_VITIS_LOOP_199_1 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/mfcc_Pipeline_VITIS_LOOP_199_1_csynth.xml 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       syn_report -verbosereport -model mfcc_Pipeline_VITIS_LOOP_199_1 -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.verbose.rpt 
-Execute         list_part -family xc7a100t-csg324-1 
-Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
-Execute           ap_part_info -quiet -name xc7a100t-csg324-1 -data family 
-Execute       db_write -model mfcc_Pipeline_VITIS_LOOP_199_1 -f -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.adb 
-Execute       db_write -model mfcc_Pipeline_VITIS_LOOP_199_1 -bindview -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info mfcc_Pipeline_VITIS_LOOP_199_1 -p C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1 
+Execute       db_write -model mfcc_Pipeline_task_2 -f -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.adb 
+Execute       db_write -model mfcc_Pipeline_task_2 -bindview -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info mfcc_Pipeline_task_2 -p C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'mfcc_Pipeline_task_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model mfcc_Pipeline_task_6 -top_prefix mfcc_ -sub_prefix mfcc_ -mg_file C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_6.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mfcc_Pipeline_task_6' pipeline 'task_6' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'mfcc_Pipeline_task_6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 1.142 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 1.095 GB.
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
 Execute       gen_rtl mfcc_Pipeline_task_6 -style xilinx -f -lang vhdl -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/vhdl/mfcc_mfcc_Pipeline_task_6 
 Execute       gen_rtl mfcc_Pipeline_task_6 -style xilinx -f -lang vlog -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/verilog/mfcc_mfcc_Pipeline_task_6 
@@ -611,11 +384,8 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'mfcc/out_stream_V_strb_V' 
 INFO: [RTGEN 206-500] Setting interface mode on port 'mfcc/out_stream_V_last_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on function 'mfcc' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'mfcc'.
-INFO: [RTMG 210-278] Implementing memory 'mfcc_abs_spectrogram_RAM_1WNR_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'mfcc_mel_filtered_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'mfcc_mfcc_1_RAM_AUTO_1R1W' using auto RAMs.
-Command       create_rtl_model done; 0.302 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.442 seconds; current allocated memory: 1.143 GB.
+Command       create_rtl_model done; 0.188 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.095 GB.
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
 Execute       gen_rtl mfcc -istop -style xilinx -f -lang vhdl -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/vhdl/mfcc 
 Execute       gen_rtl mfcc -istop -style xilinx -f -lang vlog -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/verilog/mfcc 
@@ -636,7 +406,6 @@ Execute       db_write -model mfcc -bindview -o C:/Users/the5t/OneDrive/Document
 Execute       gen_tb_info mfcc -p C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc 
 Execute       export_constraint_db -f -tool general -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.constraint.tcl 
 Execute       syn_report -designview -model mfcc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.design.xml 
-Command       syn_report done; 0.159 sec.
 Execute       syn_report -csynthDesign -model mfcc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/csynth.rpt -MHOut C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
 Execute         list_part -family xc7a100t-csg324-1 
 Execute           ap_family_info -name xc7a100t-csg324-1 -data names 
@@ -645,103 +414,9 @@ Execute       syn_report -wcfg -model mfcc -o C:/Users/the5t/OneDrive/Documents/
 Execute       syn_report -protoinst -model mfcc -o C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.protoinst 
 Execute       sc_get_clocks mfcc 
 Execute       sc_get_portdomain mfcc 
-INFO-FLOW: Model list for RTL component generation: mfcc_Pipeline_task_3 mfcc_Pipeline_VITIS_LOOP_180_1 {log<17, 9>} mfcc_Pipeline_VITIS_LOOP_199_1 mfcc_Pipeline_task_6 mfcc
-INFO-FLOW: Handling components in module [mfcc_Pipeline_task_3] ... 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.compgen.tcl 
-INFO-FLOW: Found component mfcc_flow_control_loop_pipe_sequential_init.
-INFO-FLOW: Append model mfcc_flow_control_loop_pipe_sequential_init
-INFO-FLOW: Handling components in module [mfcc_Pipeline_VITIS_LOOP_180_1] ... 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.compgen.tcl 
-INFO-FLOW: Found component mfcc_mul_8ns_16s_24_1_1.
-INFO-FLOW: Append model mfcc_mul_8ns_16s_24_1_1
-INFO-FLOW: Found component mfcc_mul_7ns_16s_23_1_1.
-INFO-FLOW: Append model mfcc_mul_7ns_16s_23_1_1
-INFO-FLOW: Found component mfcc_mul_6ns_16s_22_1_1.
-INFO-FLOW: Append model mfcc_mul_6ns_16s_22_1_1
-INFO-FLOW: Found component mfcc_mul_5ns_16s_21_1_1.
-INFO-FLOW: Append model mfcc_mul_5ns_16s_21_1_1
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_first_ind_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_first_ind_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_0_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_0_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_1_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_1_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_2_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_2_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_3_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_3_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_4_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_4_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_5_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_5_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_6_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_6_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_7_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_7_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_8_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_8_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_9_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_9_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_10_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_10_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_11_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_11_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_12_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_12_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_13_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_13_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_14_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_14_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_15_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_15_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_16_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_16_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_17_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_17_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_18_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_18_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_19_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_19_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_20_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_20_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_21_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_21_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_22_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_22_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_23_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_23_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_24_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_24_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_25_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_25_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_26_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_26_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_27_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_27_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_28_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_28_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_29_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_29_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_flow_control_loop_pipe_sequential_init.
-INFO-FLOW: Append model mfcc_flow_control_loop_pipe_sequential_init
-INFO-FLOW: Handling components in module [log_17_9_s] ... 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.compgen.tcl 
-INFO-FLOW: Found component mfcc_mul_29s_6ns_29_2_1.
-INFO-FLOW: Append model mfcc_mul_29s_6ns_29_2_1
-INFO-FLOW: Found component mfcc_mul_5s_23ns_28_1_1.
-INFO-FLOW: Append model mfcc_mul_5s_23ns_28_1_1
-INFO-FLOW: Found component mfcc_mul_9ns_9ns_18_1_1.
-INFO-FLOW: Append model mfcc_mul_9ns_9ns_18_1_1
-INFO-FLOW: Found component mfcc_mac_mulsub_24ns_4ns_29ns_29_4_1.
-INFO-FLOW: Append model mfcc_mac_mulsub_24ns_4ns_29ns_29_4_1
-INFO-FLOW: Found component mfcc_log_17_9_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_log_17_9_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_log_17_9_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_log_17_9_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTO_1R
-INFO-FLOW: Found component mfcc_log_17_9_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R.
-INFO-FLOW: Append model mfcc_log_17_9_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R
-INFO-FLOW: Handling components in module [mfcc_Pipeline_VITIS_LOOP_199_1] ... 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.compgen.tcl 
+INFO-FLOW: Model list for RTL component generation: mfcc_Pipeline_task_2 mfcc_Pipeline_task_6 mfcc
+INFO-FLOW: Handling components in module [mfcc_Pipeline_task_2] ... 
+Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.compgen.tcl 
 INFO-FLOW: Found component mfcc_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model mfcc_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [mfcc_Pipeline_task_6] ... 
@@ -750,12 +425,6 @@ INFO-FLOW: Found component mfcc_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model mfcc_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [mfcc] ... 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.compgen.tcl 
-INFO-FLOW: Found component mfcc_abs_spectrogram_RAM_1WNR_AUTO_1R1W.
-INFO-FLOW: Append model mfcc_abs_spectrogram_RAM_1WNR_AUTO_1R1W
-INFO-FLOW: Found component mfcc_mel_filtered_RAM_AUTO_1R1W.
-INFO-FLOW: Append model mfcc_mel_filtered_RAM_AUTO_1R1W
-INFO-FLOW: Found component mfcc_mfcc_1_RAM_AUTO_1R1W.
-INFO-FLOW: Append model mfcc_mfcc_1_RAM_AUTO_1R1W
 INFO-FLOW: Found component mfcc_regslice_both.
 INFO-FLOW: Append model mfcc_regslice_both
 INFO-FLOW: Found component mfcc_regslice_both.
@@ -772,64 +441,14 @@ INFO-FLOW: Found component mfcc_regslice_both.
 INFO-FLOW: Append model mfcc_regslice_both
 INFO-FLOW: Found component mfcc_regslice_both.
 INFO-FLOW: Append model mfcc_regslice_both
-INFO-FLOW: Append model mfcc_Pipeline_task_3
-INFO-FLOW: Append model mfcc_Pipeline_VITIS_LOOP_180_1
-INFO-FLOW: Append model log_17_9_s
-INFO-FLOW: Append model mfcc_Pipeline_VITIS_LOOP_199_1
+INFO-FLOW: Append model mfcc_Pipeline_task_2
 INFO-FLOW: Append model mfcc_Pipeline_task_6
 INFO-FLOW: Append model mfcc
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: mfcc_flow_control_loop_pipe_sequential_init mfcc_mul_8ns_16s_24_1_1 mfcc_mul_7ns_16s_23_1_1 mfcc_mul_6ns_16s_22_1_1 mfcc_mul_5ns_16s_21_1_1 mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_first_ind_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_0_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_1_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_2_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_3_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_4_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_5_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_6_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_7_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_8_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_9_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_10_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_11_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_12_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_13_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_14_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_15_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_16_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_17_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_18_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_19_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_20_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_21_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_22_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_23_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_24_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_25_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_26_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_27_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_28_ROM_AUTO_1R mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_29_ROM_AUTO_1R mfcc_flow_control_loop_pipe_sequential_init mfcc_mul_29s_6ns_29_2_1 mfcc_mul_5s_23ns_28_1_1 mfcc_mul_9ns_9ns_18_1_1 mfcc_mac_mulsub_24ns_4ns_29ns_29_4_1 mfcc_log_17_9_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R mfcc_log_17_9_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTO_1R mfcc_log_17_9_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R mfcc_flow_control_loop_pipe_sequential_init mfcc_flow_control_loop_pipe_sequential_init mfcc_abs_spectrogram_RAM_1WNR_AUTO_1R1W mfcc_mel_filtered_RAM_AUTO_1R1W mfcc_mfcc_1_RAM_AUTO_1R1W mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_Pipeline_task_3 mfcc_Pipeline_VITIS_LOOP_180_1 log_17_9_s mfcc_Pipeline_VITIS_LOOP_199_1 mfcc_Pipeline_task_6 mfcc
+INFO-FLOW: All models in this session: mfcc_flow_control_loop_pipe_sequential_init mfcc_flow_control_loop_pipe_sequential_init mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_regslice_both mfcc_Pipeline_task_2 mfcc_Pipeline_task_6 mfcc
 INFO-FLOW: Generating C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/autopilot.rtl.models.txt file...
 INFO-FLOW: To file: write model mfcc_flow_control_loop_pipe_sequential_init
-INFO-FLOW: To file: write model mfcc_mul_8ns_16s_24_1_1
-INFO-FLOW: To file: write model mfcc_mul_7ns_16s_23_1_1
-INFO-FLOW: To file: write model mfcc_mul_6ns_16s_22_1_1
-INFO-FLOW: To file: write model mfcc_mul_5ns_16s_21_1_1
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_first_ind_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_0_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_1_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_2_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_3_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_4_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_5_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_6_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_7_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_8_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_9_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_10_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_11_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_12_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_13_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_14_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_15_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_16_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_17_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_18_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_19_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_20_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_21_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_22_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_23_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_24_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_25_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_26_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_27_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_28_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_29_ROM_AUTO_1R
 INFO-FLOW: To file: write model mfcc_flow_control_loop_pipe_sequential_init
-INFO-FLOW: To file: write model mfcc_mul_29s_6ns_29_2_1
-INFO-FLOW: To file: write model mfcc_mul_5s_23ns_28_1_1
-INFO-FLOW: To file: write model mfcc_mul_9ns_9ns_18_1_1
-INFO-FLOW: To file: write model mfcc_mac_mulsub_24ns_4ns_29ns_29_4_1
-INFO-FLOW: To file: write model mfcc_log_17_9_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_log_17_9_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_log_17_9_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R
-INFO-FLOW: To file: write model mfcc_flow_control_loop_pipe_sequential_init
-INFO-FLOW: To file: write model mfcc_flow_control_loop_pipe_sequential_init
-INFO-FLOW: To file: write model mfcc_abs_spectrogram_RAM_1WNR_AUTO_1R1W
-INFO-FLOW: To file: write model mfcc_mel_filtered_RAM_AUTO_1R1W
-INFO-FLOW: To file: write model mfcc_mfcc_1_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model mfcc_regslice_both
 INFO-FLOW: To file: write model mfcc_regslice_both
 INFO-FLOW: To file: write model mfcc_regslice_both
@@ -838,10 +457,7 @@ INFO-FLOW: To file: write model mfcc_regslice_both
 INFO-FLOW: To file: write model mfcc_regslice_both
 INFO-FLOW: To file: write model mfcc_regslice_both
 INFO-FLOW: To file: write model mfcc_regslice_both
-INFO-FLOW: To file: write model mfcc_Pipeline_task_3
-INFO-FLOW: To file: write model mfcc_Pipeline_VITIS_LOOP_180_1
-INFO-FLOW: To file: write model log_17_9_s
-INFO-FLOW: To file: write model mfcc_Pipeline_VITIS_LOOP_199_1
+INFO-FLOW: To file: write model mfcc_Pipeline_task_2
 INFO-FLOW: To file: write model mfcc_Pipeline_task_6
 INFO-FLOW: To file: write model mfcc
 INFO-FLOW: Generating C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
@@ -875,54 +491,7 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xf
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/vhdl' dstVlogDir='C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/vlog' tclDir='C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db' modelList='mfcc_flow_control_loop_pipe_sequential_init
-mfcc_mul_8ns_16s_24_1_1
-mfcc_mul_7ns_16s_23_1_1
-mfcc_mul_6ns_16s_22_1_1
-mfcc_mul_5ns_16s_21_1_1
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_first_ind_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_0_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_1_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_2_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_3_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_4_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_5_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_6_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_7_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_8_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_9_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_10_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_11_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_12_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_13_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_14_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_15_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_16_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_17_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_18_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_19_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_20_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_21_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_22_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_23_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_24_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_25_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_26_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_27_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_28_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_29_ROM_AUTO_1R
 mfcc_flow_control_loop_pipe_sequential_init
-mfcc_mul_29s_6ns_29_2_1
-mfcc_mul_5s_23ns_28_1_1
-mfcc_mul_9ns_9ns_18_1_1
-mfcc_mac_mulsub_24ns_4ns_29ns_29_4_1
-mfcc_log_17_9_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R
-mfcc_log_17_9_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTO_1R
-mfcc_log_17_9_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R
-mfcc_flow_control_loop_pipe_sequential_init
-mfcc_flow_control_loop_pipe_sequential_init
-mfcc_abs_spectrogram_RAM_1WNR_AUTO_1R1W
-mfcc_mel_filtered_RAM_AUTO_1R1W
-mfcc_mfcc_1_RAM_AUTO_1R1W
 mfcc_regslice_both
 mfcc_regslice_both
 mfcc_regslice_both
@@ -931,10 +500,7 @@ mfcc_regslice_both
 mfcc_regslice_both
 mfcc_regslice_both
 mfcc_regslice_both
-mfcc_Pipeline_task_3
-mfcc_Pipeline_VITIS_LOOP_180_1
-log_17_9_s
-mfcc_Pipeline_VITIS_LOOP_199_1
+mfcc_Pipeline_task_2
 mfcc_Pipeline_task_6
 mfcc
 ' expOnly='0'
@@ -943,76 +509,24 @@ Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet
 Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.compgen.tcl 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.compgen.tcl 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.compgen.tcl 
-Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
-Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
-Execute         ap_part_info -name xc7a100t-csg324-1 -data info 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.compgen.tcl 
+Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.compgen.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_6.compgen.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.compgen.tcl 
-Command       ap_source done; 0.157 sec.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.285 seconds; current allocated memory: 1.147 GB.
+Command       ap_source done; 0.145 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.507 seconds; current allocated memory: 1.099 GB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='mfcc_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name mfcc
 INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml config info
-INFO-FLOW: Done: create_csynth_xml config info time: 0.2 seconds per iteration
+INFO-FLOW: Done: create_csynth_xml config info time: 0.3 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/syn/report/csynth.xml
 INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='mfcc_flow_control_loop_pipe_sequential_init
-mfcc_mul_8ns_16s_24_1_1
-mfcc_mul_7ns_16s_23_1_1
-mfcc_mul_6ns_16s_22_1_1
-mfcc_mul_5ns_16s_21_1_1
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_first_ind_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_0_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_1_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_2_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_3_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_4_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_5_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_6_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_7_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_8_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_9_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_10_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_11_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_12_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_13_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_14_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_15_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_16_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_17_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_18_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_19_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_20_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_21_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_22_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_23_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_24_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_25_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_26_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_27_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_28_ROM_AUTO_1R
-mfcc_mfcc_Pipeline_VITIS_LOOP_180_1_mel_filterbank_29_ROM_AUTO_1R
 mfcc_flow_control_loop_pipe_sequential_init
-mfcc_mul_29s_6ns_29_2_1
-mfcc_mul_5s_23ns_28_1_1
-mfcc_mul_9ns_9ns_18_1_1
-mfcc_mac_mulsub_24ns_4ns_29ns_29_4_1
-mfcc_log_17_9_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R
-mfcc_log_17_9_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTO_1R
-mfcc_log_17_9_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R
-mfcc_flow_control_loop_pipe_sequential_init
-mfcc_flow_control_loop_pipe_sequential_init
-mfcc_abs_spectrogram_RAM_1WNR_AUTO_1R1W
-mfcc_mel_filtered_RAM_AUTO_1R1W
-mfcc_mfcc_1_RAM_AUTO_1R1W
 mfcc_regslice_both
 mfcc_regslice_both
 mfcc_regslice_both
@@ -1021,10 +535,7 @@ mfcc_regslice_both
 mfcc_regslice_both
 mfcc_regslice_both
 mfcc_regslice_both
-mfcc_Pipeline_task_3
-mfcc_Pipeline_VITIS_LOOP_180_1
-log_17_9_s
-mfcc_Pipeline_VITIS_LOOP_199_1
+mfcc_Pipeline_task_2
 mfcc_Pipeline_task_6
 mfcc
 ' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
@@ -1034,10 +545,7 @@ Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.compgen.dataonly.tcl 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_3.tbgen.tcl 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_180_1.tbgen.tcl 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/log_17_9_s.tbgen.tcl 
-Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_VITIS_LOOP_199_1.tbgen.tcl 
+Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.tbgen.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_6.tbgen.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
@@ -1046,24 +554,24 @@ Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.constraint.tcl 
 Execute       sc_get_clocks mfcc 
 Execute       source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST mfcc MODULE2INSTS {mfcc mfcc mfcc_Pipeline_task_3 grp_mfcc_Pipeline_task_3_fu_138 mfcc_Pipeline_VITIS_LOOP_180_1 grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151 mfcc_Pipeline_VITIS_LOOP_199_1 grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219 log_17_9_s grp_log_17_9_s_fu_70 mfcc_Pipeline_task_6 grp_mfcc_Pipeline_task_6_fu_231} INST2MODULE {mfcc mfcc grp_mfcc_Pipeline_task_3_fu_138 mfcc_Pipeline_task_3 grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151 mfcc_Pipeline_VITIS_LOOP_180_1 grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219 mfcc_Pipeline_VITIS_LOOP_199_1 grp_log_17_9_s_fu_70 log_17_9_s grp_mfcc_Pipeline_task_6_fu_231 mfcc_Pipeline_task_6} INSTDATA {mfcc {DEPTH 1 CHILDREN {grp_mfcc_Pipeline_task_3_fu_138 grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151 grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219 grp_mfcc_Pipeline_task_6_fu_231}} grp_mfcc_Pipeline_task_3_fu_138 {DEPTH 2 CHILDREN {}} grp_mfcc_Pipeline_VITIS_LOOP_180_1_fu_151 {DEPTH 2 CHILDREN {}} grp_mfcc_Pipeline_VITIS_LOOP_199_1_fu_219 {DEPTH 2 CHILDREN grp_log_17_9_s_fu_70} grp_log_17_9_s_fu_70 {DEPTH 3 CHILDREN {}} grp_mfcc_Pipeline_task_6_fu_231 {DEPTH 2 CHILDREN {}}} MODULEDATA {mfcc_Pipeline_task_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln42_fu_93_p2 SOURCE audrey_4_hls/mfcc.cpp:42 VARIABLE add_ln42 LOOP task_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} mfcc_Pipeline_VITIS_LOOP_180_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln180_fu_963_p2 SOURCE audrey_4_hls/mfcc.cpp:180 VARIABLE add_ln180 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U6 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_fu_1176_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U22 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_1 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_1_fu_1186_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_1 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U23 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_2 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_2_fu_988_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_2 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U7 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_3 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_3_fu_999_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_3 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U8 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_4 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_4_fu_1010_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_4 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U9 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_5 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_5_fu_1021_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_5 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U10 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_6 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_6_fu_1196_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_6 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U24 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_7 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_7_fu_1206_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_7 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U25 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_8 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_8_fu_1216_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_8 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U26 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_9 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_9_fu_1226_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_9 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U27 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_10 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_10_fu_1032_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_10 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U11 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_11 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_11_fu_1043_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_11 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U12 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_12 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_12_fu_1054_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_12 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U13 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_13 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_13_fu_1065_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_13 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U14 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_14 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_14_fu_1076_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_14 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U15 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_15 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_15_fu_1087_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_15 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U16 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_16 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_16_fu_1098_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_16 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U17 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_17 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_17_fu_1236_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_17 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U28 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_18 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_18_fu_1246_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_18 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U29 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_19 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_19_fu_1256_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_19 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U30 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_20 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_20_fu_1266_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_20 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U31 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_21 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_21_fu_1276_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_21 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_8ns_16s_24_1_1_U32 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_22 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_22_fu_1286_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_22 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_7ns_16s_23_1_1_U33 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_23 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_23_fu_1296_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_23 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_7ns_16s_23_1_1_U34 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_24 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_24_fu_1306_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_24 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_7ns_16s_23_1_1_U35 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_25 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_25_fu_1109_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_25 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_7ns_16s_23_1_1_U18 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_26 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_26_fu_1120_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_26 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_6ns_16s_22_1_1_U19 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_27 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_27_fu_1131_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_27 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_6ns_16s_22_1_1_U20 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_28 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_28_fu_1142_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_28 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_5ns_16s_21_1_1_U21 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE mul_ln187_29 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_29_fu_2063_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_29 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_32_fu_1999_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_32 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_35_fu_2077_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_35 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_36_fu_2081_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_36 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_39_fu_2013_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_39 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_46_fu_2100_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_46 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_49_fu_2110_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_49 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_50_fu_2115_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_50 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln187_53_fu_2038_p2 SOURCE audrey_4_hls/mfcc.cpp:187 VARIABLE add_ln187_53 LOOP VITIS_LOOP_180_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME first_ind_U SOURCE {} VARIABLE first_ind LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_0_U SOURCE {} VARIABLE mel_filterbank_0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_1_U SOURCE {} VARIABLE mel_filterbank_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_2_U SOURCE {} VARIABLE mel_filterbank_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_3_U SOURCE {} VARIABLE mel_filterbank_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_4_U SOURCE {} VARIABLE mel_filterbank_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_5_U SOURCE {} VARIABLE mel_filterbank_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_6_U SOURCE {} VARIABLE mel_filterbank_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_7_U SOURCE {} VARIABLE mel_filterbank_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_8_U SOURCE {} VARIABLE mel_filterbank_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_9_U SOURCE {} VARIABLE mel_filterbank_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_10_U SOURCE {} VARIABLE mel_filterbank_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_11_U SOURCE {} VARIABLE mel_filterbank_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_12_U SOURCE {} VARIABLE mel_filterbank_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_13_U SOURCE {} VARIABLE mel_filterbank_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_14_U SOURCE {} VARIABLE mel_filterbank_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_15_U SOURCE {} VARIABLE mel_filterbank_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_16_U SOURCE {} VARIABLE mel_filterbank_16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_17_U SOURCE {} VARIABLE mel_filterbank_17 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_18_U SOURCE {} VARIABLE mel_filterbank_18 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_19_U SOURCE {} VARIABLE mel_filterbank_19 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_20_U SOURCE {} VARIABLE mel_filterbank_20 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_21_U SOURCE {} VARIABLE mel_filterbank_21 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_22_U SOURCE {} VARIABLE mel_filterbank_22 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_23_U SOURCE {} VARIABLE mel_filterbank_23 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_24_U SOURCE {} VARIABLE mel_filterbank_24 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_25_U SOURCE {} VARIABLE mel_filterbank_25 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_26_U SOURCE {} VARIABLE mel_filterbank_26 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_27_U SOURCE {} VARIABLE mel_filterbank_27 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_28_U SOURCE {} VARIABLE mel_filterbank_28 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME mel_filterbank_29_U SOURCE {} VARIABLE mel_filterbank_29 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 30 BRAM 0 URAM 0}} log_17_9_s {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_5s_23ns_28_1_1_U74 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:739 VARIABLE mul_ln739 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_29s_6ns_29_2_1_U73 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:761 VARIABLE mul_ln761 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln184_fu_1540_p2 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:184 VARIABLE add_ln184 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_mulsub_24ns_4ns_29ns_29_4_1_U76 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:184 VARIABLE mul_ln184 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE sub PRAGMA {} RTLNAME mac_mulsub_24ns_4ns_29ns_29_4_1_U76 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:184 VARIABLE sub_ln184 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_9ns_9ns_18_1_1_U75 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:776 VARIABLE mul_ln776 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln776_fu_1634_p2 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:776 VARIABLE sub_ln776 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln779_fu_1557_p2 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:779 VARIABLE add_ln779 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME log_base_1_fu_1699_p2 SOURCE C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h:786 VARIABLE log_base_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_inverse_lut_table_array_U SOURCE {} VARIABLE log_apfixed_reduce_log_inverse_lut_table_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_U SOURCE {} VARIABLE log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 4 BRAM 1 URAM 0}} mfcc_Pipeline_VITIS_LOOP_199_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln199_fu_96_p2 SOURCE audrey_4_hls/mfcc.cpp:199 VARIABLE add_ln199 LOOP VITIS_LOOP_199_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_fu_116_p2 SOURCE audrey_4_hls/mfcc.cpp:201 VARIABLE x LOOP VITIS_LOOP_199_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 4 BRAM 1 URAM 0}} mfcc_Pipeline_task_6 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln107_fu_105_p2 SOURCE audrey_4_hls/mfcc.cpp:107 VARIABLE add_ln107 LOOP task_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} mfcc {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME abs_spectrogram_U SOURCE audrey_4_hls/mfcc.cpp:41 VARIABLE abs_spectrogram LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME mel_filtered_U SOURCE audrey_4_hls/mfcc.cpp:63 VARIABLE mel_filtered LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME mfcc_1_U SOURCE audrey_4_hls/mfcc.cpp:71 VARIABLE mfcc_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 34 BRAM 15 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST mfcc MODULE2INSTS {mfcc mfcc mfcc_Pipeline_task_2 grp_mfcc_Pipeline_task_2_fu_52 mfcc_Pipeline_task_6 grp_mfcc_Pipeline_task_6_fu_64} INST2MODULE {mfcc mfcc grp_mfcc_Pipeline_task_2_fu_52 mfcc_Pipeline_task_2 grp_mfcc_Pipeline_task_6_fu_64 mfcc_Pipeline_task_6} INSTDATA {mfcc {DEPTH 1 CHILDREN {grp_mfcc_Pipeline_task_2_fu_52 grp_mfcc_Pipeline_task_6_fu_64}} grp_mfcc_Pipeline_task_2_fu_52 {DEPTH 2 CHILDREN {}} grp_mfcc_Pipeline_task_6_fu_64 {DEPTH 2 CHILDREN {}}} MODULEDATA {mfcc_Pipeline_task_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_2_fu_76_p2 SOURCE audrey_4_hls/mfcc.cpp:32 VARIABLE i_2 LOOP task_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} mfcc_Pipeline_task_6 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln106_fu_89_p2 SOURCE audrey_4_hls/mfcc.cpp:106 VARIABLE add_ln106 LOOP task_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} mfcc {AREA {DSP 0 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.2 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.072 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.103 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for mfcc.
 INFO: [VLOG 209-307] Generating Verilog RTL for mfcc.
 Execute       syn_report -model mfcc -printsummary 
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 145.43 MHz
-Command     autosyn done; 8.396 sec.
-Command   csynth_design done; 30.388 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 2 seconds. Elapsed time: 30.388 seconds; current allocated memory: 128.984 MB.
-Command ap_source done; 33.578 sec.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 267.90 MHz
+Command     autosyn done; 2.887 sec.
+Command   csynth_design done; 24.569 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 24.569 seconds; current allocated memory: 70.266 MB.
+Command ap_source done; 27.579 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1 opened at Mon Jan 19 23:21:34 +0100 2026
+INFO-FLOW: Workspace C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1 opened at Tue Jan 20 12:44:14 +0100 2026
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7a100t-csg324-1 
@@ -1072,7 +580,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
-Command       create_platform done; 2.754 sec.
+Command       create_platform done; 2.547 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -1087,13 +595,25 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xf
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.864 sec.
+Command     set_part done; 2.652 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 2.97 sec.
-Execute   set_part xc7a100tcsg324-1 
-INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
-Execute     create_platform xc7a100tcsg324-1 -board  
+Execute     send_msg_by_id INFO @200-1464@%s config_export -display_name=mfcc2 
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=mfcc2
+Execute     config_export -display_name=mfcc2 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP 
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP
+Execute     config_export -output=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 2.714 sec.
+Execute   set_part xc7a100t-csg324-1 
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-1 
+Execute     create_platform xc7a100t-csg324-1 -board  
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -1108,28 +628,159 @@ Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7a100t-csg324-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.112 sec.
+Command   set_part done; 0.101 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   csim_design -quiet 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute   config_export -display_name mfcc2 -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -display_name mfcc2 -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP -rtl verilog 
+Execute   source ./audrey_4_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./audrey_4_hls/solution1/directives.tcl
+Execute     set_directive_top -name mfcc mfcc 
+INFO: [HLS 200-1510] Running: set_directive_top -name mfcc mfcc 
+Execute   export_design -rtl verilog -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP 
+Execute     config_export -format=ip_catalog -output=C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog -display_name mfcc2
 Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     send_msg_by_id INFO @200-2036@%s debug 
-INFO: [HLS 200-2036] Building debug C Simulation binaries
-Execute     ap_part_info -name xc7a100t-csg324-1 -data info 
-ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
-4
-    while executing
-"::AESL_CSIM::csim_cmd_wrap $args"
-INFO-FLOW: Caught error in csim_design: 4
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 2.291 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.291 seconds; current allocated memory: 0.691 MB.
-Command ap_source done; error code: 1; 5.444 sec.
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_family_info -name artix7 -data parts 
+Execute     ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=mfcc xml_exists=0
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to mfcc
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=8
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=13 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='mfcc_flow_control_loop_pipe_sequential_init
+mfcc_flow_control_loop_pipe_sequential_init
+mfcc_regslice_both
+mfcc_regslice_both
+mfcc_regslice_both
+mfcc_regslice_both
+mfcc_regslice_both
+mfcc_regslice_both
+mfcc_regslice_both
+mfcc_regslice_both
+mfcc_Pipeline_task_2
+mfcc_Pipeline_task_6
+mfcc
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.compgen.dataonly.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_2.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc_Pipeline_task_6.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.constraint.tcl 
+Execute     sc_get_clocks mfcc 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to mfcc
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=mfcc
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.constraint.tcl 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/mfcc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_family_info -name artix7 -data parts 
+Execute     ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:     IP package: success C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/impl/ip/pack.bat
+Execute     send_msg_by_id INFO @200-802@%s C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/export.zip 
+INFO: [HLS 200-802] Generated output file C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/export.zip
+Command   export_design done; 10.616 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.616 seconds; current allocated memory: 7.523 MB.
+Command ap_source done; 13.52 sec.
 Execute cleanup_all 

@@ -31,8 +31,7 @@ void mfcc(
         complex_fft_in_t audio[WIN_SIZE_SAMPLES];
         task_2: for (int i = 0; i < WIN_SIZE_SAMPLES; i++) {
         /// Task: check if the loop can be pipelined or unrole using the pragmas
-#pragma HLS UNROLL
-        	/// todo was unable to see this loop in the synthesis summary but I think its unroll
+#pragma HLS PIPELINE II=1
             AXI_TYPE val_in = in_stream.read();
             audio[i].real(val_in.data);
             audio[i].imag(0);
@@ -40,7 +39,7 @@ void mfcc(
     #else // allow to start from STFT output for debugging purposes
         fix_t abs_spectrogram[N_SPECTROGRAM_BINS];
         task_3: for (int i = 0; i < N_SPECTROGRAM_BINS; i++) {
-#pragma HLS PIPELINE
+#pragma HLS PIPELINE II=1
         /// Task: check if the loop can be pipelined or unrole using the pragmas
             AXI_TYPE val_in = in_stream.read();
             abs_spectrogram[i] = val_in.data;
@@ -77,7 +76,7 @@ void mfcc(
     ////////////////////////////////////////
     #ifndef FEATURE_1_MEL
         task_4: for (int m = 0; m < N_SPECTROGRAM_BINS; m++) {
-#pragma HLS UNROLL
+#pragma HLS PIPELINE II=1
         /// Task: check if the loop can be pipelined or unrole using the pragmas
             AXI_TYPE val_out;
             val_out.data = abs_spectrogram[m];
@@ -106,6 +105,7 @@ void mfcc(
     #else
         task_6: for (int m = 0; m < N_MFCC; m++) {
         /// Task: check if the loop can be pipelined or unrole using the pragmas
+#pragma HLS PIPELINE II=1
             AXI_TYPE val_out;
             val_out.data = mfcc[m];
             val_out.keep = -1; // All bytes are valid
@@ -143,7 +143,7 @@ typedef hls::ip_fft::status_t<config1> status_t;
 
 
 void feature_0_stft(complex_fft_in_t audio[WIN_SIZE_SAMPLES], fix_t abs_spectrogram[N_SPECTROGRAM_BINS]) {
-    /*
+	/*
     fix_t fft_out[WIN_SIZE_SAMPLES];
 
     config_t fft_config;
@@ -159,11 +159,11 @@ void feature_0_stft(complex_fft_in_t audio[WIN_SIZE_SAMPLES], fix_t abs_spectrog
     for (int k = 0; k < WIN_SIZE_SAMPLES; k++) {
         fft_out_tmp[k] = fft_out[k];
     }
-    
     */
     
     // Absolute of all coefficients from 0 to N_SPECTROGRAM_BINS
     for (int k = 0; k <= N_SPECTROGRAM_BINS; k++) {
+#pragma HLS PIPELINE II=1
     /// Task: check if the loop can be pipelined or unrole using the pragmas
         int k_ = k + N_SPECTROGRAM_BINS/2;
         //out[k] = hls::sqrt(fft_out_tmp[k_].real() * fft_out_tmp[k_].real() + fft_out_tmp[k_].imag() * fft_out_tmp[k_].imag());
@@ -197,6 +197,7 @@ void feature_1_mel(fix_t abs_spectrogram[N_SPECTROGRAM_BINS], fix_t mel_filtered
 ////////////////////////////////////////
 void feature_2_log(fix_t mel_filtered[N_MFCC], fix_t mfcc[N_MFCC]) {
     for (int m = 0; m < N_MFCC; m++) {
+#pragma HLS PIPELINE II=1
     /// Task: check if the loop can be pipelined or unrole using the pragmas
         mfcc[m] = hls::log(mel_filtered[m] + (fix_t) 3.90625e-3);
     }

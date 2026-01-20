@@ -1,89 +1,20 @@
 {
   "0": {
-    "basicblocks": 22,
-    "calls": "38 1",
+    "basicblocks": 28,
+    "calls": "14 7 4 14 11 3 8",
     "file": "mfcc.cpp",
     "fileloc": 17,
-    "instructions": 152,
+    "instructions": 191,
     "loads": {
-      "L": 8
+      "L": 7
     },
     "name": "mfcc",
     "stores": {
-      "L": 8
+      "L": 7
     },
-    "total_instructions": 6656
+    "total_instructions": 6876
   },
   "1": {
-    "basicblocks": 7,
-    "calls": "",
-    "file": "mfcc.cpp",
-    "fileloc": 198,
-    "instructions": 39,
-    "loads": {
-      "L": 1
-    },
-    "name": "feature_2_log",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 5660
-  },
-  "10": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 3546,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.421",
-    "total_instructions": 1217
-  },
-  "11": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 3690,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.443",
-    "total_instructions": 1217
-  },
-  "12": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "mel_filterbank.h",
-    "fileloc": 53,
-    "instructions": 1261,
-    "name": "__cxx_global_var_init",
-    "total_instructions": 514081
-  },
-  "13": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 2876,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.291",
-    "total_instructions": 1217
-  },
-  "14": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 3168,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.356",
-    "total_instructions": 1217
-  },
-  "15": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 2154,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.223",
-    "total_instructions": 1217
-  },
-  "16": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.h",
@@ -99,108 +30,105 @@
     },
     "total_instructions": 1309
   },
-  "17": {
+  "10": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
-    "fileloc": 2588,
+    "fileloc": 3546,
     "instructions": 65,
-    "name": "__cxx_global_var_init.226",
+    "name": "__cxx_global_var_init.421",
     "total_instructions": 1217
   },
-  "18": {
-    "basicblocks": 1,
+  "11": {
+    "basicblocks": 7,
     "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 4752,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.604",
-    "total_instructions": 1217
+    "file": "mfcc.cpp",
+    "fileloc": 145,
+    "instructions": 21,
+    "loads": {
+      "L": 1
+    },
+    "name": "feature_0_stft",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 78
   },
-  "19": {
+  "12": {
     "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 3024,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.292",
-    "total_instructions": 1217
-  },
-  "2": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 3316,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.357",
-    "total_instructions": 1217
-  },
-  "20": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 2732,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.290",
-    "total_instructions": 1217
-  },
-  "21": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 92,
-    "instructions": 17,
-    "name": "__cxx_global_var_init",
-    "total_instructions": 305
-  },
-  "22": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 276,
-    "instructions": 17,
-    "name": "__cxx_global_var_init.19",
-    "total_instructions": 305
-  },
-  "23": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 2298,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.224",
-    "total_instructions": 1217
-  },
-  "24": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 2440,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.225",
-    "total_instructions": 1217
-  },
-  "25": {
-    "basicblocks": 1,
-    "calls": "12",
+    "calls": "38",
     "file": "mfcc.pp.0.cpp",
     "fileloc": 0,
     "instructions": 2,
     "name": "",
     "total_instructions": 514083
   },
-  "26": {
+  "13": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
-    "fileloc": 994,
+    "fileloc": 230,
+    "instructions": 17,
+    "name": "__cxx_global_var_init.18",
+    "total_instructions": 305
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_x_complex.h",
+    "fileloc": 68,
+    "instructions": 5,
+    "name": "x_complex",
+    "total_instructions": 19
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1574,
     "instructions": 65,
-    "name": "__cxx_global_var_init.89",
+    "name": "__cxx_global_var_init.156",
     "total_instructions": 1217
   },
-  "27": {
+  "16": {
     "basicblocks": 1,
-    "calls": "16",
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1718,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.157",
+    "total_instructions": 1217
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 850,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.88",
+    "total_instructions": 1217
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "23 37 19 13 36 28 22 6 31 32 17 35 25 20 26 15 16 40 34 24 33 9 21 43 30 42 41 29 10 27 5",
+    "file": "hls_log_apfixed.pp.cpp",
+    "fileloc": 0,
+    "instructions": 32,
+    "name": "",
+    "total_instructions": 31375
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 184,
+    "instructions": 17,
+    "name": "__cxx_global_var_init.17",
+    "total_instructions": 305
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "1",
     "file": "hls_log_apfixed.h",
     "fileloc": 249,
     "instructions": 15,
@@ -213,7 +141,7 @@
     },
     "total_instructions": 1548
   },
-  "28": {
+  "20": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
@@ -222,77 +150,16 @@
     "name": "__cxx_global_var_init.91",
     "total_instructions": 1217
   },
-  "29": {
+  "21": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
-    "fileloc": 850,
+    "fileloc": 2588,
     "instructions": 65,
-    "name": "__cxx_global_var_init.88",
+    "name": "__cxx_global_var_init.226",
     "total_instructions": 1217
   },
-  "3": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 1718,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.157",
-    "total_instructions": 1217
-  },
-  "30": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 230,
-    "instructions": 17,
-    "name": "__cxx_global_var_init.18",
-    "total_instructions": 305
-  },
-  "31": {
-    "basicblocks": 14,
-    "calls": "27",
-    "file": "hls_log_apfixed.h",
-    "fileloc": 499,
-    "instructions": 369,
-    "loads": {
-      "G": 2,
-      "L": 9
-    },
-    "name": "log<17, 9>",
-    "stores": {
-      "L": 11
-    },
-    "total_instructions": 4992
-  },
-  "32": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 322,
-    "instructions": 17,
-    "name": "__cxx_global_var_init.20",
-    "total_instructions": 305
-  },
-  "33": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 1138,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.90",
-    "total_instructions": 1217
-  },
-  "34": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 562,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.86",
-    "total_instructions": 1217
-  },
-  "35": {
+  "22": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
@@ -301,25 +168,70 @@
     "name": "__cxx_global_var_init.21",
     "total_instructions": 305
   },
-  "36": {
+  "23": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
-    "fileloc": 2010,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.159",
-    "total_instructions": 1217
+    "fileloc": 92,
+    "instructions": 17,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 305
   },
-  "37": {
+  "24": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
-    "fileloc": 706,
+    "fileloc": 2154,
     "instructions": 65,
-    "name": "__cxx_global_var_init.87",
+    "name": "__cxx_global_var_init.223",
     "total_instructions": 1217
   },
-  "38": {
+  "25": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1138,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.90",
+    "total_instructions": 1217
+  },
+  "26": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1430,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.155",
+    "total_instructions": 1217
+  },
+  "27": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 3690,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.443",
+    "total_instructions": 1217
+  },
+  "28": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 322,
+    "instructions": 17,
+    "name": "__cxx_global_var_init.20",
+    "total_instructions": 305
+  },
+  "29": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 3316,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.357",
+    "total_instructions": 1217
+  },
+  "3": {
     "basicblocks": 13,
     "calls": "",
     "file": "mfcc.cpp",
@@ -335,34 +247,119 @@
     },
     "total_instructions": 527
   },
-  "39": {
+  "30": {
     "basicblocks": 1,
-    "calls": "21 9 8 30 22 32 35 7 34 37 29 26 33 28 4 5 3 6 36 15 23 24 17 20 13 19 14 2 10 11 18",
-    "file": "hls_log_apfixed.pp.cpp",
-    "fileloc": 0,
-    "instructions": 32,
-    "name": "",
-    "total_instructions": 31375
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 2876,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.291",
+    "total_instructions": 1217
+  },
+  "31": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 562,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.86",
+    "total_instructions": 1217
+  },
+  "32": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 706,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.87",
+    "total_instructions": 1217
+  },
+  "33": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 2298,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.224",
+    "total_instructions": 1217
+  },
+  "34": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 2010,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.159",
+    "total_instructions": 1217
+  },
+  "35": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 994,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.89",
+    "total_instructions": 1217
+  },
+  "36": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 276,
+    "instructions": 17,
+    "name": "__cxx_global_var_init.19",
+    "total_instructions": 305
+  },
+  "37": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 138,
+    "instructions": 17,
+    "name": "__cxx_global_var_init.16",
+    "total_instructions": 305
+  },
+  "38": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "mel_filterbank.h",
+    "fileloc": 53,
+    "instructions": 1261,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 514081
+  },
+  "39": {
+    "basicblocks": 14,
+    "calls": "2",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 499,
+    "instructions": 369,
+    "loads": {
+      "G": 2,
+      "L": 9
+    },
+    "name": "log<17, 9>",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 4992
   },
   "4": {
     "basicblocks": 1,
     "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 1430,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.155",
-    "total_instructions": 1217
+    "file": "hls_x_complex.h",
+    "fileloc": 84,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "imag",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
   },
-  "5": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 1574,
-    "instructions": 65,
-    "name": "__cxx_global_var_init.156",
-    "total_instructions": 1217
-  },
-  "6": {
+  "40": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
@@ -371,7 +368,43 @@
     "name": "__cxx_global_var_init.158",
     "total_instructions": 1217
   },
-  "7": {
+  "41": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 3168,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.356",
+    "total_instructions": 1217
+  },
+  "42": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 3024,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.292",
+    "total_instructions": 1217
+  },
+  "43": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 2732,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.290",
+    "total_instructions": 1217
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 4752,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.604",
+    "total_instructions": 1217
+  },
+  "6": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
@@ -380,22 +413,43 @@
     "name": "__cxx_global_var_init.22",
     "total_instructions": 1217
   },
-  "8": {
+  "7": {
     "basicblocks": 1,
     "calls": "",
-    "file": "hls_log_apfixed.cpp",
-    "fileloc": 184,
-    "instructions": 17,
-    "name": "__cxx_global_var_init.17",
-    "total_instructions": 305
+    "file": "hls_x_complex.h",
+    "fileloc": 79,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "real",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "8": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "mfcc.cpp",
+    "fileloc": 198,
+    "instructions": 39,
+    "loads": {
+      "L": 1
+    },
+    "name": "feature_2_log",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 5660
   },
   "9": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_log_apfixed.cpp",
-    "fileloc": 138,
-    "instructions": 17,
-    "name": "__cxx_global_var_init.16",
-    "total_instructions": 305
+    "fileloc": 2440,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.225",
+    "total_instructions": 1217
   }
 }

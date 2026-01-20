@@ -7,5 +7,6 @@
   </source>
   <testbench>
     <originFiles name="tb.cpp" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\tb.cpp"/>
+    <originFiles name="stimuli" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\stimuli"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

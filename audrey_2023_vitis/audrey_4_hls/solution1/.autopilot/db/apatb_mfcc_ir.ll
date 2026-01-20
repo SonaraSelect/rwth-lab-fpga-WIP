@@ -35,8 +35,8 @@ entry:
 ; Function Attrs: argmemonly noinline
 define internal fastcc void @copy_in(%"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias, i16* noalias "unpacked"="1.0" %_V_data_V, i2* noalias "unpacked"="1.1" %_V_keep_V, i2* noalias "unpacked"="1.2" %_V_strb_V, i1* noalias "unpacked"="1.3" %_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias, i16* noalias "unpacked"="3.0" %_V_data_V1, i2* noalias "unpacked"="3.1" %_V_keep_V2, i2* noalias "unpacked"="3.2" %_V_strb_V3, i1* noalias "unpacked"="3.3" %_V_last_V4) unnamed_addr #1 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.32"(i16* %_V_data_V, i2* %_V_keep_V, i2* %_V_strb_V, i1* %_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* %0)
-  call fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.32"(i16* %_V_data_V1, i2* %_V_keep_V2, i2* %_V_strb_V3, i1* %_V_last_V4, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* %1)
+  call fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.40"(i16* %_V_data_V, i2* %_V_keep_V, i2* %_V_strb_V, i1* %_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* %0)
+  call fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.40"(i16* %_V_data_V1, i2* %_V_keep_V2, i2* %_V_strb_V3, i1* %_V_last_V4, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* %1)
   ret void
 }
 
@@ -56,7 +56,7 @@ entry:
   br i1 %1, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  call fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.27"(%"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* nonnull align 512 %dst, i16* %src_V_data_V, i2* %src_V_keep_V, i2* %src_V_strb_V, i1* %src_V_last_V)
+  call fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.35"(%"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* nonnull align 512 %dst, i16* %src_V_data_V, i2* %src_V_keep_V, i2* %src_V_strb_V, i1* %src_V_last_V)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -64,7 +64,7 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.27"(%"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias nocapture align 512, i16* noalias nocapture "unpacked"="1.0" %_V_data_V, i2* noalias nocapture "unpacked"="1.1" %_V_keep_V, i2* noalias nocapture "unpacked"="1.2" %_V_strb_V, i1* noalias nocapture "unpacked"="1.3" %_V_last_V) unnamed_addr #4 {
+define internal fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.35"(%"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias nocapture align 512, i16* noalias nocapture "unpacked"="1.0" %_V_data_V, i2* noalias nocapture "unpacked"="1.1" %_V_keep_V, i2* noalias nocapture "unpacked"="1.2" %_V_strb_V, i1* noalias nocapture "unpacked"="1.3" %_V_last_V) unnamed_addr #4 {
 entry:
   %1 = alloca %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"
   %2 = alloca i16
@@ -123,14 +123,14 @@ ret:                                              ; preds = %empty
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.32"(i16* noalias "unpacked"="0.0" %dst_V_data_V, i2* noalias "unpacked"="0.1" %dst_V_keep_V, i2* noalias "unpacked"="0.2" %dst_V_strb_V, i1* noalias "unpacked"="0.3" %dst_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias %src) unnamed_addr #3 {
+define internal fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.40"(i16* noalias "unpacked"="0.0" %dst_V_data_V, i2* noalias "unpacked"="0.1" %dst_V_keep_V, i2* noalias "unpacked"="0.2" %dst_V_strb_V, i1* noalias "unpacked"="0.3" %dst_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias %src) unnamed_addr #3 {
 entry:
   %0 = icmp eq %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* %src, null
   %1 = or i1 false, %0
   br i1 %1, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  call fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.35"(i16* %dst_V_data_V, i2* %dst_V_keep_V, i2* %dst_V_strb_V, i1* %dst_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* nonnull %src)
+  call fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.43"(i16* %dst_V_data_V, i2* %dst_V_keep_V, i2* %dst_V_strb_V, i1* %dst_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* nonnull %src)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -138,7 +138,7 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.35"(i16* noalias nocapture "unpacked"="0.0" %_V_data_V, i2* noalias nocapture "unpacked"="0.1" %_V_keep_V, i2* noalias nocapture "unpacked"="0.2" %_V_strb_V, i1* noalias nocapture "unpacked"="0.3" %_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias nocapture) unnamed_addr #4 {
+define internal fastcc void @"streamcpy_hls.p0class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>.43"(i16* noalias nocapture "unpacked"="0.0" %_V_data_V, i2* noalias nocapture "unpacked"="0.1" %_V_keep_V, i2* noalias nocapture "unpacked"="0.2" %_V_strb_V, i1* noalias nocapture "unpacked"="0.3" %_V_last_V, %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"* noalias nocapture) unnamed_addr #4 {
 entry:
   %1 = alloca %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"
   %2 = alloca %"class.hls::stream<hls::axis<ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>"

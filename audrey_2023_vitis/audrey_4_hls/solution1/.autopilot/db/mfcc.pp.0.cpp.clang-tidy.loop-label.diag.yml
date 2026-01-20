@@ -1428,21 +1428,21 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_927_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_166_1:  '
-    FileOffset:      166
+    Message:         'Added loop label VITIS_LOOP_165_1:  '
+    FileOffset:      165
     FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\mfcc.cpp'
     Replacements:    
       - FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp'
-        Offset:          2495274
+        Offset:          2495615
         Length:          0
-        ReplacementText: 'VITIS_LOOP_166_1: '
+        ReplacementText: 'VITIS_LOOP_165_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_180_1:  '
     FileOffset:      180
     FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\mfcc.cpp'
     Replacements:    
       - FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp'
-        Offset:          2495468
+        Offset:          2495828
         Length:          0
         ReplacementText: 'VITIS_LOOP_180_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1451,7 +1451,7 @@ Diagnostics:
     FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\mfcc.cpp'
     Replacements:    
       - FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp'
-        Offset:          2495571
+        Offset:          2495931
         Length:          0
         ReplacementText: 'VITIS_LOOP_186_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1460,7 +1460,7 @@ Diagnostics:
     FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\mfcc.cpp'
     Replacements:    
       - FilePath:        'C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\audrey_2023_vitis\audrey_4_hls\solution1\.autopilot\db\mfcc.pp.0.cpp'
-        Offset:          2495810
+        Offset:          2496170
         Length:          0
         ReplacementText: 'VITIS_LOOP_199_1: '
 ...

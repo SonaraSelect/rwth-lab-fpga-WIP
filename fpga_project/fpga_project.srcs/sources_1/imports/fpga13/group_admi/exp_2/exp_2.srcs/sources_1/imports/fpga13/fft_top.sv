@@ -14,7 +14,6 @@ module fft_top #(
 	output var fft_pkg::real_str_t proc_data,
 	output var logic proc_data_valid,
 	input var logic proc_data_ready,
-	
 	output var logic active
 	
 );

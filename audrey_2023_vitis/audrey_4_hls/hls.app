@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="mfcc" name="audrey_4_hls" projectType="C/C++">
+<project xmlns="com.autoesl.autopilot.project" name="audrey_4_hls" top="mfcc" projectType="C/C++">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -9,6 +9,7 @@
         <file name="audrey_4_hls/mfcc.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="audrey_4_hls/mfcc.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="../tb.cpp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
+        <file name="../stimuli" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

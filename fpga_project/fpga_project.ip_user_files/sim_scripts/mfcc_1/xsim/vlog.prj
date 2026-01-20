@@ -1,0 +1,13 @@
+verilog xil_defaultlib --include "../../../ipstatic/hdl/verilog" \
+"../../../ipstatic/hdl/verilog/mfcc_flow_control_loop_pipe_sequential_init.v" \
+"../../../ipstatic/hdl/verilog/mfcc_hls_deadlock_idx0_monitor.v" \
+"../../../ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_2.v" \
+"../../../ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_6.v" \
+"../../../ipstatic/hdl/verilog/mfcc_regslice_both.v" \
+"../../../ipstatic/hdl/verilog/mfcc.v" \
+"../../../../fpga_project.gen/sources_1/ip/mfcc_1/sim/mfcc_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

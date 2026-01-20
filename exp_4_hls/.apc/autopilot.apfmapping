@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="mel_filterbank.h" path="C:\Users\necde\Documents\fpga_supplementary\exp_4_files\mel_filterbank.h"/>
-    <originFiles name="mfcc.cpp" path="C:\Users\necde\Documents\fpga_supplementary\exp_4_files\mfcc.cpp"/>
-    <originFiles name="mfcc.h" path="C:\Users\necde\Documents\fpga_supplementary\exp_4_files\mfcc.h"/>
+    <originFiles name="mel_filterbank.h" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\mel_filterbank.h"/>
+    <originFiles name="mfcc.cpp" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\mfcc.cpp"/>
+    <originFiles name="mfcc.h" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\mfcc.h"/>
   </source>
   <testbench>
-    <originFiles name="tb.cpp" path="C:\Users\necde\Documents\fpga_supplementary\exp_4_files\tb.cpp"/>
-    <originFiles name="stimuli" path="C:\Users\necde\Documents\fpga_supplementary\exp_4_files\stimuli"/>
+    <originFiles name="tb.cpp" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\tb.cpp"/>
+    <originFiles name="stimuli" path="C:\Users\the5t\OneDrive\Documents\GitHub\rwth-lab-fpga-WIP\stimuli"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

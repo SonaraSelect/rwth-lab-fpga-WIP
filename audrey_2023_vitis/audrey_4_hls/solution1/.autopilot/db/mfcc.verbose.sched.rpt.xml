@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mfcc'" level="0">
-<item name = "Date">Mon Jan 19 23:15:28 2026
+<item name = "Date">Tue Jan 20 12:41:16 2026
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">audrey_4_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.876 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 3.733 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">459, 459, 4.590 us, 4.590 us, 460, 460, no</column>
+<column name="">564, 564, 5.640 us, 5.640 us, 565, 565, no</column>
 </table>
 </item>
 <item name = "Detail">

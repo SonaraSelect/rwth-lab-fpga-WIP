@@ -15,7 +15,7 @@
 // 3. FEATURE_2_LOG: Take the logarithm of the output of the previous step
 
 // TODO uncomment when implemented from top to bottom (FEATURE_0_STFT can be skipped for debugging purposes)
-//#define FEATURE_0_STFT
+#define FEATURE_0_STFT
 #define FEATURE_1_MEL
 #define FEATURE_2_LOG
 
@@ -27,7 +27,7 @@ typedef hls::axis<fix_t, 0, 0, 0> AXI_TYPE;
 typedef hls::x_complex<fix_t> complex_fix_t;
 
 // For FFT only, subject to change
-// typedef ap_fixed<16,1> ap_fft_t;
+//typedef ap_fixed<16,1> ap_fft_t;
 typedef fix_t ap_fft_t;
 typedef hls::x_complex<ap_fft_t> complex_fft_in_t;
 typedef hls::x_complex<ap_fft_t> complex_fft_out_t;

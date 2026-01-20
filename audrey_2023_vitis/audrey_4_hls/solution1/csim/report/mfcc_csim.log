@@ -1,11 +1,53 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../tb.cpp in debug mode
-csim.mk:78: recipe for target 'obj/tb.o' failed
-../../../tb.cpp:8:25: fatal error: ../src/mfcc.h: No such file or directory
- #include "../src/mfcc.h"
-                         ^
-compilation terminated.
-make: *** [obj/tb.o] Error 1
-ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+   Compiling ../../../mfcc.cpp in debug mode
+   Generating csim.exe
+Starting testbench...
+The following features are enabled:
+FEATURE_1_MEL
+FEATURE_2_LOG
+-------------------------------------------------------------
+Test case number 0
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 1
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 2
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 3
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 4
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 5
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 6
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 7
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 8
+Max difference: 0.00390625
+PASSED
+-------------------------------------------------------------
+Test case number 9
+Max difference: 0.00390625
+PASSED
+Testbench completed.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 257
+INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

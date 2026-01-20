@@ -54846,7 +54846,11 @@ __attribute__((sdx_kernel("mfcc", 0))) void mfcc(
     hls::stream<AXI_TYPE> &in_stream,
     hls::stream<AXI_TYPE> &out_stream
 ) {
-#line 17 "C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/csynth.tcl"
+#line 19 "C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=mfcc
+# 20 "audrey_4_hls/mfcc.cpp"
+
+#line 7 "C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/audrey_2023_vitis/audrey_4_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=mfcc
 # 20 "audrey_4_hls/mfcc.cpp"
 
@@ -54855,15 +54859,29 @@ __attribute__((sdx_kernel("mfcc", 0))) void mfcc(
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=in_stream
 #pragma HLS INTERFACE axis port=out_stream
-# 41 "audrey_4_hls/mfcc.cpp"
- fix_t abs_spectrogram[257];
-        task_3: for (int i = 0; i < 257; i++) {
-#pragma HLS PIPELINE
 
+
+
+
+
+ complex_fft_in_t audio[512];
+        task_2: for (int i = 0; i < 512; i++) {
+
+#pragma HLS PIPELINE II=1
  AXI_TYPE val_in = in_stream.read();
-            abs_spectrogram[i] = val_in.data;
+            audio[i].real(val_in.data);
+            audio[i].imag(0);
         }
-# 63 "audrey_4_hls/mfcc.cpp"
+# 53 "audrey_4_hls/mfcc.cpp"
+        complex_fft_out_t fft_out[512];
+        fix_t abs_spectrogram[257];
+        feature_0_stft(audio, abs_spectrogram);
+
+
+
+
+
+
         fix_t mel_filtered[42];
         feature_1_mel(abs_spectrogram, mel_filtered);
 
@@ -54874,10 +54892,11 @@ __attribute__((sdx_kernel("mfcc", 0))) void mfcc(
 
         fix_t mfcc[42];
         feature_2_log(mel_filtered, mfcc);
-# 107 "audrey_4_hls/mfcc.cpp"
+# 106 "audrey_4_hls/mfcc.cpp"
         task_6: for (int m = 0; m < 42; m++) {
 
-            AXI_TYPE val_out;
+#pragma HLS PIPELINE II=1
+ AXI_TYPE val_out;
             val_out.data = mfcc[m];
             val_out.keep = -1;
             val_out.strb = -1;
@@ -54906,10 +54925,11 @@ typedef hls::ip_fft::status_t<config1> status_t;
 
 
 void feature_0_stft(complex_fft_in_t audio[512], fix_t abs_spectrogram[257]) {
-# 166 "audrey_4_hls/mfcc.cpp"
-    VITIS_LOOP_166_1: for (int k = 0; k <= 257; k++) {
+# 165 "audrey_4_hls/mfcc.cpp"
+    VITIS_LOOP_165_1: for (int k = 0; k <= 257; k++) {
+#pragma HLS PIPELINE II=1
 
-        int k_ = k + 257/2;
+ int k_ = k + 257/2;
 
         abs_spectrogram[k] = fix_t(-1);
     }
@@ -54941,7 +54961,8 @@ void feature_1_mel(fix_t abs_spectrogram[257], fix_t mel_filtered[42]) {
 
 void feature_2_log(fix_t mel_filtered[42], fix_t mfcc[42]) {
     VITIS_LOOP_199_1: for (int m = 0; m < 42; m++) {
+#pragma HLS PIPELINE II=1
 
-        mfcc[m] = hls::log(mel_filtered[m] + (fix_t) 3.90625e-3);
+ mfcc[m] = hls::log(mel_filtered[m] + (fix_t) 3.90625e-3);
     }
 }

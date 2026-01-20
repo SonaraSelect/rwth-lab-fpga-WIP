@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fft_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1765877366">
-  <File Type="VDS-TIMINGSUMMARY" Name="fft_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="fft.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="fft_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="fft_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="fft_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="fft.vds"/>
-  <File Type="REPORTS-TCL" Name="fft_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="fft_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="fft.tcl"/>
+  <File Type="REPORTS-TCL" Name="fft_reports.tcl"/>
+  <File Type="RDS-RDS" Name="fft.vds"/>
+  <File Type="RDS-UTIL" Name="fft_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="fft_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="fft.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fft" RelGenDir="$PGENDIR/fft">
     <File Path="$PSRCDIR/sources_1/ip/fft/fft.xci">
       <FileInfo>

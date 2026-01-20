@@ -14,9 +14,6 @@ module mfcc_mfcc_Pipeline_task_6 (
         ap_idle,
         ap_ready,
         out_stream_TREADY,
-        mfcc_1_address0,
-        mfcc_1_ce0,
-        mfcc_1_q0,
         out_stream_TDATA,
         out_stream_TVALID,
         out_stream_TKEEP,
@@ -33,9 +30,6 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input   out_stream_TREADY;
-output  [5:0] mfcc_1_address0;
-output   mfcc_1_ce0;
-input  [14:0] mfcc_1_q0;
 output  [15:0] out_stream_TDATA;
 output   out_stream_TVALID;
 output  [1:0] out_stream_TKEEP;
@@ -43,7 +37,6 @@ output  [1:0] out_stream_TSTRB;
 output  [0:0] out_stream_TLAST;
 
 reg ap_idle;
-reg mfcc_1_ce0;
 reg out_stream_TVALID;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
@@ -54,18 +47,17 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 reg    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln107_fu_99_p2;
+wire   [0:0] icmp_ln106_fu_83_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg    out_stream_TDATA_blk_n;
 wire    ap_block_pp0_stage0;
+wire   [0:0] val_out_last_fu_95_p2;
+reg   [0:0] val_out_last_reg_116;
 reg    ap_block_pp0_stage0_11001;
-wire   [0:0] val_out_last_fu_116_p2;
-reg   [0:0] val_out_last_reg_147;
-wire   [63:0] m_2_cast_fu_111_p1;
-reg   [5:0] m_fu_56;
-wire   [5:0] add_ln107_fu_105_p2;
+reg   [5:0] m_fu_52;
+wire   [5:0] add_ln106_fu_89_p2;
 wire    ap_loop_init;
 reg   [5:0] ap_sig_allocacmp_m_1;
 reg    ap_block_pp0_stage0_01001;
@@ -133,22 +125,22 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln107_fu_99_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            m_fu_56 <= add_ln107_fu_105_p2;
+        if (((icmp_ln106_fu_83_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            m_fu_52 <= add_ln106_fu_89_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            m_fu_56 <= 6'd0;
+            m_fu_52 <= 6'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln107_fu_99_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        val_out_last_reg_147 <= val_out_last_fu_116_p2;
+    if (((icmp_ln106_fu_83_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        val_out_last_reg_116 <= val_out_last_fu_95_p2;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln107_fu_99_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln106_fu_83_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -191,15 +183,7 @@ always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_sig_allocacmp_m_1 = 6'd0;
     end else begin
-        ap_sig_allocacmp_m_1 = m_fu_56;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        mfcc_1_ce0 = 1'b1;
-    end else begin
-        mfcc_1_ce0 = 1'b0;
+        ap_sig_allocacmp_m_1 = m_fu_52;
     end
 end
 
@@ -230,7 +214,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln107_fu_105_p2 = (ap_sig_allocacmp_m_1 + 6'd1);
+assign add_ln106_fu_89_p2 = (ap_sig_allocacmp_m_1 + 6'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -260,20 +244,16 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln107_fu_99_p2 = ((ap_sig_allocacmp_m_1 == 6'd42) ? 1'b1 : 1'b0);
+assign icmp_ln106_fu_83_p2 = ((ap_sig_allocacmp_m_1 == 6'd42) ? 1'b1 : 1'b0);
 
-assign m_2_cast_fu_111_p1 = ap_sig_allocacmp_m_1;
-
-assign mfcc_1_address0 = m_2_cast_fu_111_p1;
-
-assign out_stream_TDATA = $signed(mfcc_1_q0);
+assign out_stream_TDATA = 16'd0;
 
 assign out_stream_TKEEP = 2'd3;
 
-assign out_stream_TLAST = val_out_last_reg_147;
+assign out_stream_TLAST = val_out_last_reg_116;
 
 assign out_stream_TSTRB = 2'd3;
 
-assign val_out_last_fu_116_p2 = ((ap_sig_allocacmp_m_1 == 6'd41) ? 1'b1 : 1'b0);
+assign val_out_last_fu_95_p2 = ((ap_sig_allocacmp_m_1 == 6'd41) ? 1'b1 : 1'b0);
 
 endmodule //mfcc_mfcc_Pipeline_task_6

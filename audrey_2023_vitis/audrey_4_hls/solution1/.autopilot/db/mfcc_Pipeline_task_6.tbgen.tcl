@@ -15,7 +15,6 @@ set DLRegItemOffset 0
 set C_modelName {mfcc_Pipeline_task_6}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ mfcc_1 int 15 regular {array 42 { 1 3 } 1 1 }  }
 	{ out_stream_V_data_V int 16 regular {axi_s 1 volatile  { out_stream Data } }  }
 	{ out_stream_V_keep_V int 2 regular {axi_s 1 volatile  { out_stream Keep } }  }
 	{ out_stream_V_strb_V int 2 regular {axi_s 1 volatile  { out_stream Strb } }  }
@@ -23,13 +22,12 @@ set C_modelArgList {
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
-	{ "Name" : "mfcc_1", "interface" : "memory", "bitwidth" : 15, "direction" : "READONLY"} , 
- 	{ "Name" : "out_stream_V_data_V", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
+	{ "Name" : "out_stream_V_data_V", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
  	{ "Name" : "out_stream_V_keep_V", "interface" : "axis", "bitwidth" : 2, "direction" : "WRITEONLY"} , 
  	{ "Name" : "out_stream_V_strb_V", "interface" : "axis", "bitwidth" : 2, "direction" : "WRITEONLY"} , 
  	{ "Name" : "out_stream_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
-set portNum 15
+set portNum 12
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -37,15 +35,12 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ out_stream_TREADY sc_in sc_logic 1 outacc 1 } 
-	{ mfcc_1_address0 sc_out sc_lv 6 signal 0 } 
-	{ mfcc_1_ce0 sc_out sc_logic 1 signal 0 } 
-	{ mfcc_1_q0 sc_in sc_lv 15 signal 0 } 
-	{ out_stream_TDATA sc_out sc_lv 16 signal 1 } 
-	{ out_stream_TVALID sc_out sc_logic 1 outvld 4 } 
-	{ out_stream_TKEEP sc_out sc_lv 2 signal 2 } 
-	{ out_stream_TSTRB sc_out sc_lv 2 signal 3 } 
-	{ out_stream_TLAST sc_out sc_lv 1 signal 4 } 
+	{ out_stream_TREADY sc_in sc_logic 1 outacc 0 } 
+	{ out_stream_TDATA sc_out sc_lv 16 signal 0 } 
+	{ out_stream_TVALID sc_out sc_logic 1 outvld 3 } 
+	{ out_stream_TKEEP sc_out sc_lv 2 signal 1 } 
+	{ out_stream_TSTRB sc_out sc_lv 2 signal 2 } 
+	{ out_stream_TLAST sc_out sc_lv 1 signal 3 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -55,9 +50,6 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "out_stream_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_stream_V_data_V", "role": "default" }} , 
- 	{ "name": "mfcc_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "mfcc_1", "role": "address0" }} , 
- 	{ "name": "mfcc_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mfcc_1", "role": "ce0" }} , 
- 	{ "name": "mfcc_1_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "mfcc_1", "role": "q0" }} , 
  	{ "name": "out_stream_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "out_stream_V_data_V", "role": "default" }} , 
  	{ "name": "out_stream_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_stream_V_last_V", "role": "default" }} , 
  	{ "name": "out_stream_TKEEP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "out_stream_V_keep_V", "role": "default" }} , 
@@ -80,7 +72,6 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "mfcc_1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "out_stream_V_data_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "out_stream",
 				"BlockSignal" : [
 					{"Name" : "out_stream_TDATA_blk_n", "Type" : "RtlSignal"}]},
@@ -95,7 +86,6 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	mfcc_Pipeline_task_6 {
-		mfcc_1 {Type I LastRead 0 FirstWrite -1}
 		out_stream_V_data_V {Type O LastRead -1 FirstWrite 1}
 		out_stream_V_keep_V {Type O LastRead -1 FirstWrite 1}
 		out_stream_V_strb_V {Type O LastRead -1 FirstWrite 1}
@@ -113,7 +103,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	mfcc_1 { ap_memory {  { mfcc_1_address0 mem_address 1 6 }  { mfcc_1_ce0 mem_ce 1 1 }  { mfcc_1_q0 in_data 0 15 } } }
 	out_stream_V_data_V { axis {  { out_stream_TREADY out_acc 0 1 }  { out_stream_TDATA out_data 1 16 } } }
 	out_stream_V_keep_V { axis {  { out_stream_TKEEP out_data 1 2 } } }
 	out_stream_V_strb_V { axis {  { out_stream_TSTRB out_data 1 2 } } }
