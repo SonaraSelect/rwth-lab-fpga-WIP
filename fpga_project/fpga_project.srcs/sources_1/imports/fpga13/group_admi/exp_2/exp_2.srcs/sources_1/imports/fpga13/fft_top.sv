@@ -364,6 +364,7 @@ stream_register #(
 logic [15:0] sqrt_value;
 sqrt_cordic sqrt_i (
 	.aclk(clk),
+	.aresetn(arstn),
 	.s_axis_cartesian_tvalid(square_value_valid),
 	.s_axis_cartesian_tready(square_value_ready),
 	.s_axis_cartesian_tlast(square_value_reg.last),

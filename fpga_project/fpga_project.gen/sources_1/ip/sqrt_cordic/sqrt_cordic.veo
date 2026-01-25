@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -56,6 +56,7 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 sqrt_cordic your_instance_name (
   .aclk(aclk),                                        // input wire aclk
+  .aresetn(aresetn),                                  // input wire aresetn
   .s_axis_cartesian_tvalid(s_axis_cartesian_tvalid),  // input wire s_axis_cartesian_tvalid
   .s_axis_cartesian_tready(s_axis_cartesian_tready),  // output wire s_axis_cartesian_tready
   .s_axis_cartesian_tlast(s_axis_cartesian_tlast),    // input wire s_axis_cartesian_tlast

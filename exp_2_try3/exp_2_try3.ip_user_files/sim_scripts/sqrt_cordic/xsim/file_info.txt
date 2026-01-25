@@ -1,0 +1,1 @@
+sqrt_cordic.vhd,vhdl,xil_defaultlib,../../../../exp_2_try3.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd,

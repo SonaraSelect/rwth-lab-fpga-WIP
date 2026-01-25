@@ -1,5 +1,5 @@
 -- (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+-- (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of AMD and is protected under U.S. and international copyright
@@ -54,6 +54,7 @@
 COMPONENT sqrt_cordic
   PORT (
     aclk : IN STD_LOGIC;
+    aresetn : IN STD_LOGIC;
     s_axis_cartesian_tvalid : IN STD_LOGIC;
     s_axis_cartesian_tready : OUT STD_LOGIC;
     s_axis_cartesian_tlast : IN STD_LOGIC;
@@ -73,6 +74,7 @@ END COMPONENT;
 your_instance_name : sqrt_cordic
   PORT MAP (
     aclk => aclk,
+    aresetn => aresetn,
     s_axis_cartesian_tvalid => s_axis_cartesian_tvalid,
     s_axis_cartesian_tready => s_axis_cartesian_tready,
     s_axis_cartesian_tlast => s_axis_cartesian_tlast,

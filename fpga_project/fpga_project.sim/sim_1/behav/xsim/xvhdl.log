@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fft'
+ERROR: [VRFC 10-2987] 'fft' is not compiled in library 'xil_defaultlib' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd:210]
+ERROR: [VRFC 10-9458] unit 'tb' is ignored due to previous errors [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd:77]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd' is ignored due to errors

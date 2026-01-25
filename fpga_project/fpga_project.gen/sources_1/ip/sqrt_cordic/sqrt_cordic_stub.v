@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Tue Dec 16 10:30:41 2025
-// Host        : FPGA13L running 64-bit Ubuntu 22.04.5 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/fpga13/group_admi/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic_stub.v
+// Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+// Date        : Sun Jan 25 11:26:52 2026
+// Host        : DESKTOP-OS4G7S0 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub {c:/Users/necde/Documents/GitHub
+//               Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic_stub.v}
 // Design      : sqrt_cordic
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
@@ -15,12 +15,13 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "cordic_v6_0_19,Vivado 2023.1" *)
-module sqrt_cordic(aclk, s_axis_cartesian_tvalid, 
+module sqrt_cordic(aclk, aresetn, s_axis_cartesian_tvalid, 
   s_axis_cartesian_tready, s_axis_cartesian_tlast, s_axis_cartesian_tdata, 
   m_axis_dout_tvalid, m_axis_dout_tready, m_axis_dout_tlast, m_axis_dout_tdata)
-/* synthesis syn_black_box black_box_pad_pin="s_axis_cartesian_tvalid,s_axis_cartesian_tready,s_axis_cartesian_tlast,s_axis_cartesian_tdata[39:0],m_axis_dout_tvalid,m_axis_dout_tready,m_axis_dout_tlast,m_axis_dout_tdata[15:0]" */
+/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axis_cartesian_tvalid,s_axis_cartesian_tready,s_axis_cartesian_tlast,s_axis_cartesian_tdata[39:0],m_axis_dout_tvalid,m_axis_dout_tready,m_axis_dout_tlast,m_axis_dout_tdata[15:0]" */
 /* synthesis syn_force_seq_prim="aclk" */;
   input aclk /* synthesis syn_isclock = 1 */;
+  input aresetn;
   input s_axis_cartesian_tvalid;
   output s_axis_cartesian_tready;
   input s_axis_cartesian_tlast;

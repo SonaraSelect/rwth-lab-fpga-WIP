@@ -1,0 +1,1 @@
+fft.vhd,vhdl,xil_defaultlib,../../../../exp_2_try3.gen/sources_1/ip/fft/sim/fft.vhd,

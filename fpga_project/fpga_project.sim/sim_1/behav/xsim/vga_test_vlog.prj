@@ -1,20 +1,28 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" \
+verilog xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" --include "../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog" \
 "../../../../fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz_clk_wiz.v" \
 "../../../../fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz.v" \
+"../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_flow_control_loop_pipe_sequential_init.v" \
+"../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_hls_deadlock_idx0_monitor.v" \
+"../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_2.v" \
+"../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_6.v" \
+"../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_regslice_both.v" \
+"../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc.v" \
+"../../../../fpga_project.gen/sources_1/ip/mfcc_1/sim/mfcc_1.v" \
 
-sv xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" \
+sv xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" --include "../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog" \
 "../../../../fpga_project.srcs/sources_1/imports/1/pkg.sv" \
 "../../../../fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv" \
 "../../../../fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv" \
 "../../../../fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv" \
 "../../../../fpga_project.srcs/sources_1/imports/new/top.sv" \
 
-verilog xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" \
+verilog xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" --include "../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog" \
 "../../../../fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
 "../../../../fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 
-sv xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" \
+sv xil_defaultlib  --include "../../../../fpga_project.ip_user_files/ipstatic" --include "../../../../fpga_project.ip_user_files/ipstatic/hdl/verilog" \
+"../../../../fpga_project.srcs/sources_1/imports/new/uart_top.sv" \
 "../../../../fpga_project.srcs/sim_1/imports/new/fft_test.sv" \
 "../../../../fpga_project.srcs/sim_1/new/vga_test.sv" \
 

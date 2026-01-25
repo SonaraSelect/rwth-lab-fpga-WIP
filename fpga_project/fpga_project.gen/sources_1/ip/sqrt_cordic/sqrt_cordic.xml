@@ -670,11 +670,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -687,12 +687,8 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 16 09:30:42 UTC 2025</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -706,11 +702,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -725,11 +721,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:53 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -743,11 +739,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -793,11 +789,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1772a304</spirit:value>
+            <spirit:value>9:66cb28d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -813,11 +809,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1772a304</spirit:value>
+            <spirit:value>9:66cb28d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -863,11 +859,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -883,11 +879,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -903,11 +899,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 09 09:02:55 UTC 2025</spirit:value>
+            <spirit:value>Sun Jan 25 10:24:58 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c949397</spirit:value>
+            <spirit:value>9:c9947e0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -977,7 +973,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aresetn" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ARESETN&apos;)) != 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aresetn" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ARESETN&apos;)) != 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1377,7 +1373,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_ARESETN</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_ARESETN">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_ARESETN">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_INPUT_WIDTH</spirit:name>
@@ -2053,7 +2049,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ARESETN</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ARESETN" spirit:order="25">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ARESETN" spirit:order="25">true</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -2079,6 +2075,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_PHASE.TDATA_NUM_BYTES" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_PHASE.TDEST_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_PHASE.TID_WIDTH" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ARESETN" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Coarse_Rotation" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Data_Format" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Functional_Selection" xilinx:valueSource="user"/>

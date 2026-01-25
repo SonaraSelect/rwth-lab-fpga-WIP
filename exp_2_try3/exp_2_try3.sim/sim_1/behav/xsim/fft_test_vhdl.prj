@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../exp_2_try3.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd" \
+"../../../../exp_2_try3.gen/sources_1/ip/fft/sim/fft.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,61 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_hls_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc_hls_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc_mfcc_Pipeline_task_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc_mfcc_Pipeline_task_6
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc_regslice_both
+INFO: [VRFC 10-311] analyzing module mfcc_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.ip_user_files/ipstatic/hdl/verilog/mfcc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/sim/mfcc_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dc_block
+INFO: [VRFC 10-311] analyzing module i2s_to_pcm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft_top
+INFO: [VRFC 10-311] analyzing module serial_fft
+INFO: [VRFC 10-311] analyzing module fft_abs_value
+INFO: [VRFC 10-311] analyzing module stream_register
+INFO: [VRFC 10-311] analyzing module drop_upper_freqs
+WARNING: [VRFC 10-3467] initial value of parameter 'dtype_t' is omitted [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:410]
+INFO: [VRFC 10-311] analyzing module drop_upper_frames
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module colorize_pixel
+INFO: [VRFC 10-311] analyzing module vga_gen
+INFO: [VRFC 10-311] analyzing module image_buf
+INFO: [VRFC 10-311] analyzing module render_fft
+INFO: [VRFC 10-311] analyzing module detection_overlay
+INFO: [VRFC 10-311] analyzing module stream_register
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'stream_register' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
+INFO: [VRFC 10-311] analyzing module vga_top_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-311] analyzing module uart_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sim_1/imports/new/fft_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sim_1/new/vga_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fft'
+ERROR: [VRFC 10-2987] 'fft' is not compiled in library 'xil_defaultlib' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd:210]
+ERROR: [VRFC 10-9458] unit 'tb' is ignored due to previous errors [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd:77]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd' is ignored due to errors
