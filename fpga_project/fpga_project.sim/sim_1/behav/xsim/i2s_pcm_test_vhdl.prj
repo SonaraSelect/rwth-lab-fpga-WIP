@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../fpga_project.gen/sources_1/ip/fft/demo_tb/tb_fft.vhd" \
+"../../../../fpga_project.gen/sources_1/ip/fft/sim/fft.vhd" \
+"../../../../fpga_project.gen/sources_1/ip/sqrt_cordic/demo_tb/tb_sqrt_cordic.vhd" \
+"../../../../fpga_project.gen/sources_1/ip/sqrt_cordic/sim/sqrt_cordic.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,403 @@
+
+*** Running vivado
+    with args -log fft_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft_top.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fft_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 455.836 ; gain = 161.859
+Command: synth_design -top fft_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30412
+WARNING: [Synth 8-11067] parameter 'BITSIMAG' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:5]
+WARNING: [Synth 8-11067] parameter 'BITSREAL' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:6]
+WARNING: [Synth 8-11067] parameter 'WINDOWSTEP_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:17]
+WARNING: [Synth 8-11067] parameter 'WINDOWSIZE_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:18]
+WARNING: [Synth 8-11067] parameter 'SAMPLE_PER_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:19]
+WARNING: [Synth 8-11067] parameter 'FRAME_WIDTH_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:20]
+WARNING: [Synth 8-11067] parameter 'REQUIRED_FRAMES' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:22]
+WARNING: [Synth 8-11067] parameter 'PARALLELISM' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:26]
+WARNING: [Synth 8-11067] parameter 'FIFO_DEPTH_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:27]
+WARNING: [Synth 8-11067] parameter 'FIFO_DEPTH' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:28]
+WARNING: [Synth 8-11067] parameter 'WINDOWSTEP' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:29]
+WARNING: [Synth 8-11067] parameter 'ENOUGH_DATA' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:32]
+WARNING: [Synth 8-11067] parameter 'FRAME_SIZE' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:33]
+WARNING: [Synth 8-11067] parameter 'WAIT_SIZE' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:34]
+WARNING: [Synth 8-11067] parameter 'FRAME_COUNT' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/Documents/pkg.sv:36]
+WARNING: [Synth 8-9661] initial value of parameter 'dtype_t' is omitted [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:414]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1300.000 ; gain = 409.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fft_top' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'serial_fft' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:79]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9044]
+	Parameter MEMORY_SIZE bound to: 32768 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: no_change - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: no_change - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:508]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:510]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9044]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:203]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1529]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1529]
+INFO: [Synth 8-6157] synthesizing module 'fft' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.runs/synth_1/.Xil/Vivado-29404-DESKTOP-OS4G7S0/realtime/fft_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.runs/synth_1/.Xil/Vivado-29404-DESKTOP-OS4G7S0/realtime/fft_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'serial_fft' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:79]
+INFO: [Synth 8-6157] synthesizing module 'fft_abs_value' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:330]
+INFO: [Synth 8-6157] synthesizing module 'stream_register' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:386]
+INFO: [Synth 8-6155] done synthesizing module 'stream_register' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:386]
+INFO: [Synth 8-6157] synthesizing module 'sqrt_cordic' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.runs/synth_1/.Xil/Vivado-29404-DESKTOP-OS4G7S0/realtime/sqrt_cordic_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sqrt_cordic' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.runs/synth_1/.Xil/Vivado-29404-DESKTOP-OS4G7S0/realtime/sqrt_cordic_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft_abs_value' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:330]
+INFO: [Synth 8-6157] synthesizing module 'drop_upper_freqs' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:412]
+INFO: [Synth 8-6155] done synthesizing module 'drop_upper_freqs' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:412]
+INFO: [Synth 8-6155] done synthesizing module 'fft_top' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:3]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2381]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3071]
+WARNING: [Synth 8-3848] Net config_data[pad] in module/entity serial_fft does not have driver. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:292]
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1397.375 ; gain = 507.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1397.375 ; gain = 507.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1397.375 ; gain = 507.293
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1397.375 ; gain = 0.000
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_serial_fft/clk_gate' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.gen/sources_1/ip/fft/fft/fft_in_context.xdc] for cell 'u_serial_fft/fft_i'
+Finished Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.gen/sources_1/ip/fft/fft/fft_in_context.xdc] for cell 'u_serial_fft/fft_i'
+Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.gen/sources_1/ip/sqrt_cordic/sqrt_cordic/sqrt_cordic_in_context.xdc] for cell 'abs_value_i/sqrt_i'
+Finished Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.gen/sources_1/ip/sqrt_cordic/sqrt_cordic/sqrt_cordic_in_context.xdc] for cell 'abs_value_i/sqrt_i'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fft_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fft_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1493.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1493.664 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for u_serial_fft/fft_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for abs_value_i/sqrt_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_serial_fft/i_xpm_memory_tdpram. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'serial_fft'
+INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_word_narrow.mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            WAIT_TRIGGER |                                0 | 00000000000000000000000000000000
+                  ACTIVE |                                1 | 00000000000000000000000000000001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'serial_fft'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 7     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               10 Bit    Registers := 5     
+	                9 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              32K Bit	(1024 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 8     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP abs_value_i/square_value[value]0, operation Mode is: A*B.
+DSP Report: operator abs_value_i/square_value[value]0 is absorbed into DSP abs_value_i/square_value[value]0.
+DSP Report: Generating DSP abs_value_i/square_value[value], operation Mode is: PCIN+A*B.
+DSP Report: operator abs_value_i/square_value[value] is absorbed into DSP abs_value_i/square_value[value].
+DSP Report: operator abs_value_i/square_value[value]0 is absorbed into DSP abs_value_i/square_value[value].
+WARNING: [Synth 8-3917] design fft_top has port proc_data[tdata][0] driven by constant 0
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_b.gen_word_narrow.mem_reg | 1 K x 32(NO_CHANGE)    | W | R | 1 K x 32(NO_CHANGE)    | W | R | Port A and B     | 0      | 1      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_abs_value | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_abs_value | PCIN+A*B    | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_b.gen_word_narrow.mem_reg | 1 K x 32(NO_CHANGE)    | W | R | 1 K x 32(NO_CHANGE)    | W | R | Port A and B     | 0      | 1      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/gen_wr_b.gen_word_narrow.mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \u_serial_fft/fft_i  has unconnected pin s_axis_config_tdata[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \u_serial_fft/fft_i  has unconnected pin s_axis_config_tdata[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \u_serial_fft/fft_i  has unconnected pin s_axis_config_tdata[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \u_serial_fft/fft_i  has unconnected pin s_axis_config_tdata[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \u_serial_fft/fft_i  has unconnected pin s_axis_config_tdata[19]
+WARNING: [Synth 8-5410] Found another clock driver \u_serial_fft/clk_gate :O [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.srcs/sources_1/imports/fpga13/fft_top.sv:296]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_abs_value | A*B         | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_abs_value | (PCIN+A*B)' | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |sqrt_cordic   |         1|
+|2     |fft           |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |fft         |     1|
+|2     |sqrt_cordic |     1|
+|3     |BUFG        |     1|
+|4     |BUFGCE      |     1|
+|5     |CARRY4      |     1|
+|6     |DSP48E1     |     2|
+|8     |LUT1        |     3|
+|9     |LUT2        |    47|
+|10    |LUT3        |    19|
+|11    |LUT4        |    24|
+|12    |LUT5        |    29|
+|13    |LUT6        |    32|
+|14    |RAMB36E1    |     1|
+|15    |FDCE        |    69|
+|16    |FDPE        |     1|
+|17    |FDRE        |    32|
+|18    |IBUF        |    37|
+|19    |OBUF        |    19|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 5 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1493.664 ; gain = 507.293
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1493.664 ; gain = 603.582
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1493.664 ; gain = 0.000
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_serial_fft/clk_gate' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1493.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+
+Synth Design complete | Checksum: 40f1ddcf
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 36 Warnings, 5 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:59 . Memory (MB): peak = 1493.664 ; gain = 1002.418
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/exp_2_try3/exp_2_try3.runs/synth_1/fft_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fft_top_utilization_synth.rpt -pb fft_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 27 09:59:04 2026...

@@ -13,15 +13,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="628,945.833 ns"></ZoomStartTime>
-      <ZoomEndTime time="630,210.834 ns"></ZoomEndTime>
-      <Cursor1Time time="630,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="62,047.667 ns"></ZoomStartTime>
+      <ZoomEndTime time="64,461.668 ns"></ZoomEndTime>
+      <Cursor1Time time="62,521.667 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="111"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <NameColumnWidth column_width="180"></NameColumnWidth>
+      <ValueColumnWidth column_width="214"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="39" />
    <wvobject fp_name="/fft_test/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -66,9 +66,14 @@
       <obj_property name="ElementShortName">s_axis_data_tready</obj_property>
       <obj_property name="ObjectShortName">s_axis_data_tready</obj_property>
    </wvobject>
+   <wvobject fp_name="/fft_test/i_fft/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/mem" type="array">
+      <obj_property name="ElementShortName">mem[0:1023][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:1023][31:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/fft_test/i_fft/u_serial_fft/sample_count" type="array">
       <obj_property name="ElementShortName">sample_count[8:0]</obj_property>
       <obj_property name="ObjectShortName">sample_count[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/fft_test/i_fft/u_serial_fft/frame_count" type="array">
       <obj_property name="ElementShortName">frame_count[6:0]</obj_property>

@@ -1,0 +1,11 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+xpm_memory.sv,systemverilog,xpm,../../../../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+mfcc_flow_control_loop_pipe_sequential_init.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/mfcc_flow_control_loop_pipe_sequential_init.v,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+mfcc_hls_deadlock_idx0_monitor.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/mfcc_hls_deadlock_idx0_monitor.v,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+mfcc_mfcc_Pipeline_task_2.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_2.v,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+mfcc_mfcc_Pipeline_task_6.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/mfcc_mfcc_Pipeline_task_6.v,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+mfcc_regslice_both.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/mfcc_regslice_both.v,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+mfcc.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/mfcc.v,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+mfcc_1.v,verilog,xil_defaultlib,../../../../fpga_project.gen/sources_1/ip/mfcc_1/sim/mfcc_1.v,incdir="$ref_dir/../../../ipstatic/hdl/verilog"incdir="../../../ipstatic/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

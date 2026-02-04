@@ -49,7 +49,7 @@ clk_wiz_0 inst
 localparam int DOWNSAMPLE = 4; // clock divisor (counter upper bond)
 logic [$clog2(DOWNSAMPLE)-1:0] ds_cnt = '0; //Start at 0, use this signal as your counter
 /// Task 2: implement the counter and generate bclk
- always_ff @(posedge clk_gen_fast) begin
+ always_ff @(posedge clk_gen_fast or negedge arstn) begin
  	if (!arstn) begin 
  	  bclk <= 1'b0;
  	  ds_cnt <= 2'b00;
@@ -89,8 +89,9 @@ end
 
 // generating valid to signal that data has been fully recorded
 logic left_valid;
-always_ff @(posedge clk_gen_fast) begin
-	left_valid <= en && ws_cnt == BITS-1;
+always_ff @(posedge clk_gen_fast or negedge arstn) begin
+    if (!arstn) left_valid <= 0;
+    else left_valid <= en && ws_cnt == BITS-1;
 end
 
 // Cross Domain Crossing from clk_gen_fast to system clk

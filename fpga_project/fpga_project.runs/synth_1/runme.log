@@ -3,6 +3,8 @@
     with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 
 
+ECHO is off.
+ECHO is off.
 
 ****** Vivado v2023.1 (64-bit)
   **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
@@ -12,20 +14,17 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 456.938 ; gain = 165.211
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/export-nonpipelined'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/export-nonpipelined'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.cache/ip 
-Command: read_checkpoint -auto_incremental -incremental C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/utils_1/imports/synth_1/top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+Current IP cache path is c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.cache/ip 
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/utils_1/imports/synth_1/top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top -part xc7a100tcsg324-1
 Starting synth_design
-INFO: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
-* This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:nexys-a7-100t:part0:1.2' used to customize the IP 'clk_wiz_0' do not match.
-INFO: [IP_Flow 19-2162] IP 'clk_wiz' is locked:
-* This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:nexys-a7-100t:part0:1.2' used to customize the IP 'clk_wiz' do not match.
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
@@ -33,36 +32,36 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22984
-WARNING: [Synth 8-11067] parameter 'BITSIMAG' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:5]
-WARNING: [Synth 8-11067] parameter 'BITSREAL' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:6]
-WARNING: [Synth 8-11067] parameter 'WINDOWSTEP_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:17]
-WARNING: [Synth 8-11067] parameter 'WINDOWSIZE_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:18]
-WARNING: [Synth 8-11067] parameter 'SAMPLE_PER_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:19]
-WARNING: [Synth 8-11067] parameter 'FRAME_WIDTH_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:20]
-WARNING: [Synth 8-11067] parameter 'REQUIRED_FRAMES' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:22]
-WARNING: [Synth 8-11067] parameter 'PARALLELISM' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:26]
-WARNING: [Synth 8-11067] parameter 'FIFO_DEPTH_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:27]
-WARNING: [Synth 8-11067] parameter 'FIFO_DEPTH' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:28]
-WARNING: [Synth 8-11067] parameter 'WINDOWSTEP' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:29]
-WARNING: [Synth 8-11067] parameter 'ENOUGH_DATA' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:32]
-WARNING: [Synth 8-11067] parameter 'FRAME_SIZE' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:33]
-WARNING: [Synth 8-11067] parameter 'WAIT_SIZE' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:34]
-WARNING: [Synth 8-11067] parameter 'FRAME_COUNT' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:36]
-WARNING: [Synth 8-9661] initial value of parameter 'dtype_t' is omitted [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:409]
-WARNING: [Synth 8-11065] parameter 'BITSPERPIXEL' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:42]
-WARNING: [Synth 8-11065] parameter 'FFT2D' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:43]
-WARNING: [Synth 8-11065] parameter 'MEMHORPIXEL' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:44]
-WARNING: [Synth 8-11065] parameter 'MEMVERPIXEL' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:45]
-CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'stream_register' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:669]
-INFO: [Synth 8-9937] previous definition of design element 'stream_register' is here [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:403]
+INFO: [Synth 8-7075] Helper process launched with PID 19724
+WARNING: [Synth 8-11067] parameter 'BITSIMAG' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:5]
+WARNING: [Synth 8-11067] parameter 'BITSREAL' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:6]
+WARNING: [Synth 8-11067] parameter 'WINDOWSTEP_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:17]
+WARNING: [Synth 8-11067] parameter 'WINDOWSIZE_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:18]
+WARNING: [Synth 8-11067] parameter 'SAMPLE_PER_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:19]
+WARNING: [Synth 8-11067] parameter 'FRAME_WIDTH_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:20]
+WARNING: [Synth 8-11067] parameter 'REQUIRED_FRAMES' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:22]
+WARNING: [Synth 8-11067] parameter 'PARALLELISM' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:26]
+WARNING: [Synth 8-11067] parameter 'FIFO_DEPTH_MS' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:27]
+WARNING: [Synth 8-11067] parameter 'FIFO_DEPTH' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:28]
+WARNING: [Synth 8-11067] parameter 'WINDOWSTEP' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:29]
+WARNING: [Synth 8-11067] parameter 'ENOUGH_DATA' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:32]
+WARNING: [Synth 8-11067] parameter 'FRAME_SIZE' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:33]
+WARNING: [Synth 8-11067] parameter 'WAIT_SIZE' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:34]
+WARNING: [Synth 8-11067] parameter 'FRAME_COUNT' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/1/pkg.sv:36]
+WARNING: [Synth 8-9661] initial value of parameter 'dtype_t' is omitted [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:414]
+WARNING: [Synth 8-11065] parameter 'BITSPERPIXEL' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:42]
+WARNING: [Synth 8-11065] parameter 'FFT2D' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:43]
+WARNING: [Synth 8-11065] parameter 'MEMHORPIXEL' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:44]
+WARNING: [Synth 8-11065] parameter 'MEMVERPIXEL' becomes localparam in 'vga_top' with formal parameter declaration list [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:45]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'stream_register' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:669]
+INFO: [Synth 8-9937] previous definition of design element 'stream_register' is here [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:408]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2290.227 ; gain = 409.027
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1301.906 ; gain = 410.227
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:22]
-INFO: [Synth 8-6157] synthesizing module 'i2s_to_pcm' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:21]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'i2s_to_pcm' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_pulse' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:714]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
@@ -72,12 +71,12 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_pulse' [C:/Xilinx/Vivado/2023.
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_pulse' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:714]
-INFO: [Synth 8-6157] synthesizing module 'dc_block' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'dc_block' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:3]
 	Parameter WIDTH bound to: 32'sb00000000000000000000000000010010 
-INFO: [Synth 8-6155] done synthesizing module 'dc_block' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'i2s_to_pcm' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:21]
-INFO: [Synth 8-6157] synthesizing module 'fft_top' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'serial_fft' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:79]
+INFO: [Synth 8-6155] done synthesizing module 'dc_block' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'i2s_to_pcm' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'fft_top' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'serial_fft' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:79]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9044]
 	Parameter MEMORY_SIZE bound to: 32768 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
@@ -110,32 +109,32 @@ INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instruct
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:510]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9044]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:196]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:203]
 INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1529]
 INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1529]
-INFO: [Synth 8-6157] synthesizing module 'fft' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/fft_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fft' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/fft_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'serial_fft' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:79]
-INFO: [Synth 8-6157] synthesizing module 'fft_abs_value' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:326]
-INFO: [Synth 8-6157] synthesizing module 'stream_register' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
-INFO: [Synth 8-6155] done synthesizing module 'stream_register' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
-INFO: [Synth 8-6157] synthesizing module 'sqrt_cordic' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/sqrt_cordic_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'sqrt_cordic' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/sqrt_cordic_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fft_abs_value' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:326]
-INFO: [Synth 8-6157] synthesizing module 'drop_upper_freqs' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:407]
-INFO: [Synth 8-6155] done synthesizing module 'drop_upper_freqs' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:407]
-INFO: [Synth 8-6155] done synthesizing module 'fft_top' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:4]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/clk_wiz_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/clk_wiz_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'vga_gen' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:207]
-INFO: [Synth 8-6155] done synthesizing module 'vga_gen' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:207]
-INFO: [Synth 8-6157] synthesizing module 'render_fft' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:429]
+INFO: [Synth 8-6157] synthesizing module 'fft' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/fft_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/fft_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'serial_fft' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:79]
+INFO: [Synth 8-6157] synthesizing module 'fft_abs_value' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:330]
+INFO: [Synth 8-6157] synthesizing module 'stream_register' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
+INFO: [Synth 8-6155] done synthesizing module 'stream_register' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
+INFO: [Synth 8-6157] synthesizing module 'sqrt_cordic' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/sqrt_cordic_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sqrt_cordic' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/sqrt_cordic_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft_abs_value' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:330]
+INFO: [Synth 8-6157] synthesizing module 'drop_upper_freqs' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:412]
+INFO: [Synth 8-6155] done synthesizing module 'drop_upper_freqs' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:412]
+INFO: [Synth 8-6155] done synthesizing module 'fft_top' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/clk_wiz_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/clk_wiz_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_gen' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:207]
+INFO: [Synth 8-6155] done synthesizing module 'vga_gen' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:207]
+INFO: [Synth 8-6157] synthesizing module 'render_fft' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:429]
 	Parameter TRANSFORMLENGTH bound to: 32'sb00000000000000000000000100000001 
-INFO: [Synth 8-6157] synthesizing module 'stream_register__parameterized0' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
-INFO: [Synth 8-6155] done synthesizing module 'stream_register__parameterized0' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
-INFO: [Synth 8-6155] done synthesizing module 'render_fft' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:429]
-INFO: [Synth 8-6157] synthesizing module 'image_buf' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:305]
+INFO: [Synth 8-6157] synthesizing module 'stream_register__parameterized0' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
+INFO: [Synth 8-6155] done synthesizing module 'stream_register__parameterized0' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:625]
+INFO: [Synth 8-6155] done synthesizing module 'render_fft' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:429]
+INFO: [Synth 8-6157] synthesizing module 'image_buf' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:305]
 	Parameter MEMHORPIXEL bound to: 32'sb00000000000000000000000001100001 
 	Parameter MEMVERPIXEL bound to: 32'sb00000000000000000000000100000001 
 	Parameter BITSPERPIXEL bound to: 32'sb00000000000000000000000000001000 
@@ -171,14 +170,14 @@ INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instruct
 CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../fpga-lab-vga/data/default.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1195]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram__parameterized0' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9044]
-INFO: [Synth 8-6155] done synthesizing module 'image_buf' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:305]
-INFO: [Synth 8-6157] synthesizing module 'colorize_pixel' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:121]
+INFO: [Synth 8-6155] done synthesizing module 'image_buf' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:305]
+INFO: [Synth 8-6157] synthesizing module 'colorize_pixel' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:121]
 	Parameter BITSPERPIXEL bound to: 32'sb00000000000000000000000000001000 
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sprom' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8891]
 	Parameter MEMORY_SIZE bound to: 3072 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
-	Parameter MEMORY_INIT_FILE bound to: ../../../data/lut.mem - type: string 
+	Parameter MEMORY_INIT_FILE bound to: lut.mem - type: string 
 	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
 	Parameter USE_MEM_INIT bound to: 1 - type: integer 
 	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
@@ -194,19 +193,19 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sprom' [C:/Xilinx/Vivado/20
 	Parameter RST_MODE_A bound to: SYNC - type: string 
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:508]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../data/lut.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1149]
+INFO: [Synth 8-3876] $readmem data file 'lut.mem' is read successfully [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1149]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sprom' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8891]
-WARNING: [Synth 8-7071] port 'sbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_mem' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:174]
-WARNING: [Synth 8-7071] port 'dbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_mem' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:174]
-WARNING: [Synth 8-7023] instance 'lut_mem' of module 'xpm_memory_sprom' has 11 connections declared, but only 9 given [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:174]
-INFO: [Synth 8-6155] done synthesizing module 'colorize_pixel' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:121]
-INFO: [Synth 8-6157] synthesizing module 'detection_overlay' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:538]
+WARNING: [Synth 8-7071] port 'sbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_mem' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:174]
+WARNING: [Synth 8-7071] port 'dbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_mem' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:174]
+WARNING: [Synth 8-7023] instance 'lut_mem' of module 'xpm_memory_sprom' has 11 connections declared, but only 9 given [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:174]
+INFO: [Synth 8-6155] done synthesizing module 'colorize_pixel' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:121]
+INFO: [Synth 8-6157] synthesizing module 'detection_overlay' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:538]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sprom__parameterized0' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8891]
 	Parameter MEMORY_SIZE bound to: 21600 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
-	Parameter MEMORY_INIT_FILE bound to: ../../../fpga-lab-vga/data/text.mem - type: string 
+	Parameter MEMORY_INIT_FILE bound to: text.mem - type: string 
 	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
 	Parameter USE_MEM_INIT bound to: 1 - type: integer 
 	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
@@ -222,146 +221,40 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sprom__parameterized0' [C:/
 	Parameter RST_MODE_A bound to: SYNC - type: string 
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:508]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../fpga-lab-vga/data/text.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1195]
+INFO: [Synth 8-3876] $readmem data file 'text.mem' is read successfully [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1195]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sprom__parameterized0' (0#1) [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8891]
-WARNING: [Synth 8-7071] port 'sbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_words' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:583]
-WARNING: [Synth 8-7071] port 'dbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_words' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:583]
-WARNING: [Synth 8-7023] instance 'lut_words' of module 'xpm_memory_sprom' has 11 connections declared, but only 9 given [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:583]
-INFO: [Synth 8-6155] done synthesizing module 'detection_overlay' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:538]
-INFO: [Synth 8-6155] done synthesizing module 'vga_top' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:4]
-INFO: [Synth 8-6157] synthesizing module 'mfcc_1' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/mfcc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mfcc_1' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-20064-audrey/realtime/mfcc_1_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'in_stream_TDATA' does not match port width (16) of module 'mfcc_1' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:96]
-WARNING: [Synth 8-689] width (1) of port connection 'out_stream_TDATA' does not match port width (16) of module 'mfcc_1' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:102]
-INFO: [Synth 8-6157] synthesizing module 'uart_top' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:22]
+WARNING: [Synth 8-7071] port 'sbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_words' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:583]
+WARNING: [Synth 8-7071] port 'dbiterra' of module 'xpm_memory_sprom' is unconnected for instance 'lut_words' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:583]
+WARNING: [Synth 8-7023] instance 'lut_words' of module 'xpm_memory_sprom' has 11 connections declared, but only 9 given [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:583]
+INFO: [Synth 8-6155] done synthesizing module 'detection_overlay' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:538]
+INFO: [Synth 8-6155] done synthesizing module 'vga_top' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/vga_top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'mfcc_1' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/mfcc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mfcc_1' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/.Xil/Vivado-29880-DESKTOP-OS4G7S0/realtime/mfcc_1_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'in_stream_TDATA' does not match port width (16) of module 'mfcc_1' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:96]
+WARNING: [Synth 8-689] width (1) of port connection 'out_stream_TDATA' does not match port width (16) of module 'mfcc_1' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:102]
+INFO: [Synth 8-6157] synthesizing module 'uart_top' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:22]
 	Parameter AXI_WIDTH bound to: 16 - type: integer 
 	Parameter CLK_FREQ bound to: 100000000 - type: integer 
 	Parameter BAUD_RATE bound to: 9600 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'uart_gen' [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:111]
+INFO: [Synth 8-6157] synthesizing module 'uart_gen' [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:111]
 	Parameter CLK_FREQ bound to: 100000000 - type: integer 
 	Parameter BAUD_RATE bound to: 9600 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'uart_gen' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:111]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:74]
-INFO: [Synth 8-6155] done synthesizing module 'uart_top' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:22]
-INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:22]
-WARNING: [Synth 8-6014] Unused sequential element rreg_reg was removed.  [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:86]
+INFO: [Synth 8-6155] done synthesizing module 'uart_gen' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:111]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:74]
+INFO: [Synth 8-6155] done synthesizing module 'uart_top' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/uart_top.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:22]
+WARNING: [Synth 8-6014] Unused sequential element rreg_reg was removed.  [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_1/exp_1.srcs/sources_1/new/i2s_interface.sv:86]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2381]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3071]
-WARNING: [Synth 8-6014] Unused sequential element wdata_reg was removed.  [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:219]
-WARNING: [Synth 8-3848] Net config_data[pad] in module/entity serial_fft does not have driver. [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:288]
+WARNING: [Synth 8-3848] Net config_data[pad] in module/entity serial_fft does not have driver. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/fpga13/group_admi/exp_2/exp_2.srcs/sources_1/imports/fpga13/fft_top.sv:292]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2381]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3071]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2381]
-WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-	1: Unable to determine number of words or word size in RAM. 
-	2: No valid read/write found for RAM. 
-RAM dissolved into registers
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base__parameterized1 does not have driver. [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1067]
-INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2381]
-WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-	1: Unable to determine number of words or word size in RAM. 
-	2: No valid read/write found for RAM. 
-RAM dissolved into registers
+WARNING: [Synth 8-3848] Net in_stream_TLAST_empty in module/entity top does not have driver. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:45]
+WARNING: [Synth 8-3848] Net in_stream_TKEEP_empty in module/entity top does not have driver. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:47]
+WARNING: [Synth 8-3848] Net in_stream_TSTRB_empty in module/entity top does not have driver. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/sources_1/imports/new/top.sv:47]
 WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port wea[0] in module xpm_memory_base__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dina[0] in module xpm_memory_base__parameterized2 is either unconnected or has no load
@@ -456,18 +349,18 @@ WARNING: [Synth 8-7129] Port clk in module dc_block is either unconnected or has
 WARNING: [Synth 8-7129] Port arstn in module dc_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2511.430 ; gain = 630.230
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1423.996 ; gain = 532.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2527.785 ; gain = 646.586
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1423.996 ; gain = 532.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2527.785 ; gain = 646.586
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1423.996 ; gain = 532.316
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2539.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1423.996 ; gain = 0.000
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'fft0/u_serial_fft/clk_gate' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -475,28 +368,42 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'i2spcm0/inst'
-Finished Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'i2spcm0/inst'
-Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/fft/fft_in_context.xdc] for cell 'fft0/u_serial_fft/fft_i'
-Finished Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/fft/fft_in_context.xdc] for cell 'fft0/u_serial_fft/fft_i'
-Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic/sqrt_cordic_in_context.xdc] for cell 'fft0/abs_value_i/sqrt_i'
-Finished Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic/sqrt_cordic_in_context.xdc] for cell 'fft0/abs_value_i/sqrt_i'
-Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'vga0/clk_wiz_i'
-WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc:1]
-Finished Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'vga0/clk_wiz_i'
-Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/mfcc_1/mfcc_1_in_context.xdc] for cell 'mfcc'
-Finished Parsing XDC File [c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/mfcc_1/mfcc_1_in_context.xdc] for cell 'mfcc'
-Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]
-Finished Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'i2spcm0/inst'
+Finished Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'i2spcm0/inst'
+Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/fft/fft_in_context.xdc] for cell 'fft0/u_serial_fft/fft_i'
+Finished Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/fft/fft/fft_in_context.xdc] for cell 'fft0/u_serial_fft/fft_i'
+Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic/sqrt_cordic_in_context.xdc] for cell 'fft0/abs_value_i/sqrt_i'
+Finished Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/sqrt_cordic/sqrt_cordic/sqrt_cordic_in_context.xdc] for cell 'fft0/abs_value_i/sqrt_i'
+Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'vga0/clk_wiz_i'
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc:1]
+Finished Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'vga0/clk_wiz_i'
+Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/mfcc_1/mfcc_1_in_context.xdc] for cell 'mfcc'
+Finished Parsing XDC File [c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/mfcc_1/mfcc_1/mfcc_1_in_context.xdc] for cell 'mfcc'
+Parsing XDC File [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz_0'. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc:214]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc:214]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_out1_clk_wiz_0]'. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc:214]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc:214]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/floorplan.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]
-WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc:1]
-Finished Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc:1]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz_0'. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc:18]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc:18]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_out1_clk_wiz_0]'. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc:18]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc:18]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.srcs/constrs_1/imports/fpga13/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -504,30 +411,30 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl
 INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2592.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1519.727 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   BUFGCE => BUFGCTRL: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2592.012 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1519.727 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'fft0/abs_value_i/sqrt_i' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {c:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.gen/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc}, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for i2spcm0/inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for fft0/u_serial_fft/fft_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for fft0/abs_value_i/sqrt_i. (constraint file  auto generated constraint).
@@ -537,11 +444,19 @@ Applied set_property KEEP_HIERARCHY = SOFT for i2spcm0/xpm_cdc_pulse_inst/xpm_cd
 Applied set_property KEEP_HIERARCHY = SOFT for fft0/u_serial_fft/i_xpm_memory_tdpram. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for vga0/image_buf_i/i_xpm_memory_tdpram. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'serial_fft'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_gen'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_top'
 INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_word_narrow.mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            WAIT_TRIGGER |                                0 | 00000000000000000000000000000000
+                  ACTIVE |                                1 | 00000000000000000000000000000001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'serial_fft'
 INFO: [Synth 8-3971] The signal "xpm_memory_base__parameterized0:/gen_wr_b.gen_word_narrow.mem_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -568,7 +483,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -590,7 +505,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 9     
+	               32 Bit    Registers := 7     
 	               19 Bit    Registers := 4     
 	               16 Bit    Registers := 2     
 	               15 Bit    Registers := 1     
@@ -603,22 +518,24 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 13    
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 57    
+	                1 Bit    Registers := 58    
 +---RAMs : 
 	             194K Bit	(24929 X 8 bit)          RAMs := 1     
 	              32K Bit	(1024 X 32 bit)          RAMs := 1     
 	               2K Bit	(257 X 8 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 2     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 2     
 	   2 Input   14 Bit        Muxes := 2     
-	   2 Input   10 Bit        Muxes := 7     
+	   2 Input   10 Bit        Muxes := 8     
 	   2 Input    9 Bit        Muxes := 4     
 	   2 Input    8 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 3     
 	   3 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
 	   2 Input    1 Bit        Muxes := 15    
 	  11 Input    1 Bit        Muxes := 6     
 	   3 Input    1 Bit        Muxes := 5     
@@ -658,20 +575,30 @@ WARNING: [Synth 8-7129] Port enb in module xpm_memory_base__parameterized2 is ei
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
-WARNING: [Synth 8-3332] Sequential element (vga0/render_i/fft_buffer_reg_async_reset_b) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
+ROM: Preliminary Mapping Report
++----------------+-------------------------------------------------------------------+---------------+----------------+
+|Module Name     | RTL Object                                                        | Depth x Width | Implemented As | 
++----------------+-------------------------------------------------------------------+---------------+----------------+
+|xpm_memory_base | gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_pipe.douta_reg_reg | 256x12        | Block RAM      | 
+|xpm_memory_base | gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_pipe.douta_reg_reg | 32768x1       | Block RAM      | 
++----------------+-------------------------------------------------------------------+---------------+----------------+
+
+
 Block RAM: Preliminary Mapping Report (see note below)
-+-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|xpm_memory_base: | gen_wr_b.gen_word_narrow.mem_reg | 1 K x 32(NO_CHANGE)    | W | R | 1 K x 32(NO_CHANGE)    | W | R | Port A and B     | 0      | 1      | 
-+-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base:                 | gen_wr_b.gen_word_narrow.mem_reg | 1 K x 32(NO_CHANGE)    | W | R | 1 K x 32(NO_CHANGE)    | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_base__parameterized0: | gen_wr_b.gen_word_narrow.mem_reg | 24 K x 8(NO_CHANGE)    | W | R | 24 K x 8(NO_CHANGE)    | W | R | Port A and B     | 0      | 8      | 
+|top                              | vga0/render_i/fft_buffer_reg     | 257 x 8(READ_FIRST)    | W |   | 257 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
@@ -695,24 +622,26 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-565] redefining clock 'clk'
 WARNING: [Synth 8-565] redefining clock 'clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|xpm_memory_base: | gen_wr_b.gen_word_narrow.mem_reg | 1 K x 32(NO_CHANGE)    | W | R | 1 K x 32(NO_CHANGE)    | W | R | Port A and B     | 0      | 1      | 
-+-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base:                 | gen_wr_b.gen_word_narrow.mem_reg | 1 K x 32(NO_CHANGE)    | W | R | 1 K x 32(NO_CHANGE)    | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_base__parameterized0: | gen_wr_b.gen_word_narrow.mem_reg | 24 K x 8(NO_CHANGE)    | W | R | 24 K x 8(NO_CHANGE)    | W | R | Port A and B     | 0      | 8      | 
+|top                              | vga0/render_i/fft_buffer_reg     | 257 x 8(READ_FIRST)    | W |   | 257 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -721,8 +650,9 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7052] The timing for the instance fft0/u_serial_fft/i_xpm_memory_tdpram/xpm_memory_base_inst/gen_wr_b.gen_word_narrow.mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga0/render_i/fft_buffer_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -750,37 +680,37 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module mfcc has unconnected pin in_str
 CRITICAL WARNING: [Synth 8-4442] BlackBox module mfcc has unconnected pin in_stream_TSTRB[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module mfcc has unconnected pin in_stream_TSTRB[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -801,12 +731,14 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|fft_abs_value | A*B         | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|fft_abs_value | (PCIN+A*B)' | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-+--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_abs_value     | A*B         | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_abs_value     | (PCIN+A*B)' | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|detection_overlay | D+A*B       | 30     | 7      | -      | 9      | 22     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|image_buf         | A*B         | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -829,49 +761,50 @@ Report Cell Usage:
 |4     |mfcc        |     1|
 |5     |sqrt_cordic |     1|
 |6     |BUFGCE      |     1|
-|7     |CARRY4      |    16|
-|8     |DSP48E1     |     2|
-|10    |LUT1        |    11|
-|11    |LUT2        |    58|
-|12    |LUT3        |    63|
-|13    |LUT4        |    44|
-|14    |LUT5        |    83|
-|15    |LUT6        |    75|
-|16    |RAMB36E1    |     1|
-|17    |SRL16E      |     2|
-|18    |FDCE        |   224|
-|19    |FDPE        |    15|
-|20    |FDRE        |   100|
-|21    |IBUF        |     3|
-|22    |OBUF        |    18|
+|7     |CARRY4      |    62|
+|8     |DSP48E1     |     4|
+|11    |LUT1        |    22|
+|12    |LUT2        |   168|
+|13    |LUT3        |   126|
+|14    |LUT4        |    99|
+|15    |LUT5        |   124|
+|16    |LUT6        |   110|
+|17    |RAMB18E1    |     2|
+|19    |RAMB36E1    |    10|
+|22    |SRL16E      |     2|
+|23    |FDCE        |   417|
+|24    |FDPE        |    76|
+|25    |FDRE        |   111|
+|26    |IBUF        |     3|
+|27    |OBUF        |    18|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 10 critical warnings and 93 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 2592.012 ; gain = 646.586
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 2592.012 ; gain = 710.812
+Synthesis finished with 0 errors, 10 critical warnings and 92 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1519.730 ; gain = 532.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1519.730 ; gain = 628.051
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2592.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1519.730 ; gain = 0.000
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'fft0/u_serial_fft/clk_gate' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2592.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1520.973 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   BUFGCE => BUFGCTRL: 1 instance 
 
-Synth Design complete | Checksum: 79699320
+Synth Design complete | Checksum: 7bc85517
 INFO: [Common 17-83] Releasing license: Synthesis
-116 Infos, 250 Warnings, 14 Critical Warnings and 0 Errors encountered.
+120 Infos, 154 Warnings, 16 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 2592.012 ; gain = 1111.703
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1520.973 ; gain = 1028.352
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/the5t/OneDrive/Documents/GitHub/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/necde/Documents/GitHub Repos/rwth-lab-fpga-WIP/fpga_project/fpga_project.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 14:11:24 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  4 14:55:43 2026...

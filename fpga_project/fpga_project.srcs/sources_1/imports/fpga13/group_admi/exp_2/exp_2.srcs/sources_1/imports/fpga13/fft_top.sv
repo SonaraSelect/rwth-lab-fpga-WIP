@@ -28,14 +28,14 @@ serial_fft u_serial_fft (
 	.valid_i(data_valid),
 	.trigger(trigger),
 	.data_o(fft_ser),
-	.valid_o(),
+	.valid_o(fft_ser_valid),
 	.ready_i(fft_ser_ready)
 );
 //fft_ser_valid
-initial begin
-    fft_ser_valid = 0; 
-    #200 fft_ser_valid = 1;
-end
+//initial begin
+//    fft_ser_valid = 0; 
+//    #200 fft_ser_valid = 1;
+//end
 
 //Compute the absolute value of the complex numbers
 fft_pkg::real_str_t abs_value;
@@ -188,44 +188,48 @@ typedef enum {WAIT_TRIGGER, ACTIVE} state_t;
 state_t state,state_next;
 assign active  = state != WAIT_TRIGGER;
 /// Task 1: implement the state machine
+logic trigger_q;
 always_ff @(posedge clk or negedge arstn) begin
-	if (!arstn) begin
-	   state <= WAIT_TRIGGER;
-	   state_next <= ACTIVE;
-	end else begin
-	   case (state)
-           WAIT_TRIGGER: begin
-               if(!trigger) begin
-                   state <= state_next;
-                   state_next <= WAIT_TRIGGER;
-               end
-           end
-           ACTIVE: begin
-               if(frame_count >= fft_pkg::REQUIRED_FRAMES-1) begin
-                   state <= state_next;
-                   state_next <= ACTIVE;
-               end
-           end
-        endcase
-    end
+  if (!arstn) trigger_q <= 1'b1;
+  else        trigger_q <= trigger;
+end
+logic trigger_press;
+assign trigger_press = (trigger_q == 1'b1) && (trigger == 1'b0);
+
+always_ff @(posedge clk or negedge arstn) begin
+  if (!arstn) begin
+    state <= WAIT_TRIGGER;
+  end else begin
+    unique case (state)
+      WAIT_TRIGGER: begin
+        if (trigger_press) state <= ACTIVE;
+      end
+
+      ACTIVE: begin
+        if (done) state <= WAIT_TRIGGER;
+      end
+    endcase
+  end
 end
 
 /// Task 2: generate waddr and we to capture data
 
 // generating waddr
 always_ff @(posedge clk or negedge arstn) begin
-    if(!arstn) begin
-        waddr <= 0; // todo --------------------------- check
-        wdata <= 0;
-    end else if(state == ACTIVE) begin
-        if(valid_i) begin
-            if(waddr == 2*WINDOWSIZE - 1) waddr <= 'd0;
-            else waddr <= waddr + 'b1;
-        end
+  if (!arstn) begin
+    waddr <= '0;
+  end else if (state == WAIT_TRIGGER) begin
+    waddr <= '0;
+  end else if (state == ACTIVE) begin
+    if (valid_i) begin
+      if (waddr == Words-1) waddr <= '0;
+      else waddr <= waddr + 'd1;
     end
+  end
 end
 
-assign we = valid_i;
+//generating write enable
+assign we = valid_i && (state == ACTIVE);
 
 // generating raddr and re to control data movement
 // generating raddr:
